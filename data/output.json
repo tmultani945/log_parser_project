@@ -1,0 +1,4967 @@
+{
+  "0X1C07": {
+    "name": "NR5G Sub6 TxAGC",
+    "section": "4.1",
+    "versions": [],
+    "version_to_table": {},
+    "tables": {
+      "4-1": {
+        "title": "Nr5g_Sub6TxAgc",
+        "page_span": [
+          17,
+          17
+        ],
+        "rows": [
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Versions",
+            "type_name": "Table 4-2",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Versions",
+            "type_name": "Table 4-2",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Unknown Versions",
+            "type_name": "Table 4-3",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "Default"
+          },
+          {
+            "name": "Unknown Versions",
+            "type_name": "Table 4-3",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "Default"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Version 2",
+            "type_name": "Table 4-4",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "2"
+          },
+          {
+            "name": "Version 2",
+            "type_name": "Table 4-4",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "2"
+          },
+          {
+            "name": "Version 3",
+            "type_name": "Table 4-6",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "3"
+          },
+          {
+            "name": "Version 3",
+            "type_name": "Table 4-6",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "3"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Version 5",
+            "type_name": "Table 4-8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "5"
+          },
+          {
+            "name": "Version 5",
+            "type_name": "Table 4-8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "5"
+          },
+          {
+            "name": "Version 6",
+            "type_name": "Table 4-10",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "6"
+          },
+          {
+            "name": "Version 6",
+            "type_name": "Table 4-10",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "6"
+          },
+          {
+            "name": "Version 7",
+            "type_name": "Table 4-14",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "7"
+          },
+          {
+            "name": "Version 7",
+            "type_name": "Table 4-14",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "7"
+          },
+          {
+            "name": "Version 8",
+            "type_name": "Table 4-18",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "8"
+          },
+          {
+            "name": "Version 8",
+            "type_name": "Table 4-18",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "8"
+          },
+          {
+            "name": "Unsupported Version",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Unsupported Version",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Systime",
+            "type_name": "Table 4-5",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "systime"
+          },
+          {
+            "name": "Systime",
+            "type_name": "Table 4-5",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "systime"
+          }
+        ],
+        "dep_tables": [
+          "4-10",
+          "4-14",
+          "4-18",
+          "4-2",
+          "4-3",
+          "4-4",
+          "4-5",
+          "4-6",
+          "4-8"
+        ]
+      },
+      "4-12": {
+        "title": "per_chain_info",
+        "page_span": [
+          23,
+          23
+        ],
+        "rows": [
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "40",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "40",
+            "description": ""
+          },
+          {
+            "name": "NR PC limit",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "40",
+            "len": "16",
+            "description": "NR PC limit"
+          },
+          {
+            "name": "NR PC limit",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "40",
+            "len": "16",
+            "description": "NR PC limit"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "56",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "56",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Channel number",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "120",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "Channel number",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "120",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "freq_error_hz",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "152",
+            "len": "16",
+            "description": "Frequency Error in hz"
+          },
+          {
+            "name": "freq_error_hz",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "152",
+            "len": "16",
+            "description": "Frequency Error in hz"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "",
+            "off": "168",
+            "len": "32",
+            "description": "Frequency Error in ppm"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "",
+            "off": "168",
+            "len": "32",
+            "description": "Frequency Error in ppm"
+          },
+          {
+            "name": "is qet alarm reg read success",
+            "type_name": "Bool",
+            "cnt": "",
+            "off": "200",
+            "len": "8",
+            "description": "QET Alarm Register Pass or Fail"
+          },
+          {
+            "name": "is qet alarm reg read success",
+            "type_name": "Bool",
+            "cnt": "",
+            "off": "200",
+            "len": "8",
+            "description": "QET Alarm Register Pass or Fail"
+          },
+          {
+            "name": "Therm Value",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "208",
+            "len": "16",
+            "description": "Therm Value in degC"
+          },
+          {
+            "name": "Therm Value",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "208",
+            "len": "16",
+            "description": "Therm Value in degC"
+          },
+          {
+            "name": "Therm Scaled Value",
+            "type_name": "Uint16",
+            "cnt": "",
+            "off": "224",
+            "len": "16",
+            "description": "Therm Scaled Value"
+          },
+          {
+            "name": "Therm Scaled Value",
+            "type_name": "Uint16",
+            "cnt": "",
+            "off": "224",
+            "len": "16",
+            "description": "Therm Scaled Value"
+          },
+          {
+            "name": "Therm Bin Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "240",
+            "len": "8",
+            "description": "Therm Bin Value"
+          },
+          {
+            "name": "Therm Bin Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "240",
+            "len": "8",
+            "description": "Therm Bin Value"
+          },
+          {
+            "name": "NS Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "248",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "NS Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "248",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "sub6_semi_static_fields",
+            "type_name": "Table 4-13",
+            "cnt": "\u2020",
+            "off": "256",
+            "len": "VAR",
+            "description": "\u2020 Count: 0 + 1"
+          },
+          {
+            "name": "sub6_semi_static_fields",
+            "type_name": "Table 4-13",
+            "cnt": "\u2020",
+            "off": "256",
+            "len": "VAR",
+            "description": "\u2020 Count: 0 + 1"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "256",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "256",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Ref Time",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "32",
+            "len": "32",
+            "description": "Reference Time"
+          },
+          {
+            "name": "Ref Time",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "32",
+            "len": "32",
+            "description": "Reference Time"
+          },
+          {
+            "name": "num_cc",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "64",
+            "len": "8",
+            "description": "num_cc"
+          },
+          {
+            "name": "num_cc",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "64",
+            "len": "8",
+            "description": "num_cc"
+          },
+          {
+            "name": "CA_combo_PC",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "72",
+            "len": "8",
+            "description": "CA_combo_PC"
+          },
+          {
+            "name": "CA_combo_PC",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "72",
+            "len": "8",
+            "description": "CA_combo_PC"
+          },
+          {
+            "name": "variant_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "80",
+            "len": "8",
+            "description": "Variant_id"
+          },
+          {
+            "name": "variant_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "80",
+            "len": "8",
+            "description": "Variant_id"
+          },
+          {
+            "name": "cc_info",
+            "type_name": "Table 4-15",
+            "cnt": "2",
+            "off": "88",
+            "len": "VAR",
+            "description": "CC_info"
+          },
+          {
+            "name": "cc_info",
+            "type_name": "Table 4-15",
+            "cnt": "2",
+            "off": "88",
+            "len": "VAR",
+            "description": "CC_info"
+          },
+          {
+            "name": "cc_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "cc_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "num_chains",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "8",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "num_chains",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "8",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-16",
+            "cnt": "2",
+            "off": "16",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-16",
+            "cnt": "2",
+            "off": "16",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "40",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "40",
+            "description": ""
+          },
+          {
+            "name": "NR PC limit",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "40",
+            "len": "16",
+            "description": "NR PC limit"
+          },
+          {
+            "name": "NR PC limit",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "40",
+            "len": "16",
+            "description": "NR PC limit"
+          }
+        ],
+        "dep_tables": [
+          "4-13",
+          "4-15",
+          "4-16"
+        ]
+      },
+      "4-16": {
+        "title": "per_chain_info",
+        "page_span": [
+          24,
+          24
+        ],
+        "rows": [
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "56",
+            "len": "96",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "56",
+            "len": "96",
+            "description": ""
+          },
+          {
+            "name": "Channel number",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "152",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "Channel number",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "152",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "freq_error_hz",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "184",
+            "len": "16",
+            "description": "Frequency Error in hz"
+          },
+          {
+            "name": "freq_error_hz",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "184",
+            "len": "16",
+            "description": "Frequency Error in hz"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "",
+            "off": "200",
+            "len": "32",
+            "description": "Frequency Error in ppm"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "",
+            "off": "200",
+            "len": "32",
+            "description": "Frequency Error in ppm"
+          },
+          {
+            "name": "is qet alarm reg read success",
+            "type_name": "Bool",
+            "cnt": "",
+            "off": "232",
+            "len": "8",
+            "description": "QET Alarm Register Pass or Fail"
+          },
+          {
+            "name": "is qet alarm reg read success",
+            "type_name": "Bool",
+            "cnt": "",
+            "off": "232",
+            "len": "8",
+            "description": "QET Alarm Register Pass or Fail"
+          },
+          {
+            "name": "Therm Value",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "240",
+            "len": "16",
+            "description": "Therm Value in degC"
+          },
+          {
+            "name": "Therm Value",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "240",
+            "len": "16",
+            "description": "Therm Value in degC"
+          },
+          {
+            "name": "Therm Scaled Value",
+            "type_name": "Uint16",
+            "cnt": "",
+            "off": "256",
+            "len": "16",
+            "description": "Therm Scaled Value"
+          },
+          {
+            "name": "Therm Scaled Value",
+            "type_name": "Uint16",
+            "cnt": "",
+            "off": "256",
+            "len": "16",
+            "description": "Therm Scaled Value"
+          },
+          {
+            "name": "Therm Bin Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "272",
+            "len": "8",
+            "description": "Therm Bin Value"
+          },
+          {
+            "name": "Therm Bin Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "272",
+            "len": "8",
+            "description": "Therm Bin Value"
+          },
+          {
+            "name": "Tx Ant Sw Path",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "280",
+            "len": "32",
+            "description": "Tx Ant Sw Path"
+          },
+          {
+            "name": "Tx Ant Sw Path",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "280",
+            "len": "32",
+            "description": "Tx Ant Sw Path"
+          },
+          {
+            "name": "Alt Ant Sw Paths",
+            "type_name": "Uint32",
+            "cnt": "3",
+            "off": "312",
+            "len": "96",
+            "description": "Alt Ant Sw Paths"
+          },
+          {
+            "name": "Alt Ant Sw Paths",
+            "type_name": "Uint32",
+            "cnt": "3",
+            "off": "312",
+            "len": "96",
+            "description": "Alt Ant Sw Paths"
+          },
+          {
+            "name": "NS Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "408",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "NS Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "408",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "sub6_semi_static_fields",
+            "type_name": "Table 4-17",
+            "cnt": "\u2020",
+            "off": "416",
+            "len": "VAR",
+            "description": "\u2020 Count: 0 + 1"
+          },
+          {
+            "name": "sub6_semi_static_fields",
+            "type_name": "Table 4-17",
+            "cnt": "\u2020",
+            "off": "416",
+            "len": "VAR",
+            "description": "\u2020 Count: 0 + 1"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "288",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "288",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Ref Time",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "32",
+            "len": "32",
+            "description": "Reference Time"
+          },
+          {
+            "name": "Ref Time",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "32",
+            "len": "32",
+            "description": "Reference Time"
+          },
+          {
+            "name": "num_entries",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "64",
+            "len": "8",
+            "description": "num_entries"
+          },
+          {
+            "name": "num_entries",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "64",
+            "len": "8",
+            "description": "num_entries"
+          },
+          {
+            "name": "CA_combo_PC",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "72",
+            "len": "8",
+            "description": "CA_combo_PC"
+          },
+          {
+            "name": "CA_combo_PC",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "72",
+            "len": "8",
+            "description": "CA_combo_PC"
+          },
+          {
+            "name": "variant_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "80",
+            "len": "8",
+            "description": "Variant_id"
+          },
+          {
+            "name": "variant_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "80",
+            "len": "8",
+            "description": "Variant_id"
+          },
+          {
+            "name": "cc_info",
+            "type_name": "Table 4-19",
+            "cnt": "\u2020",
+            "off": "88",
+            "len": "VAR",
+            "description": "CC_info\n\u2020 Count: num_entries"
+          },
+          {
+            "name": "cc_info",
+            "type_name": "Table 4-19",
+            "cnt": "\u2020",
+            "off": "88",
+            "len": "VAR",
+            "description": "CC_info\n\u2020 Count: num_entries"
+          },
+          {
+            "name": "cc_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "cc_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "chain_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "8",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "chain_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "8",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-20",
+            "cnt": "",
+            "off": "16",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-20",
+            "cnt": "",
+            "off": "16",
+            "len": "VAR",
+            "description": ""
+          }
+        ],
+        "dep_tables": [
+          "4-17",
+          "4-19",
+          "4-20"
+        ]
+      },
+      "4-20": {
+        "title": "per_chain_info",
+        "page_span": [
+          25,
+          25
+        ],
+        "rows": [
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "40",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "40",
+            "description": ""
+          },
+          {
+            "name": "NR PC limit",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "40",
+            "len": "16",
+            "description": "NR PC limit"
+          },
+          {
+            "name": "NR PC limit",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "40",
+            "len": "16",
+            "description": "NR PC limit"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "56",
+            "len": "96",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "56",
+            "len": "96",
+            "description": ""
+          },
+          {
+            "name": "Channel number",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "152",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "Channel number",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "152",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "freq_error_hz",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "184",
+            "len": "16",
+            "description": "Frequency Error in hz"
+          },
+          {
+            "name": "freq_error_hz",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "184",
+            "len": "16",
+            "description": "Frequency Error in hz"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "",
+            "off": "200",
+            "len": "32",
+            "description": "Frequency Error in ppm"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "",
+            "off": "200",
+            "len": "32",
+            "description": "Frequency Error in ppm"
+          },
+          {
+            "name": "is qet alarm reg read success",
+            "type_name": "Bool",
+            "cnt": "",
+            "off": "232",
+            "len": "8",
+            "description": "QET Alarm Register Pass or Fail"
+          },
+          {
+            "name": "is qet alarm reg read success",
+            "type_name": "Bool",
+            "cnt": "",
+            "off": "232",
+            "len": "8",
+            "description": "QET Alarm Register Pass or Fail"
+          },
+          {
+            "name": "Therm Value",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "240",
+            "len": "16",
+            "description": "Therm Value in degC"
+          },
+          {
+            "name": "Therm Value",
+            "type_name": "Int16",
+            "cnt": "",
+            "off": "240",
+            "len": "16",
+            "description": "Therm Value in degC"
+          },
+          {
+            "name": "Therm Scaled Value",
+            "type_name": "Uint16",
+            "cnt": "",
+            "off": "256",
+            "len": "16",
+            "description": "Therm Scaled Value"
+          },
+          {
+            "name": "Therm Scaled Value",
+            "type_name": "Uint16",
+            "cnt": "",
+            "off": "256",
+            "len": "16",
+            "description": "Therm Scaled Value"
+          },
+          {
+            "name": "Therm Bin Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "272",
+            "len": "8",
+            "description": "Therm Bin Value"
+          },
+          {
+            "name": "Therm Bin Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "272",
+            "len": "8",
+            "description": "Therm Bin Value"
+          },
+          {
+            "name": "Tx Ant Sw Path",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "280",
+            "len": "32",
+            "description": "Tx Ant Sw Path"
+          },
+          {
+            "name": "Tx Ant Sw Path",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "280",
+            "len": "32",
+            "description": "Tx Ant Sw Path"
+          },
+          {
+            "name": "Alt Ant Sw Paths",
+            "type_name": "Uint32",
+            "cnt": "3",
+            "off": "312",
+            "len": "96",
+            "description": "Alt Ant Sw Paths"
+          },
+          {
+            "name": "Alt Ant Sw Paths",
+            "type_name": "Uint32",
+            "cnt": "3",
+            "off": "312",
+            "len": "96",
+            "description": "Alt Ant Sw Paths"
+          },
+          {
+            "name": "NS Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "408",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "NS Value",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "408",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "sub6_semi_static_fields",
+            "type_name": "Table 4-21",
+            "cnt": "\u2020",
+            "off": "416",
+            "len": "VAR",
+            "description": "\u2020 Count: 0 + 1"
+          },
+          {
+            "name": "sub6_semi_static_fields",
+            "type_name": "Table 4-21",
+            "cnt": "\u2020",
+            "off": "416",
+            "len": "VAR",
+            "description": "\u2020 Count: 0 + 1"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "288",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "288",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Versions",
+            "type_name": "Table 4-23",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Versions",
+            "type_name": "Table 4-23",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Unknown Versions",
+            "type_name": "Table 4-24",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "Default"
+          },
+          {
+            "name": "Unknown Versions",
+            "type_name": "Table 4-24",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "Default"
+          },
+          {
+            "name": "Version 1",
+            "type_name": "Table 4-25",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "1"
+          },
+          {
+            "name": "Version 1",
+            "type_name": "Table 4-25",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "1"
+          },
+          {
+            "name": "Version 2",
+            "type_name": "Table 4-29",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "2"
+          },
+          {
+            "name": "Version 2",
+            "type_name": "Table 4-29",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "2"
+          },
+          {
+            "name": "Version 3",
+            "type_name": "Table 4-34",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "3"
+          },
+          {
+            "name": "Version 3",
+            "type_name": "Table 4-34",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "3"
+          }
+        ],
+        "dep_tables": [
+          "4-21",
+          "4-23",
+          "4-24",
+          "4-25",
+          "4-29",
+          "4-34"
+        ]
+      },
+      "4-24": {
+        "title": "UnknownVersions",
+        "page_span": [
+          26,
+          26
+        ],
+        "rows": [
+          {
+            "name": "Unsupported Version",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Unsupported Version",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Sym Info",
+            "type_name": "Table 4-26",
+            "cnt": "7",
+            "off": "32",
+            "len": "4704",
+            "description": ""
+          },
+          {
+            "name": "Sym Info",
+            "type_name": "Table 4-26",
+            "cnt": "7",
+            "off": "32",
+            "len": "4704",
+            "description": ""
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4736",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4736",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Carrier Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4738",
+            "len": "8",
+            "description": "The carrier mask"
+          },
+          {
+            "name": "Tx Carrier Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4738",
+            "len": "8",
+            "description": "The carrier mask"
+          },
+          {
+            "name": "Num Symbol",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4746",
+            "len": "4",
+            "description": "Symbol number for intelligent apex parsing"
+          },
+          {
+            "name": "Num Symbol",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4746",
+            "len": "4",
+            "description": "Symbol number for intelligent apex parsing"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "4750",
+            "len": "18",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "4750",
+            "len": "18",
+            "description": ""
+          },
+          {
+            "name": "Sysframe",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4768",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Sysframe",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4768",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Subframe",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4778",
+            "len": "6",
+            "description": ""
+          },
+          {
+            "name": "Subframe",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4778",
+            "len": "6",
+            "description": ""
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4784",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4784",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "SCS",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4792",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "SCS",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "4792",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Output Power TxAGC",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "11",
+            "description": "Output Power TxAGC in db10"
+          },
+          {
+            "name": "Output Power TxAGC",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "11",
+            "description": "Output Power TxAGC in db10"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "11",
+            "len": "11",
+            "description": "MTPL"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "11",
+            "len": "11",
+            "description": "MTPL"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "22",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "22",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Beam Id",
+            "type_name": "Uint32",
+            "cnt": "2",
+            "off": "32",
+            "len": "64",
+            "description": "Beam id for the 2 tx chains"
+          },
+          {
+            "name": "Beam Id",
+            "type_name": "Uint32",
+            "cnt": "2",
+            "off": "32",
+            "len": "64",
+            "description": "Beam id for the 2 tx chains"
+          },
+          {
+            "name": "Post Comb Gain",
+            "type_name": "Int32",
+            "cnt": "2",
+            "off": "96",
+            "len": "64",
+            "description": "Post comb gain (backoff)"
+          },
+          {
+            "name": "Post Comb Gain",
+            "type_name": "Int32",
+            "cnt": "2",
+            "off": "96",
+            "len": "64",
+            "description": "Post comb gain (backoff)"
+          },
+          {
+            "name": "Pre Comb Gain",
+            "type_name": "Int32",
+            "cnt": "8",
+            "off": "160",
+            "len": "256",
+            "description": "Pre comb gain"
+          },
+          {
+            "name": "Pre Comb Gain",
+            "type_name": "Int32",
+            "cnt": "8",
+            "off": "160",
+            "len": "256",
+            "description": "Pre comb gain"
+          },
+          {
+            "name": "PhasorInfo2D",
+            "type_name": "Table 4-27",
+            "cnt": "2",
+            "off": "416",
+            "len": "256",
+            "description": ""
+          },
+          {
+            "name": "PhasorInfo2D",
+            "type_name": "Table 4-27",
+            "cnt": "2",
+            "off": "416",
+            "len": "256",
+            "description": ""
+          },
+          {
+            "name": "Phasor Info",
+            "type_name": "Table 4-28",
+            "cnt": "4",
+            "off": "0",
+            "len": "128",
+            "description": ""
+          },
+          {
+            "name": "Phasor Info",
+            "type_name": "Table 4-28",
+            "cnt": "4",
+            "off": "0",
+            "len": "128",
+            "description": ""
+          },
+          {
+            "name": "Rgi TxAGC",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "6",
+            "description": "RF gain setting for TxAGC"
+          },
+          {
+            "name": "Rgi TxAGC",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "6",
+            "description": "RF gain setting for TxAGC"
+          },
+          {
+            "name": "Lookup Power",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "6",
+            "len": "11",
+            "description": "Lookup power from the linearizer for logging"
+          },
+          {
+            "name": "Lookup Power",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "6",
+            "len": "11",
+            "description": "Lookup power from the linearizer for logging"
+          },
+          {
+            "name": "EIRP Comb Gain",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "17",
+            "len": "11",
+            "description": "EIRP comb gain"
+          },
+          {
+            "name": "EIRP Comb Gain",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "17",
+            "len": "11",
+            "description": "EIRP comb gain"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "28",
+            "len": "4",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "28",
+            "len": "4",
+            "description": ""
+          }
+        ],
+        "dep_tables": [
+          "4-26",
+          "4-27",
+          "4-28"
+        ]
+      },
+      "4-29": {
+        "title": "Nr5g_MmwTxAgc_V2",
+        "page_span": [
+          27,
+          27
+        ],
+        "rows": [
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": "Describes the log version number"
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": "Describes the log version number"
+          },
+          {
+            "name": "Systime",
+            "type_name": "Table 4-30",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "systime"
+          },
+          {
+            "name": "Systime",
+            "type_name": "Table 4-30",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "systime"
+          },
+          {
+            "name": "Num Sym",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Num Sym",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "68",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "68",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Carr Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "70",
+            "len": "8",
+            "description": "The carrier mask"
+          },
+          {
+            "name": "Tx Carr Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "70",
+            "len": "8",
+            "description": "The carrier mask"
+          },
+          {
+            "name": "Reserved3",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "78",
+            "len": "18",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved3",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "78",
+            "len": "18",
+            "description": "reserved"
+          },
+          {
+            "name": "TxPower",
+            "type_name": "Table 4-31",
+            "cnt": "2",
+            "off": "96",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "TxPower",
+            "type_name": "Table 4-31",
+            "cnt": "2",
+            "off": "96",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "8",
+            "off": "160",
+            "len": "320",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "8",
+            "off": "160",
+            "len": "320",
+            "description": ""
+          },
+          {
+            "name": "PhasorInfo",
+            "type_name": "Table 4-32",
+            "cnt": "2",
+            "off": "480",
+            "len": "192",
+            "description": ""
+          },
+          {
+            "name": "PhasorInfo",
+            "type_name": "Table 4-32",
+            "cnt": "2",
+            "off": "480",
+            "len": "192",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "2",
+            "off": "672",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "2",
+            "off": "672",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Waveform",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "736",
+            "len": "4",
+            "description": "Waveform type\nValues:\n\u2022 0 \u2013 CP-OFDM\n\u2022 1 \u2013 DFT-OFDM"
+          },
+          {
+            "name": "Waveform",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "736",
+            "len": "4",
+            "description": "Waveform type\nValues:\n\u2022 0 \u2013 CP-OFDM\n\u2022 1 \u2013 DFT-OFDM"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "740",
+            "len": "4",
+            "description": "Modulation type\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "740",
+            "len": "4",
+            "description": "Modulation type\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "744",
+            "len": "16",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "744",
+            "len": "16",
+            "description": ""
+          },
+          {
+            "name": "Reserved5",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "760",
+            "len": "8",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved5",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "760",
+            "len": "8",
+            "description": "reserved"
+          },
+          {
+            "name": "ThermRead",
+            "type_name": "Table 4-33",
+            "cnt": "2",
+            "off": "768",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "ThermRead",
+            "type_name": "Table 4-33",
+            "cnt": "2",
+            "off": "768",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "832",
+            "len": "20",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "832",
+            "len": "20",
+            "description": ""
+          },
+          {
+            "name": "Reserved7",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "852",
+            "len": "12",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved7",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "852",
+            "len": "12",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "2",
+            "off": "864",
+            "len": "80",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "2",
+            "off": "864",
+            "len": "80",
+            "description": ""
+          },
+          {
+            "name": "Reserved9",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "944",
+            "len": "16",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved9",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "944",
+            "len": "16",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "960",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "960",
+            "len": "64",
+            "description": ""
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Sub FN",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "10",
+            "len": "6",
+            "description": ""
+          },
+          {
+            "name": "Sub FN",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "10",
+            "len": "6",
+            "description": ""
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "16",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "16",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "SCS",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "24",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "SCS",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "24",
+            "len": "8",
+            "description": ""
+          }
+        ],
+        "dep_tables": [
+          "4-30",
+          "4-31",
+          "4-32",
+          "4-33"
+        ]
+      },
+      "4-31": {
+        "title": "TxPower",
+        "page_span": [
+          28,
+          28
+        ],
+        "rows": [
+          {
+            "name": "Req Power TxAGC Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "11",
+            "description": "Requested Power TxAGC in db10"
+          },
+          {
+            "name": "Req Power TxAGC Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "11",
+            "description": "Requested Power TxAGC in db10"
+          },
+          {
+            "name": "Req Power TxAGC",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Req Power TxAGC",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "11",
+            "len": "11",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "11",
+            "len": "11",
+            "description": ""
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "22",
+            "len": "10",
+            "description": "MTPL per element in Db10"
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "22",
+            "len": "10",
+            "description": "MTPL per element in Db10"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "RGI",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "8",
+            "len": "6",
+            "description": "RF gain setting for TxAGC"
+          },
+          {
+            "name": "RGI",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "8",
+            "len": "6",
+            "description": "RF gain setting for TxAGC"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "14",
+            "len": "11",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "14",
+            "len": "11",
+            "description": ""
+          },
+          {
+            "name": "Reserved4",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "25",
+            "len": "7",
+            "description": "Reserved"
+          },
+          {
+            "name": "Reserved4",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "25",
+            "len": "7",
+            "description": "Reserved"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Radiated PDET Power Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "64",
+            "len": "16",
+            "description": "Radiated PDET power in dB10"
+          },
+          {
+            "name": "Radiated PDET Power Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "64",
+            "len": "16",
+            "description": "Radiated PDET power in dB10"
+          },
+          {
+            "name": "Rad PDET Power",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Rad PDET Power",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "80",
+            "len": "16",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "80",
+            "len": "16",
+            "description": ""
+          },
+          {
+            "name": "Therm Avg",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "16",
+            "description": "Therm value averaged over 4 quads per phasor"
+          },
+          {
+            "name": "Therm Avg",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "16",
+            "description": "Therm value averaged over 4 quads per phasor"
+          },
+          {
+            "name": "Reserved6",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "16",
+            "len": "16",
+            "description": "reserved"
+          },
+          {
+            "name": "Reserved6",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "16",
+            "len": "16",
+            "description": "reserved"
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": "Describes the log version number"
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": "Describes the log version number"
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "42",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "42",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "SCS",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "50",
+            "len": "4",
+            "description": "Values:\n\u2022 0 \u2013 15KHZ\n\u2022 1 \u2013 30KHZ\n\u2022 2 \u2013 60KHZ\n\u2022 3 \u2013 120KHZ\n\u2022 4 \u2013 240KHZ\n\u2022 5 \u2013 DEFAULT"
+          },
+          {
+            "name": "SCS",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "50",
+            "len": "4",
+            "description": "Values:\n\u2022 0 \u2013 15KHZ\n\u2022 1 \u2013 30KHZ\n\u2022 2 \u2013 60KHZ\n\u2022 3 \u2013 120KHZ\n\u2022 4 \u2013 240KHZ\n\u2022 5 \u2013 DEFAULT"
+          },
+          {
+            "name": "Num Sym",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "54",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Num Sym",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "54",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Waveform",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "58",
+            "len": "3",
+            "description": "Waveform type"
+          },
+          {
+            "name": "Waveform",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "58",
+            "len": "3",
+            "description": "Waveform type"
+          }
+        ],
+        "dep_tables": []
+      },
+      "4-34": {
+        "title": "Nr5g_MmwTxAgc_V3",
+        "page_span": [
+          29,
+          29
+        ],
+        "rows": [
+          {
+            "name": "",
+            "type_name": "",
+            "cnt": "",
+            "off": "",
+            "len": "",
+            "description": "Values:\n\u2022 0 \u2013 CP-OFDM\n\u2022 1 \u2013 DFT-OFDM"
+          },
+          {
+            "name": "",
+            "type_name": "",
+            "cnt": "",
+            "off": "",
+            "len": "",
+            "description": "Values:\n\u2022 0 \u2013 CP-OFDM\n\u2022 1 \u2013 DFT-OFDM"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "61",
+            "len": "3",
+            "description": "Modulation type\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "61",
+            "len": "3",
+            "description": "Modulation type\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Carr Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "66",
+            "len": "4",
+            "description": "Tx carrier mask"
+          },
+          {
+            "name": "Tx Carr Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "66",
+            "len": "4",
+            "description": "Tx carrier mask"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "70",
+            "len": "2",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "70",
+            "len": "2",
+            "description": ""
+          },
+          {
+            "name": "Tx Band",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "72",
+            "len": "4",
+            "description": "Tx Band\nValues:\n\u2022 0 \u2013 N41\n\u2022 1 \u2013 N77\n\u2022 2 \u2013 N78\n\u2022 3 \u2013 N79\n\u2022 4 \u2013 N257\n\u2022 5 \u2013 N258\n\u2022 6 \u2013 N260\n\u2022 7 \u2013 N261"
+          },
+          {
+            "name": "Tx Band",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "72",
+            "len": "4",
+            "description": "Tx Band\nValues:\n\u2022 0 \u2013 N41\n\u2022 1 \u2013 N77\n\u2022 2 \u2013 N78\n\u2022 3 \u2013 N79\n\u2022 4 \u2013 N257\n\u2022 5 \u2013 N258\n\u2022 6 \u2013 N260\n\u2022 7 \u2013 N261"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "76",
+            "len": "84",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "76",
+            "len": "84",
+            "description": ""
+          },
+          {
+            "name": "Path Info",
+            "type_name": "Table 4-35",
+            "cnt": "2",
+            "off": "160",
+            "len": "320",
+            "description": ""
+          },
+          {
+            "name": "Path Info",
+            "type_name": "Table 4-35",
+            "cnt": "2",
+            "off": "160",
+            "len": "320",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "480",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "480",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Req Power TxAGC Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Req Power TxAGC Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Req Power TxAGC",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Req Power TxAGC",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "10",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "10",
+            "len": "10",
+            "description": ""
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "20",
+            "len": "12",
+            "description": ""
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "20",
+            "len": "12",
+            "description": ""
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "RGI",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "6",
+            "description": "Radio Gain Index"
+          },
+          {
+            "name": "RGI",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "6",
+            "description": "Radio Gain Index"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "38",
+            "len": "46",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "38",
+            "len": "46",
+            "description": ""
+          },
+          {
+            "name": "PDET Power Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "84",
+            "len": "12",
+            "description": "Measured PDET power"
+          },
+          {
+            "name": "PDET Power Raw",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "84",
+            "len": "12",
+            "description": "Measured PDET power"
+          },
+          {
+            "name": "PDET Power",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "PDET Power",
+            "type_name": "Float64",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "96",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "96",
+            "len": "8",
+            "description": ""
+          }
+        ],
+        "dep_tables": [
+          "4-35"
+        ]
+      },
+      "4-35": {
+        "title": "Nr5g_MmwTxAgc_V3_PathInfo",
+        "page_span": [
+          30,
+          30
+        ],
+        "rows": [
+          {
+            "name": "Therm Avg",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "104",
+            "len": "10",
+            "description": "Therm Average"
+          },
+          {
+            "name": "Therm Avg",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "104",
+            "len": "10",
+            "description": "Therm Average"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "114",
+            "len": "46",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "114",
+            "len": "46",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Versions",
+            "type_name": "Table 4-37",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Versions",
+            "type_name": "Table 4-37",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Unknown Versions",
+            "type_name": "Table 4-38",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "Default"
+          },
+          {
+            "name": "Unknown Versions",
+            "type_name": "Table 4-38",
+            "cnt": "1",
+            "off": "0",
+            "len": "VAR",
+            "description": "Default"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "",
+            "off": "0",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Version 2",
+            "type_name": "Table 4-39",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "2"
+          },
+          {
+            "name": "Version 2",
+            "type_name": "Table 4-39",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "2"
+          },
+          {
+            "name": "Version 3",
+            "type_name": "Table 4-43",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "3"
+          },
+          {
+            "name": "Version 3",
+            "type_name": "Table 4-43",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "3"
+          },
+          {
+            "name": "Version 4",
+            "type_name": "Table 4-47",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "4"
+          },
+          {
+            "name": "Version 4",
+            "type_name": "Table 4-47",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": "4"
+          },
+          {
+            "name": "Unsupported Version",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Unsupported Version",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Target Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "8",
+            "description": "Slot number"
+          },
+          {
+            "name": "Target Slot",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "8",
+            "description": "Slot number"
+          },
+          {
+            "name": "Target SCS",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "40",
+            "len": "4",
+            "description": "Sub-carrier Spacing"
+          },
+          {
+            "name": "Target SCS",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "40",
+            "len": "4",
+            "description": "Sub-carrier Spacing"
+          },
+          {
+            "name": "Sysframe",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "44",
+            "len": "10",
+            "description": "Radio frame number"
+          },
+          {
+            "name": "Sysframe",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "44",
+            "len": "10",
+            "description": "Radio frame number"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "54",
+            "len": "138",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "54",
+            "len": "138",
+            "description": ""
+          },
+          {
+            "name": "ComputeLnaAgcInfo",
+            "type_name": "Table 4-40",
+            "cnt": "2",
+            "off": "192",
+            "len": "192",
+            "description": ""
+          },
+          {
+            "name": "ComputeLnaAgcInfo",
+            "type_name": "Table 4-40",
+            "cnt": "2",
+            "off": "192",
+            "len": "192",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "6",
+            "off": "384",
+            "len": "1152",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "6",
+            "off": "384",
+            "len": "1152",
+            "description": ""
+          },
+          {
+            "name": "SetLnaAgcInfo",
+            "type_name": "Table 4-41",
+            "cnt": "2",
+            "off": "1536",
+            "len": "128",
+            "description": "Set LNA agc Info"
+          },
+          {
+            "name": "SetLnaAgcInfo",
+            "type_name": "Table 4-41",
+            "cnt": "2",
+            "off": "1536",
+            "len": "128",
+            "description": "Set LNA agc Info"
+          }
+        ],
+        "dep_tables": [
+          "4-37",
+          "4-38",
+          "4-39",
+          "4-40",
+          "4-41",
+          "4-43",
+          "4-47"
+        ]
+      },
+      "4-4": {
+        "title": "Nr5g_Sub6TxAgc_V2",
+        "page_span": [
+          18,
+          19
+        ],
+        "rows": [
+          {
+            "name": "Sym Index",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Sym Index",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Channel Type",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "68",
+            "len": "4",
+            "description": "validation: 15 != .\"Channel Type\"\nValues:\n\u2022 0 \u2013 PUCCH\n\u2022 1 \u2013 PUSCH\n\u2022 2 \u2013 SRS_0\n\u2022 3 \u2013 SRS_1\n\u2022 4 \u2013 SRS_2\n\u2022 5 \u2013 PRACH"
+          },
+          {
+            "name": "Channel Type",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "68",
+            "len": "4",
+            "description": "validation: 15 != .\"Channel Type\"\nValues:\n\u2022 0 \u2013 PUCCH\n\u2022 1 \u2013 PUSCH\n\u2022 2 \u2013 SRS_0\n\u2022 3 \u2013 SRS_1\n\u2022 4 \u2013 SRS_2\n\u2022 5 \u2013 PRACH"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "72",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "72",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "73",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "73",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "75",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "75",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Req Tx Power Raw",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "76",
+            "len": "16",
+            "description": "Request Tx power"
+          },
+          {
+            "name": "Req Tx Power Raw",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "76",
+            "len": "16",
+            "description": "Request Tx power"
+          },
+          {
+            "name": "Req Tx Power",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Req Tx Power",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "92",
+            "len": "20",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "92",
+            "len": "20",
+            "description": ""
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "112",
+            "len": "16",
+            "description": "Final MTPL for power limiting"
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "112",
+            "len": "16",
+            "description": "Final MTPL for power limiting"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": "MTPL"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": "MTPL"
+          },
+          {
+            "name": "PA State",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "128",
+            "len": "3",
+            "description": "PA state index"
+          },
+          {
+            "name": "PA State",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "128",
+            "len": "3",
+            "description": "PA state index"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "131",
+            "len": "12",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "131",
+            "len": "12",
+            "description": ""
+          },
+          {
+            "name": "XPT",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "143",
+            "len": "2",
+            "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n\u2022 0 \u2013 APT\n\u2022 1 \u2013 EPT\n\u2022 2 \u2013 ET\n\u2022 3 \u2013 NA"
+          },
+          {
+            "name": "XPT",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "143",
+            "len": "2",
+            "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n\u2022 0 \u2013 APT\n\u2022 1 \u2013 EPT\n\u2022 2 \u2013 ET\n\u2022 3 \u2013 NA"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "145",
+            "len": "111",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "145",
+            "len": "111",
+            "description": ""
+          },
+          {
+            "name": "BW",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "256",
+            "len": "8",
+            "description": "channel bandwidth"
+          },
+          {
+            "name": "BW",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "256",
+            "len": "8",
+            "description": "channel bandwidth"
+          },
+          {
+            "name": "Wave form",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "264",
+            "len": "2",
+            "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n\u2022 0 \u2013 CP\n\u2022 1 \u2013 DFT"
+          },
+          {
+            "name": "Wave form",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "264",
+            "len": "2",
+            "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n\u2022 0 \u2013 CP\n\u2022 1 \u2013 DFT"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "266",
+            "len": "3",
+            "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "266",
+            "len": "3",
+            "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "RB Start",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "269",
+            "len": "9",
+            "description": "Start RB index"
+          },
+          {
+            "name": "RB Start",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "269",
+            "len": "9",
+            "description": "Start RB index"
+          },
+          {
+            "name": "RB Num",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "278",
+            "len": "10",
+            "description": "< refer to ul_tx_on_type_e"
+          },
+          {
+            "name": "RB Num",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "278",
+            "len": "10",
+            "description": "< refer to ul_tx_on_type_e"
+          },
+          {
+            "name": "MPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "288",
+            "len": "8",
+            "description": "MPR"
+          },
+          {
+            "name": "MPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "288",
+            "len": "8",
+            "description": "MPR"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "AMPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "296",
+            "len": "8",
+            "description": "AMPR"
+          },
+          {
+            "name": "AMPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "296",
+            "len": "8",
+            "description": "AMPR"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "AMPR ENDC Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "304",
+            "len": "8",
+            "description": "AMPR in ENDC mode"
+          },
+          {
+            "name": "AMPR ENDC Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "304",
+            "len": "8",
+            "description": "AMPR in ENDC mode"
+          },
+          {
+            "name": "Tot Back off Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "312",
+            "len": "8",
+            "description": "Total MPR&AMPR backoff"
+          },
+          {
+            "name": "Tot Back off Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "312",
+            "len": "8",
+            "description": "Total MPR&AMPR backoff"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Therm Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "320",
+            "len": "16",
+            "description": "Thermal limit"
+          },
+          {
+            "name": "Therm Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "320",
+            "len": "16",
+            "description": "Thermal limit"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "SAR Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "336",
+            "len": "16",
+            "description": "SAR limit"
+          },
+          {
+            "name": "SAR Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "336",
+            "len": "16",
+            "description": "SAR limit"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "PE Max Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "352",
+            "len": "16",
+            "description": "Network signalled PeMax"
+          },
+          {
+            "name": "PE Max Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "352",
+            "len": "16",
+            "description": "Network signalled PeMax"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "80",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "80",
+            "description": ""
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": "Sysframe Number, range [0 to 1023]"
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": "Sysframe Number, range [0 to 1023]"
+          },
+          {
+            "name": "Sub FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "10",
+            "len": "6",
+            "description": "Subframe Number, range [0 to 9]"
+          },
+          {
+            "name": "Sub FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "10",
+            "len": "6",
+            "description": "Subframe Number, range [0 to 9]"
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "16",
+            "len": "8",
+            "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ"
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "16",
+            "len": "8",
+            "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ"
+          },
+          {
+            "name": "SCS",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "24",
+            "len": "8",
+            "description": "Numerology or SCS\nValues:\n\u2022 0 \u2013 15\n\u2022 1 \u2013 30\n\u2022 2 \u2013 60\n\u2022 3 \u2013 120"
+          },
+          {
+            "name": "SCS",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "24",
+            "len": "8",
+            "description": "Numerology or SCS\nValues:\n\u2022 0 \u2013 15\n\u2022 1 \u2013 30\n\u2022 2 \u2013 60\n\u2022 3 \u2013 120"
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Systime",
+            "type_name": "Table 4-7",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "systime"
+          },
+          {
+            "name": "Systime",
+            "type_name": "Table 4-7",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "systime"
+          },
+          {
+            "name": "Sym Index",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Sym Index",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "64",
+            "len": "4",
+            "description": "Symbol number having Tx activity"
+          },
+          {
+            "name": "Channel Type",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "68",
+            "len": "4",
+            "description": "Values:\n\u2022 0 \u2013 PUCCH\n\u2022 1 \u2013 PUSCH\n\u2022 2 \u2013 SRS_0"
+          },
+          {
+            "name": "Channel Type",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "68",
+            "len": "4",
+            "description": "Values:\n\u2022 0 \u2013 PUCCH\n\u2022 1 \u2013 PUSCH\n\u2022 2 \u2013 SRS_0"
+          }
+        ],
+        "dep_tables": [
+          "4-7"
+        ]
+      },
+      "4-6": {
+        "title": "Nr5g_Sub6TxAgc_V3",
+        "page_span": [
+          20,
+          21
+        ],
+        "rows": [
+          {
+            "name": "",
+            "type_name": "",
+            "cnt": "",
+            "off": "",
+            "len": "",
+            "description": "\u2022 3 \u2013 SRS_1\n\u2022 4 \u2013 SRS_2\n\u2022 5 \u2013 PRACH\n\u2022 15 \u2013 DTx"
+          },
+          {
+            "name": "",
+            "type_name": "",
+            "cnt": "",
+            "off": "",
+            "len": "",
+            "description": "\u2022 3 \u2013 SRS_1\n\u2022 4 \u2013 SRS_2\n\u2022 5 \u2013 PRACH\n\u2022 15 \u2013 DTx"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "72",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "72",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "73",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Tx Chain Mask",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "73",
+            "len": "2",
+            "description": "Tx chain mask"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "75",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "75",
+            "len": "1",
+            "description": ""
+          },
+          {
+            "name": "Req Tx Power Raw",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "76",
+            "len": "16",
+            "description": "Request Tx power"
+          },
+          {
+            "name": "Req Tx Power Raw",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "76",
+            "len": "16",
+            "description": "Request Tx power"
+          },
+          {
+            "name": "Req Tx Power",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Req Tx Power",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "92",
+            "len": "20",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "92",
+            "len": "20",
+            "description": ""
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "112",
+            "len": "16",
+            "description": "Final MTPL for power limiting"
+          },
+          {
+            "name": "MTPL Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "112",
+            "len": "16",
+            "description": "Final MTPL for power limiting"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": "MTPL"
+          },
+          {
+            "name": "MTPL",
+            "type_name": "Float32",
+            "cnt": "1",
+            "off": "",
+            "len": "",
+            "description": "MTPL"
+          },
+          {
+            "name": "PA State",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "128",
+            "len": "3",
+            "description": "PA state index"
+          },
+          {
+            "name": "PA State",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "128",
+            "len": "3",
+            "description": "PA state index"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "131",
+            "len": "12",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "131",
+            "len": "12",
+            "description": ""
+          },
+          {
+            "name": "XPT",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "143",
+            "len": "2",
+            "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n\u2022 0 \u2013 APT\n\u2022 1 \u2013 EPT\n\u2022 2 \u2013 ET\n\u2022 3 \u2013 NA"
+          },
+          {
+            "name": "XPT",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "143",
+            "len": "2",
+            "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n\u2022 0 \u2013 APT\n\u2022 1 \u2013 EPT\n\u2022 2 \u2013 ET\n\u2022 3 \u2013 NA"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "145",
+            "len": "111",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "145",
+            "len": "111",
+            "description": ""
+          },
+          {
+            "name": "BW",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "256",
+            "len": "8",
+            "description": "channel bandwidth"
+          },
+          {
+            "name": "BW",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "256",
+            "len": "8",
+            "description": "channel bandwidth"
+          },
+          {
+            "name": "Wave form",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "264",
+            "len": "2",
+            "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n\u2022 0 \u2013 CP\n\u2022 1 \u2013 DFT"
+          },
+          {
+            "name": "Wave form",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "264",
+            "len": "2",
+            "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n\u2022 0 \u2013 CP\n\u2022 1 \u2013 DFT"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "266",
+            "len": "3",
+            "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "Mod Scheme",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "266",
+            "len": "3",
+            "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n\u2022 0 \u2013 BPSK\n\u2022 1 \u2013 QPSK\n\u2022 2 \u2013 16QAM\n\u2022 3 \u2013 64QAM\n\u2022 4 \u2013 256QAM"
+          },
+          {
+            "name": "RB Start",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "269",
+            "len": "9",
+            "description": "Start RB index"
+          },
+          {
+            "name": "RB Start",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "269",
+            "len": "9",
+            "description": "Start RB index"
+          },
+          {
+            "name": "RB Num",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "278",
+            "len": "10",
+            "description": "< refer to ul_tx_on_type_e"
+          },
+          {
+            "name": "RB Num",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "278",
+            "len": "10",
+            "description": "< refer to ul_tx_on_type_e"
+          },
+          {
+            "name": "MPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "288",
+            "len": "8",
+            "description": "MPR"
+          },
+          {
+            "name": "MPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "288",
+            "len": "8",
+            "description": "MPR"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "AMPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "296",
+            "len": "8",
+            "description": "AMPR"
+          },
+          {
+            "name": "AMPR Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "296",
+            "len": "8",
+            "description": "AMPR"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "AMPR ENDC Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "304",
+            "len": "8",
+            "description": "AMPR in ENDC mode"
+          },
+          {
+            "name": "AMPR ENDC Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "304",
+            "len": "8",
+            "description": "AMPR in ENDC mode"
+          },
+          {
+            "name": "Tot Back off Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "312",
+            "len": "8",
+            "description": "Total MPR&AMPR backoff"
+          },
+          {
+            "name": "Tot Back off Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "312",
+            "len": "8",
+            "description": "Total MPR&AMPR backoff"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Therm Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "320",
+            "len": "16",
+            "description": "Thermal limit"
+          },
+          {
+            "name": "Therm Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "320",
+            "len": "16",
+            "description": "Thermal limit"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "SAR Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "336",
+            "len": "16",
+            "description": "SAR limit"
+          },
+          {
+            "name": "SAR Limit Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "336",
+            "len": "16",
+            "description": "SAR limit"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "PE Max Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "352",
+            "len": "16",
+            "description": "Network signalled PeMax"
+          },
+          {
+            "name": "PE Max Raw",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "352",
+            "len": "16",
+            "description": "Network signalled PeMax"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "",
+            "len": "0",
+            "description": ""
+          },
+          {
+            "name": "Ant Swt En",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "368",
+            "len": "1",
+            "description": "Ant_Switch enable"
+          },
+          {
+            "name": "Ant Swt En",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "368",
+            "len": "1",
+            "description": "Ant_Switch enable"
+          },
+          {
+            "name": "Ant Swt Idx",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "369",
+            "len": "3",
+            "description": "Ant_Switch index"
+          },
+          {
+            "name": "Ant Swt Idx",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "369",
+            "len": "3",
+            "description": "Ant_Switch index"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "372",
+            "len": "4",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "372",
+            "len": "4",
+            "description": ""
+          },
+          {
+            "name": "TA Timing Fix Up",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "376",
+            "len": "1",
+            "description": "Timing fixup due to TA change"
+          },
+          {
+            "name": "TA Timing Fix Up",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "376",
+            "len": "1",
+            "description": "Timing fixup due to TA change"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "377",
+            "len": "7",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "377",
+            "len": "7",
+            "description": ""
+          },
+          {
+            "name": "Total TA",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "384",
+            "len": "16",
+            "description": "Total TA value"
+          },
+          {
+            "name": "Total TA",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "384",
+            "len": "16",
+            "description": "Total TA value"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "400",
+            "len": "48",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "400",
+            "len": "48",
+            "description": ""
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": "Sysframe Number, range [0 to 1023]"
+          },
+          {
+            "name": "Sys FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "0",
+            "len": "10",
+            "description": "Sysframe Number, range [0 to 1023]"
+          },
+          {
+            "name": "Sub FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "10",
+            "len": "6",
+            "description": "Subframe Number, range [0 to 9]"
+          },
+          {
+            "name": "Sub FN",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "10",
+            "len": "6",
+            "description": "Subframe Number, range [0 to 9]"
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "16",
+            "len": "8",
+            "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ"
+          },
+          {
+            "name": "Slot",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "16",
+            "len": "8",
+            "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ"
+          },
+          {
+            "name": "SCS",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "24",
+            "len": "8",
+            "description": "Numerology or SCS\nValues:\n\u2022 0 \u2013 15\n\u2022 1 \u2013 30\n\u2022 2 \u2013 60\n\u2022 3 \u2013 120"
+          },
+          {
+            "name": "SCS",
+            "type_name": "Enumeration",
+            "cnt": "1",
+            "off": "24",
+            "len": "8",
+            "description": "Numerology or SCS\nValues:\n\u2022 0 \u2013 15\n\u2022 1 \u2013 30\n\u2022 2 \u2013 60\n\u2022 3 \u2013 120"
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "log_ustmr_value",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "Log USTMR value"
+          },
+          {
+            "name": "log_ustmr_value",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "Log USTMR value"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "64",
+            "len": "48",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "64",
+            "len": "48",
+            "description": ""
+          },
+          {
+            "name": "freq_error_in_hz",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "112",
+            "len": "16",
+            "description": "Frequency error(Hz)"
+          },
+          {
+            "name": "freq_error_in_hz",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "112",
+            "len": "16",
+            "description": "Frequency error(Hz)"
+          }
+        ],
+        "dep_tables": []
+      },
+      "4-8": {
+        "title": "Nr5g_Sub6TxAgc_V5",
+        "page_span": [
+          22,
+          22
+        ],
+        "rows": [
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "128",
+            "len": "32",
+            "description": "Frequency error(ppm)"
+          },
+          {
+            "name": "freq_error_ppm",
+            "type_name": "Int32",
+            "cnt": "1",
+            "off": "128",
+            "len": "32",
+            "description": "Frequency error(ppm)"
+          },
+          {
+            "name": "qet_alarm_register_value",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "160",
+            "len": "16",
+            "description": "QET alarm register value"
+          },
+          {
+            "name": "qet_alarm_register_value",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "160",
+            "len": "16",
+            "description": "QET alarm register value"
+          },
+          {
+            "name": "therm_device_type",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "176",
+            "len": "8",
+            "description": "Therm object type"
+          },
+          {
+            "name": "therm_device_type",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "176",
+            "len": "8",
+            "description": "Therm object type"
+          },
+          {
+            "name": "therm_value_in_degC",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "184",
+            "len": "16",
+            "description": "Therm object type"
+          },
+          {
+            "name": "therm_value_in_degC",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "184",
+            "len": "16",
+            "description": "Therm object type"
+          },
+          {
+            "name": "therm_scaled_value",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "200",
+            "len": "16",
+            "description": "Therm scaled value"
+          },
+          {
+            "name": "therm_scaled_value",
+            "type_name": "Uint16",
+            "cnt": "1",
+            "off": "200",
+            "len": "16",
+            "description": "Therm scaled value"
+          },
+          {
+            "name": "therm_bin_value",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "216",
+            "len": "8",
+            "description": "Therm bin value"
+          },
+          {
+            "name": "therm_bin_value",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "216",
+            "len": "8",
+            "description": "Therm bin value"
+          },
+          {
+            "name": "Num Chains",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "224",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Num Chains",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "224",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-9",
+            "cnt": "2",
+            "off": "232",
+            "len": "18144",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-9",
+            "cnt": "2",
+            "off": "232",
+            "len": "18144",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "18376",
+            "len": "2848",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "18376",
+            "len": "2848",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "channel_number",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "channel_number",
+            "type_name": "Uint32",
+            "cnt": "1",
+            "off": "32",
+            "len": "32",
+            "description": "Channel number(khz)"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "64",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "64",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "p_powerclass_nr_db10",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "72",
+            "len": "16",
+            "description": "Power class limit - NR"
+          },
+          {
+            "name": "p_powerclass_nr_db10",
+            "type_name": "Int16",
+            "cnt": "1",
+            "off": "72",
+            "len": "16",
+            "description": "Power class limit - NR"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "88",
+            "len": "16",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "1",
+            "off": "88",
+            "len": "16",
+            "description": ""
+          },
+          {
+            "name": "ns_value",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "104",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "ns_value",
+            "type_name": "Uint8",
+            "cnt": "1",
+            "off": "104",
+            "len": "8",
+            "description": "NS value"
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "4",
+            "off": "112",
+            "len": "8960",
+            "description": ""
+          },
+          {
+            "name": "Reserved",
+            "type_name": "",
+            "cnt": "4",
+            "off": "112",
+            "len": "8960",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Version",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "0",
+            "len": "32",
+            "description": ""
+          },
+          {
+            "name": "Ref Time",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "32",
+            "len": "32",
+            "description": "Reference Time"
+          },
+          {
+            "name": "Ref Time",
+            "type_name": "Uint32",
+            "cnt": "",
+            "off": "32",
+            "len": "32",
+            "description": "Reference Time"
+          },
+          {
+            "name": "num_cc",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "64",
+            "len": "8",
+            "description": "num_cc"
+          },
+          {
+            "name": "num_cc",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "64",
+            "len": "8",
+            "description": "num_cc"
+          },
+          {
+            "name": "CA_combo_PC",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "72",
+            "len": "8",
+            "description": "CA_combo_PC"
+          },
+          {
+            "name": "CA_combo_PC",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "72",
+            "len": "8",
+            "description": "CA_combo_PC"
+          },
+          {
+            "name": "variant_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "80",
+            "len": "8",
+            "description": "Variant_id"
+          },
+          {
+            "name": "variant_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "80",
+            "len": "8",
+            "description": "Variant_id"
+          },
+          {
+            "name": "cc_info",
+            "type_name": "Table 4-11",
+            "cnt": "2",
+            "off": "88",
+            "len": "VAR",
+            "description": "CC_info"
+          },
+          {
+            "name": "cc_info",
+            "type_name": "Table 4-11",
+            "cnt": "2",
+            "off": "88",
+            "len": "VAR",
+            "description": "CC_info"
+          },
+          {
+            "name": "cc_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "cc_id",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "0",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "num_chains",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "8",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "num_chains",
+            "type_name": "Uint8",
+            "cnt": "",
+            "off": "8",
+            "len": "8",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-12",
+            "cnt": "2",
+            "off": "16",
+            "len": "VAR",
+            "description": ""
+          },
+          {
+            "name": "ChainInfo",
+            "type_name": "Table 4-12",
+            "cnt": "2",
+            "off": "16",
+            "len": "VAR",
+            "description": ""
+          }
+        ],
+        "dep_tables": [
+          "4-11",
+          "4-12",
+          "4-9"
+        ]
+      }
+    }
+  },
+  "0XB84D": {
+    "name": "NR5G RLC DL Stats",
+    "section": "5.8",
+    "versions": [],
+    "version_to_table": {},
+    "tables": {}
+  },
+  "0XB8A0": {
+    "name": "NR5G MAC LL1 PUSCH Tx",
+    "section": "10.5",
+    "versions": [],
+    "version_to_table": {},
+    "tables": {}
+  },
+  "0XB970": {
+    "name": "NR5G ML1 Searcher Idle S Criteria",
+    "section": "8.6",
+    "versions": [],
+    "version_to_table": {},
+    "tables": {}
+  },
+  "0XD3B": {
+    "name": "EVENT_NR5G_ML1_CC_ACT_DEACT_VRLF_INFO",
+    "section": "17.1",
+    "versions": [],
+    "version_to_table": {},
+    "tables": {}
+  },
+  "0XD3D": {
+    "name": "EVENT_NR5G_RRC_IRAT_RESEL_FROM_NR_END_V3",
+    "section": "19.29",
+    "versions": [],
+    "version_to_table": {},
+    "tables": {}
+  }
+}
