@@ -86,39 +86,56 @@ class LogcodeParser:
                         }
         return None
     
-    def parse_versions_table(self, table: ExtractedTable) -> Dict[str, str]:
+    def parse_versions_from_table_rows(self, table: ExtractedTable, tables_dict: Dict[str, ExtractedTable]) -> Dict[str, str]:
         """
-        Parse a versions table to extract version -> table number mapping.
-        
-        Versions tables have structure like:
-        | Name          | Type Name | Cnt | Off | Len | Cond | Description |
-        | Version 2     | Table 4-4 |     | 0   | VAR | 2    |             |
-        | Version 3     | Table 4-6 |     | 0   | VAR | 3    |             |
-        
+        Parse version mappings from table rows.
+
+        Version information can be:
+        1. Directly in the table: "Version 2 | Table 4-4"
+        2. Referenced in another table: "Versions | Table 4-2" (then read Table 4-2 for mappings)
+
         Returns:
             Dict mapping version number to table number (e.g., {"2": "4-4", "3": "4-6"})
         """
         version_map = {}
-        
+
         for row in table.rows:
             if len(row) < 2:
                 continue
-            
-            # First column: "Version X"
+
             name_col = row[0].strip()
-            version_match = re.search(r'Version\s+(\d+)', name_col, re.IGNORECASE)
-            
+            type_col = row[1].strip()
+
+            # Pattern 1: "Version X" → "Table Y-Z"
+            version_match = re.search(r'^Version\s+(\d+)$', name_col, re.IGNORECASE)
             if version_match:
                 version_num = version_match.group(1)
-                
-                # Second column: "Table X-Y"
-                type_col = row[1].strip()
                 table_match = re.search(r'Table\s+(\d+-\d+)', type_col, re.IGNORECASE)
-                
                 if table_match:
                     table_num = table_match.group(1)
                     version_map[version_num] = table_num
-        
+
+            # Pattern 2: "Versions" → "Table X-Y" (reference to versions table)
+            if name_col.lower() == 'versions':
+                table_match = re.search(r'Table\s+(\d+-\d+)', type_col, re.IGNORECASE)
+                if table_match:
+                    versions_table_num = table_match.group(1)
+                    # Recursively read the referenced versions table
+                    if versions_table_num in tables_dict:
+                        versions_table = tables_dict[versions_table_num]
+                        # Parse version mappings from the referenced table
+                        for vrow in versions_table.rows:
+                            if len(vrow) < 2:
+                                continue
+                            vname = vrow[0].strip()
+                            vtype = vrow[1].strip()
+                            vmatch = re.search(r'^Version\s+(\d+)$', vname, re.IGNORECASE)
+                            if vmatch:
+                                vnum = vmatch.group(1)
+                                vtable_match = re.search(r'Table\s+(\d+-\d+)', vtype, re.IGNORECASE)
+                                if vtable_match:
+                                    version_map[vnum] = vtable_match.group(1)
+
         return version_map
     
     def detect_table_dependencies(self, table: ExtractedTable) -> List[str]:
@@ -178,82 +195,130 @@ class LogcodeParser:
     def parse_all_logcodes(self) -> Dict[str, LogcodeData]:
         """
         Parse the entire PDF and extract all logcode data.
-        
+
+        Scans page-by-page to track which logcode is active and assigns tables accordingly.
+
         Returns:
             Dict mapping logcode (e.g., "0x1C07") to LogcodeData
         """
         # Extract all tables
         all_tables = self.extractor.extract_all_tables()
-        
-        # Build table lookup
-        table_lookup = {t.metadata.table_number: t for t in all_tables}
-        
-        # Group by section
-        section_tables = self.group_tables_by_section(all_tables)
-        
-        # For each section, try to identify logcode context
-        logcodes = {}
-        
-        # Scan PDF for logcode sections
+
+        # Build table lookup by page range
+        table_by_page = {}
+        for table in all_tables:
+            for page_num in range(table.metadata.page_start, table.metadata.page_end + 1):
+                if page_num not in table_by_page:
+                    table_by_page[page_num] = []
+                table_by_page[page_num].append(table)
+
+        # First pass: detect all logcode sections and their starting table numbers
+        logcode_sections = []
         for page_num in range(len(self.extractor.doc)):
             page = self.extractor.doc[page_num]
             text = page.get_text()
-            
             section_info = self.detect_logcode_section(text)
             if section_info:
-                logcode = section_info['logcode']
-                section_num = section_info['section']
-                name = section_info['name']
-                
-                # Get major section number (e.g., "4.1" -> "4")
-                section_major = section_num.split('.')[0]
-                
-                # Get all tables for this section
-                tables_in_section = section_tables.get(section_major, [])
-                
-                # Find versions table
-                versions_table = None
-                for tbl in tables_in_section:
-                    if tbl.metadata.title.endswith('_Versions'):
-                        versions_table = tbl
-                        break
-                
-                # Parse version mappings
-                version_map = {}
-                versions = []
-                if versions_table:
-                    version_map = self.parse_versions_table(versions_table)
-                    versions = sorted(version_map.keys(), key=lambda x: int(x))
-                
-                # Build tables dict and dependencies
-                tables_dict = {}
-                dependencies = {}
-                
-                for tbl in tables_in_section:
-                    tbl_num = tbl.metadata.table_number
-                    tables_dict[tbl_num] = tbl
-                    
-                    # Detect dependencies
-                    deps = self.detect_table_dependencies(tbl)
-                    if deps:
-                        dependencies[tbl_num] = deps
-                
-                # Create LogcodeData (only if not already processed)
-                if logcode not in logcodes:
-                    logcode_data = LogcodeData(
-                        logcode=logcode,
-                        name=name,
-                        section=section_num,
-                        versions=versions,
-                        version_to_table=version_map,
-                        tables=tables_dict,
-                        dependencies=dependencies
-                    )
+                logcode_sections.append({
+                    'logcode': section_info['logcode'],
+                    'name': section_info['name'],
+                    'section': section_info['section'],
+                    'page': page_num
+                })
 
-                    logcodes[logcode] = logcode_data
-        
-        self.logcodes = logcodes
-        return logcodes
+        # Find the first table for each logcode section by looking for tables on/after the section page
+        for i, section in enumerate(logcode_sections):
+            section['first_table'] = None
+            # Look for first table with matching name pattern
+            for table in all_tables:
+                # Check if table is on or after this section's page
+                if table.metadata.page_start >= section['page']:
+                    # Check if table title contains the section name keywords
+                    # For example: "Nr5g_Sub6TxAgc" for section 4.1, "Nr5g_MmwTxAgc" for section 4.2
+                    section_keywords = section['name'].replace(' ', '').replace('5G', '5g')
+                    table_keywords = table.metadata.title.replace('_', '')
+                    if section_keywords[:15].lower() in table_keywords.lower():
+                        section['first_table'] = table.metadata.table_number
+                        break
+
+        # Assign tables to logcodes based on table number ranges
+        logcodes = {}
+        for i, section in enumerate(logcode_sections):
+            logcode = section['logcode']
+            logcodes[logcode] = {
+                'name': section['name'],
+                'section': section['section'],
+                'tables': []
+            }
+
+            # Determine table number range for this section
+            if section['first_table']:
+                start_major, start_minor = map(int, section['first_table'].split('-'))
+                # Find the end range (before next section's first table)
+                if i + 1 < len(logcode_sections) and logcode_sections[i + 1]['first_table']:
+                    end_major, end_minor = map(int, logcode_sections[i + 1]['first_table'].split('-'))
+                    end_minor -= 1  # Exclude the next section's first table
+                else:
+                    end_major, end_minor = 999, 999  # Last section gets all remaining tables
+
+                # Assign tables in this range
+                for table in all_tables:
+                    table_major, table_minor = map(int, table.metadata.table_number.split('-'))
+                    if (table_major == start_major and start_minor <= table_minor <= end_minor):
+                        logcodes[logcode]['tables'].append(table)
+
+        # Now process each logcode's tables to extract version mappings and dependencies
+        result = {}
+        for logcode, data in logcodes.items():
+            tables_list = data['tables']
+
+            # Sort tables by table number
+            sorted_tables = sorted(tables_list, key=lambda t: (
+                int(t.metadata.table_number.split('-')[0]),
+                int(t.metadata.table_number.split('-')[1])
+            ))
+
+            # Build tables dict first (needed for version parsing)
+            tables_dict = {}
+            dependencies = {}
+
+            for tbl in sorted_tables:
+                tbl_num = tbl.metadata.table_number
+                tables_dict[tbl_num] = tbl
+
+                # Detect dependencies
+                deps = self.detect_table_dependencies(tbl)
+                if deps:
+                    dependencies[tbl_num] = deps
+
+            # Parse version mappings from the first table's rows
+            version_map = {}
+            versions = []
+            if sorted_tables:
+                first_table = sorted_tables[0]
+                version_map = self.parse_versions_from_table_rows(first_table, tables_dict)
+
+                # Add version 1 as default (first table is version 1)
+                if first_table.metadata.table_number not in version_map.values():
+                    version_map['1'] = first_table.metadata.table_number
+
+                versions = sorted(version_map.keys(), key=lambda x: int(x))
+
+            # Create LogcodeData
+            logcode_data = LogcodeData(
+                logcode=logcode,
+                name=data['name'],
+                section=data['section'],
+                versions=versions,
+                version_to_table=version_map,
+                tables=tables_dict,
+                dependencies=dependencies
+            )
+
+            result[logcode] = logcode_data
+
+        self.logcodes = result
+        return result
     
     def get_tables_for_version(self, logcode: str, version: str) -> List[ExtractedTable]:
         """

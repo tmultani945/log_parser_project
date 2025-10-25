@@ -77,20 +77,21 @@ class PDFExtractor:
     def detect_table_caption(self, text_block: str) -> Optional[Tuple[str, str, bool]]:
         """
         Detect table captions like "Table 4-4 Nr5g_Sub6TxAgc_V2" or "Table 4-4 ... (cont.)"
-        
+
         Returns:
             Tuple of (table_number, title, is_continuation) or None
         """
         # Match "Table X-Y Title" or "Table X-Y Title (cont.)"
-        pattern = r'Table\s+(\d+-\d+)\s+(.+?)(?:\s+\(cont\.\))?$'
-        match = re.search(pattern, text_block, re.IGNORECASE)
-        
+        # Must start with "Table" at the beginning of the line
+        pattern = r'^Table\s+(\d+-\d+)\s+(.+?)(?:\s+\(cont\.\))?$'
+        match = re.match(pattern, text_block.strip(), re.IGNORECASE)
+
         if match:
             table_num = match.group(1)
             title = match.group(2).strip()
             is_cont = '(cont.)' in text_block.lower()
             return (table_num, title, is_cont)
-        
+
         return None
     
     def normalize_headers(self, headers: List[str]) -> List[str]:
@@ -114,36 +115,42 @@ class PDFExtractor:
     def extract_tables_from_page(self, page_num: int) -> List[Dict]:
         """
         Extract all tables from a single page using pdfplumber.
-        
+
         Returns:
             List of dicts with 'caption', 'headers', 'rows', 'bbox'
         """
         page = self.plumber_pdf.pages[page_num]
         tables = page.extract_tables()
-        
+
         # Get text to find captions
         text = page.extract_text()
         lines = text.split('\n') if text else []
-        
+
+        # Find all table captions on this page in order
+        captions = []
+        for line in lines:
+            if self.detect_table_caption(line):
+                captions.append(line.strip())
+
         extracted = []
-        for table in tables:
+        for i, table in enumerate(tables):
             if not table or len(table) < 2:
                 continue
-            
+
             # First row is typically headers
             headers = [str(cell).strip() if cell else '' for cell in table[0]]
             rows = [[str(cell).strip() if cell else '' for cell in row] for row in table[1:]]
-            
-            # Try to find caption by looking at text above table
-            caption = self._find_caption_for_table(lines, table)
-            
+
+            # Assign caption in order: first caption to first table, second to second, etc.
+            caption = captions[i] if i < len(captions) else ""
+
             extracted.append({
                 'caption': caption,
                 'headers': self.normalize_headers(headers),
                 'rows': rows,
                 'page': page_num
             })
-        
+
         return extracted
     
     def _find_caption_for_table(self, text_lines: List[str], table: List[List]) -> str:

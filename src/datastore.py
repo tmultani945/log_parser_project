@@ -229,7 +229,7 @@ class LogcodeDatastore:
         return [row['dep_table_number'] for row in cursor.fetchall()]
     
     def get_table_rows(self, logcode: str, table_number: str) -> List[Dict]:
-        """Get all rows for a table"""
+        """Get all rows for a table in their original PDF extraction order"""
         cursor = self.conn.cursor()
         cursor.execute('''
             SELECT name, type_name, cnt, off, len, description

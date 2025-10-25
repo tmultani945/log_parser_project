@@ -41,9 +41,10 @@ class QueryEngine:
             List of TableDisplay objects in order (main table first, then dependencies)
         """
         # Normalize logcode format
-        if not logcode.startswith('0x'):
-            logcode = '0x' + logcode
-        logcode = logcode.upper()
+        if not logcode.upper().startswith('0X'):
+            logcode = '0X' + logcode.upper()
+        else:
+            logcode = logcode.upper()
         
         # Get logcode info
         info = self.db.get_logcode_info(logcode)
@@ -147,15 +148,26 @@ class QueryEngine:
             
             # Data rows
             for row in table.rows:
+                # Clean description: remove newlines and extra whitespace
+                description = row.get('description', '')
+                if description:
+                    # Replace newlines with spaces
+                    description = description.replace('\n', ' ').replace('\r', ' ')
+                    # Replace multiple spaces with single space
+                    description = ' '.join(description.split())
+                    # Truncate if too long
+                    if len(description) > 50:
+                        description = description[:47] + '...'
+
                 row_values = [
                     row.get('name', ''),
                     row.get('type_name', ''),
                     row.get('cnt', ''),
                     row.get('off', ''),
                     row.get('len', ''),
-                    row.get('description', '')
+                    description
                 ]
-                
+
                 row_str = " | ".join(
                     str(val).ljust(col_widths[i])
                     for i, val in enumerate(row_values)
@@ -169,23 +181,31 @@ class QueryEngine:
     def _calculate_column_widths(self, table: TableDisplay) -> List[int]:
         """Calculate optimal column widths"""
         widths = [len(h) for h in table.headers]
-        
+
         for row in table.rows:
+            # Clean description for width calculation
+            description = row.get('description', '')
+            if description:
+                description = description.replace('\n', ' ').replace('\r', ' ')
+                description = ' '.join(description.split())
+                if len(description) > 50:
+                    description = description[:47] + '...'
+
             values = [
                 row.get('name', ''),
                 row.get('type_name', ''),
                 row.get('cnt', ''),
                 row.get('off', ''),
                 row.get('len', ''),
-                row.get('description', '')
+                description
             ]
-            
+
             for i, val in enumerate(values):
                 widths[i] = max(widths[i], len(str(val)))
-        
+
         # Cap description width
         widths[5] = min(widths[5], 50)
-        
+
         return widths
     
     def list_all_logcodes(self) -> List[Dict[str, str]]:
