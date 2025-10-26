@@ -211,7 +211,12 @@ class QueryEngine:
     def list_all_logcodes(self) -> List[Dict[str, str]]:
         """List all available logcodes with their names"""
         cursor = self.db.conn.cursor()
-        cursor.execute('SELECT logcode, name, section FROM logcodes ORDER BY section')
+        cursor.execute('''
+            SELECT logcode, name, section FROM logcodes
+            ORDER BY
+                CAST(SUBSTR(section, 1, INSTR(section, '.') - 1) AS INTEGER),
+                CAST(SUBSTR(section, INSTR(section, '.') + 1) AS INTEGER)
+        ''')
         return [dict(row) for row in cursor.fetchall()]
     
     def search_logcode(self, search_term: str) -> List[Dict[str, str]]:
