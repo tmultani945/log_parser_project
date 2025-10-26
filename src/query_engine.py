@@ -65,7 +65,13 @@ class QueryEngine:
         # Get all tables (main + dependencies)
         table_numbers = [main_table_num]
         table_numbers.extend(self._get_all_dependencies(logcode, main_table_num))
-        
+
+        # Sort table numbers numerically (format: "X-Y")
+        def table_sort_key(table_num):
+            parts = table_num.split('-')
+            return (int(parts[0]), int(parts[1]))
+        table_numbers.sort(key=table_sort_key)
+
         # Format tables for display
         result = []
         for table_num in table_numbers:

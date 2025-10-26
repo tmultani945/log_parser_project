@@ -371,9 +371,9 @@ class LogcodeParser:
                 first_table = sorted_tables[0]
                 version_map = self.parse_versions_from_table_rows(first_table, tables_dict)
 
-                # Add version 1 as default (first table is version 1)
+                # Add version 'All' as default (first table is for all versions unless explicitly versioned)
                 if first_table.metadata.table_number not in version_map.values():
-                    version_map['1'] = first_table.metadata.table_number
+                    version_map['All'] = first_table.metadata.table_number
 
                 # Sort versions with smart handling of different types:
                 # 1. Decimal numbers (1, 2, 3...)
