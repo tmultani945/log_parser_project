@@ -7,6 +7,7 @@ Handles table continuations, header deduplication, and caption detection.
 import re
 import fitz  # PyMuPDF
 import pdfplumber
+from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass, field
 
@@ -357,16 +358,27 @@ class PDFExtractor:
 
 
 def test_extractor():
-    """Test the PDF extractor on the uploaded file"""
-    pdf_path = "/mnt/user-data/uploads/80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document-1-31.pdf"
-    
+    """Test the PDF extractor - provide your own PDF path"""
+    import sys
+
+    if len(sys.argv) < 2:
+        print("Usage: python pdf_extractor.py <pdf_path>")
+        print("Example: python pdf_extractor.py ../data/document.pdf")
+        return
+
+    pdf_path = sys.argv[1]
+
+    if not Path(pdf_path).exists():
+        print(f"Error: File not found: {pdf_path}")
+        return
+
     extractor = PDFExtractor(pdf_path)
-    
+
     # Extract all tables
     tables = extractor.extract_all_tables()
-    
+
     print(f"Extracted {len(tables)} tables")
-    
+
     # Show first few tables
     for i, table in enumerate(tables[:5]):
         print(f"\n--- Table {i+1}: {table.metadata.table_number} ---")
