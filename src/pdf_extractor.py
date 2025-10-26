@@ -31,6 +31,15 @@ class ExtractedTable:
     raw_caption: str
 
 
+@dataclass
+class RevisionEntry:
+    """Represents a single revision history entry"""
+    revision: str  # e.g., "AA", "FL"
+    date: str  # e.g., "February 2025"
+    updated_logcodes: List[str] = field(default_factory=list)
+    new_logcodes: List[str] = field(default_factory=list)
+
+
 class PDFExtractor:
     """Extracts structured content from technical PDF documents"""
     
@@ -248,6 +257,103 @@ class PDFExtractor:
                 # This would require context from the parser layer
                 return table
         return None
+
+    def extract_revision_history(self) -> List[RevisionEntry]:
+        """
+        Extract revision history from the PDF.
+        Scans pages starting from page 2 (index 1) until "Contents" is found.
+
+        Returns:
+            List of RevisionEntry objects
+        """
+        revision_entries = []
+
+        # Scan pages starting from page 2 (index 1)
+        for page_num in range(1, min(20, len(self.doc))):  # Limit to first 20 pages
+            page = self.doc[page_num]
+            text = page.get_text()
+
+            # Stop if we reach "Contents" section
+            if re.search(r'^\s*Contents\s*$', text, re.MULTILINE | re.IGNORECASE):
+                break
+
+            # Check if this page has "Revision history" header
+            if page_num == 1 and not re.search(r'Revision\s+history', text, re.IGNORECASE):
+                continue
+
+            # Extract revision entries using pdfplumber for better table parsing
+            page_tables = self.extract_tables_from_page(page_num)
+
+            for table_dict in page_tables:
+                headers = table_dict.get('headers', [])
+                rows = table_dict.get('rows', [])
+
+                # Check if this is the revision history table (3 columns: Revision, Date, Description)
+                if len(headers) >= 3 and self._is_revision_history_table(headers):
+                    # Parse each row
+                    for row in rows:
+                        if len(row) >= 3 and row[0].strip():  # Skip empty rows
+                            entry = self._parse_revision_entry(row)
+                            if entry:
+                                revision_entries.append(entry)
+
+        return revision_entries
+
+    def _is_revision_history_table(self, headers: List[str]) -> bool:
+        """Check if headers match revision history table format"""
+        if len(headers) < 3:
+            return False
+
+        # Normalize and check for expected headers
+        h0 = headers[0].lower().strip()
+        h1 = headers[1].lower().strip()
+        h2 = headers[2].lower().strip()
+
+        return (h0 == 'revision' and h1 == 'date' and h2 == 'description')
+
+    def _parse_revision_entry(self, row: List[str]) -> Optional[RevisionEntry]:
+        """
+        Parse a single revision history row.
+        Extracts revision code, date, and logcodes from description.
+        """
+        if len(row) < 3:
+            return None
+
+        revision = row[0].strip()
+        date = row[1].strip()
+        description = row[2].strip()
+
+        # Skip rows that don't have valid revision codes (letters only)
+        if not revision or not re.match(r'^[A-Z]{1,2}$', revision):
+            return None
+
+        # Parse description to extract logcodes
+        updated_logcodes = []
+        new_logcodes = []
+
+        # Split description into "Updated log codes:" and "New log codes:" sections
+        if 'Updated log codes:' in description:
+            updated_part = description.split('Updated log codes:')[1]
+            if 'New log codes:' in updated_part:
+                updated_part = updated_part.split('New log codes:')[0]
+            # Extract hex codes using regex
+            updated_logcodes = re.findall(r'0x[0-9A-F]+', updated_part, re.IGNORECASE)
+
+        if 'New log codes:' in description:
+            new_part = description.split('New log codes:')[1]
+            # Extract hex codes using regex
+            new_logcodes = re.findall(r'0x[0-9A-F]+', new_part, re.IGNORECASE)
+
+        # Normalize logcodes to uppercase
+        updated_logcodes = [code.upper() for code in updated_logcodes]
+        new_logcodes = [code.upper() for code in new_logcodes]
+
+        return RevisionEntry(
+            revision=revision,
+            date=date,
+            updated_logcodes=updated_logcodes,
+            new_logcodes=new_logcodes
+        )
 
 
 def test_extractor():

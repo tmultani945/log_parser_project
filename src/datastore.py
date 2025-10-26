@@ -8,7 +8,7 @@ import json
 from typing import Dict, List, Optional
 from pathlib import Path
 from parser import LogcodeData, LogcodeParser
-from pdf_extractor import ExtractedTable
+from pdf_extractor import ExtractedTable, RevisionEntry
 
 
 class LogcodeDatastore:
@@ -102,13 +102,40 @@ class LogcodeDatastore:
                 UNIQUE(logcode, table_number, dep_table_number)
             )
         ''')
-        
+
+        # Revision history table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS revisions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                revision TEXT NOT NULL UNIQUE,
+                date TEXT NOT NULL,
+                doc_id INTEGER,
+                FOREIGN KEY (doc_id) REFERENCES documents(doc_id)
+            )
+        ''')
+
+        # Revision logcodes table (many-to-many with status)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS revision_logcodes (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                revision TEXT NOT NULL,
+                logcode TEXT NOT NULL,
+                status TEXT NOT NULL CHECK(status IN ('updated', 'new')),
+                FOREIGN KEY (revision) REFERENCES revisions(revision),
+                UNIQUE(revision, logcode, status)
+            )
+        ''')
+
         # Create indexes
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_logcode ON logcodes(logcode)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_version ON versions(logcode, version)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_table ON tables(logcode, table_number)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_rows ON table_rows(logcode, table_number)')
-        
+        cursor.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_table_row ON table_rows(logcode, table_number, row_index)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_revision ON revisions(revision)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_revision_date ON revisions(date)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_revision_logcodes ON revision_logcodes(revision, logcode)')
+
         self.conn.commit()
     
     def add_document(self, source_path: str) -> int:
@@ -237,6 +264,145 @@ class LogcodeDatastore:
             WHERE logcode = ? AND table_number = ?
             ORDER BY row_index
         ''', (logcode, table_number))
+        return [dict(row) for row in cursor.fetchall()]
+
+    def store_revision_history(self, revisions: List[RevisionEntry], doc_id: int):
+        """Store revision history entries"""
+        cursor = self.conn.cursor()
+
+        for entry in revisions:
+            # Store revision
+            cursor.execute('''
+                INSERT OR REPLACE INTO revisions (revision, date, doc_id)
+                VALUES (?, ?, ?)
+            ''', (entry.revision, entry.date, doc_id))
+
+            # Store updated logcodes
+            for logcode in entry.updated_logcodes:
+                cursor.execute('''
+                    INSERT OR IGNORE INTO revision_logcodes (revision, logcode, status)
+                    VALUES (?, ?, 'updated')
+                ''', (entry.revision, logcode))
+
+            # Store new logcodes
+            for logcode in entry.new_logcodes:
+                cursor.execute('''
+                    INSERT OR IGNORE INTO revision_logcodes (revision, logcode, status)
+                    VALUES (?, ?, 'new')
+                ''', (entry.revision, logcode))
+
+        self.conn.commit()
+
+    def get_revisions_by_date(self, month: str, year: str) -> List[Dict]:
+        """
+        Get all revisions for a given month and year.
+
+        Args:
+            month: Month name (e.g., "February", "March")
+            year: Year as string (e.g., "2025", "2024")
+
+        Returns:
+            List of dicts with revision, date, updated_logcodes, new_logcodes
+        """
+        cursor = self.conn.cursor()
+
+        # Search for date pattern "Month Year"
+        date_pattern = f"{month} {year}"
+
+        cursor.execute('''
+            SELECT revision, date FROM revisions WHERE date = ?
+        ''', (date_pattern,))
+
+        results = []
+        for row in cursor.fetchall():
+            revision = row['revision']
+            date = row['date']
+
+            # Get updated logcodes
+            cursor.execute('''
+                SELECT logcode FROM revision_logcodes
+                WHERE revision = ? AND status = 'updated'
+                ORDER BY logcode
+            ''', (revision,))
+            updated = [r['logcode'] for r in cursor.fetchall()]
+
+            # Get new logcodes
+            cursor.execute('''
+                SELECT logcode FROM revision_logcodes
+                WHERE revision = ? AND status = 'new'
+                ORDER BY logcode
+            ''', (revision,))
+            new = [r['logcode'] for r in cursor.fetchall()]
+
+            results.append({
+                'revision': revision,
+                'date': date,
+                'updated_logcodes': updated,
+                'new_logcodes': new
+            })
+
+        return results
+
+    def get_revisions_by_code(self, revision_code: str) -> Optional[Dict]:
+        """
+        Get revision details by revision code (e.g., "FK", "FL").
+
+        Returns:
+            Dict with revision, date, updated_logcodes, new_logcodes or None
+        """
+        cursor = self.conn.cursor()
+
+        cursor.execute('''
+            SELECT revision, date FROM revisions WHERE revision = ?
+        ''', (revision_code.upper(),))
+
+        row = cursor.fetchone()
+        if not row:
+            return None
+
+        revision = row['revision']
+        date = row['date']
+
+        # Get updated logcodes
+        cursor.execute('''
+            SELECT logcode FROM revision_logcodes
+            WHERE revision = ? AND status = 'updated'
+            ORDER BY logcode
+        ''', (revision,))
+        updated = [r['logcode'] for r in cursor.fetchall()]
+
+        # Get new logcodes
+        cursor.execute('''
+            SELECT logcode FROM revision_logcodes
+            WHERE revision = ? AND status = 'new'
+            ORDER BY logcode
+        ''', (revision,))
+        new = [r['logcode'] for r in cursor.fetchall()]
+
+        return {
+            'revision': revision,
+            'date': date,
+            'updated_logcodes': updated,
+            'new_logcodes': new
+        }
+
+    def search_revisions_by_logcode(self, logcode: str) -> List[Dict]:
+        """
+        Find all revisions that updated or added a specific logcode.
+
+        Returns:
+            List of dicts with revision, date, status (updated/new)
+        """
+        cursor = self.conn.cursor()
+
+        cursor.execute('''
+            SELECT r.revision, r.date, rl.status
+            FROM revisions r
+            JOIN revision_logcodes rl ON r.revision = rl.revision
+            WHERE rl.logcode = ?
+            ORDER BY r.id
+        ''', (logcode.upper(),))
+
         return [dict(row) for row in cursor.fetchall()]
     
     def export_to_json(self, output_path: str):
