@@ -101,6 +101,21 @@ class LogcodeParser:
 
         return results
     
+    def is_version_table(self, table: ExtractedTable) -> bool:
+        """
+        Detect if a table is a version table by checking for 'Cond' column header.
+
+        Version tables uniquely contain a 'Cond' (Condition) column that specifies
+        which version condition applies to each row.
+
+        Returns:
+            True if table has 'Cond' column header, False otherwise
+        """
+        for header in table.headers:
+            if header.lower().strip() == 'cond':
+                return True
+        return False
+
     def parse_versions_from_table_rows(self, table: ExtractedTable, tables_dict: Dict[str, ExtractedTable]) -> Dict[str, str]:
         """
         Parse version mappings from table rows.
@@ -294,23 +309,21 @@ class LogcodeParser:
                             break
 
             # Strategy 3: Fallback - find first table in same major section on/after this page
-            # that comes after previous logcode's range
+            # that comes after previous logcode's first table
             if section['first_table'] is None:
-                prev_last_minor = -1
+                prev_first_minor = -1
                 if i > 0 and logcode_sections[i-1].get('first_table'):
                     prev_parts = logcode_sections[i-1]['first_table'].split('-')
                     if len(prev_parts) == 2 and prev_parts[0] == section_major:
-                        # Find the last table assigned to previous logcode
-                        # by looking at all tables in that major section
-                        for t in all_tables:
-                            t_major, t_minor = t.metadata.table_number.split('-')
-                            if t_major == section_major:
-                                prev_last_minor = max(prev_last_minor, int(t_minor))
+                        # Get the previous logcode's first table number
+                        prev_first_minor = int(prev_parts[1])
 
+                # Find first table in same major section that comes after previous section's first table
+                # and is on or after this section's page
                 for table in sorted(all_tables, key=lambda t: int(t.metadata.table_number.split('-')[1])):
                     table_major, table_minor = table.metadata.table_number.split('-')
                     if table_major == section_major and table.metadata.page_start >= section['page']:
-                        if int(table_minor) > prev_last_minor:
+                        if int(table_minor) > prev_first_minor:
                             section['first_table'] = table.metadata.table_number
                             break
 
@@ -364,15 +377,20 @@ class LogcodeParser:
                 if deps:
                     dependencies[tbl_num] = deps
 
-            # Parse version mappings from the first table's rows
+            # Parse version mappings by scanning ALL tables for version tables (those with 'Cond' column)
             version_map = {}
             versions = []
             if sorted_tables:
-                first_table = sorted_tables[0]
-                version_map = self.parse_versions_from_table_rows(first_table, tables_dict)
+                # Scan all tables to find version tables (tables with 'Cond' column header)
+                for tbl in sorted_tables:
+                    if self.is_version_table(tbl):
+                        # Parse version information from this version table
+                        tbl_versions = self.parse_versions_from_table_rows(tbl, tables_dict)
+                        version_map.update(tbl_versions)
 
-                # Add version 'All' as default (first table is for all versions unless explicitly versioned)
-                if first_table.metadata.table_number not in version_map.values():
+                # Add version 'All' as default if no versions found or first table not mapped
+                first_table = sorted_tables[0]
+                if not version_map or first_table.metadata.table_number not in version_map.values():
                     version_map['All'] = first_table.metadata.table_number
 
                 # Sort versions with smart handling of different types:

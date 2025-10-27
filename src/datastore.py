@@ -191,7 +191,7 @@ class LogcodeDatastore:
                 description = row[5] if len(row) > 5 else None
                 
                 cursor.execute('''
-                    INSERT INTO table_rows 
+                    INSERT OR REPLACE INTO table_rows
                     (logcode, table_number, row_index, name, type_name, cnt, off, len, description)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
@@ -225,7 +225,7 @@ class LogcodeDatastore:
         cursor = self.conn.cursor()
         cursor.execute('''
             SELECT logcode, name, section FROM logcodes WHERE logcode = ?
-        ''', (logcode,))
+        ''', (logcode.upper(),))
         row = cursor.fetchone()
         return dict(row) if row else None
     
@@ -234,7 +234,7 @@ class LogcodeDatastore:
         cursor = self.conn.cursor()
         cursor.execute('''
             SELECT version FROM versions WHERE logcode = ? ORDER BY CAST(version AS INTEGER)
-        ''', (logcode,))
+        ''', (logcode.upper(),))
         return [row['version'] for row in cursor.fetchall()]
     
     def get_table_for_version(self, logcode: str, version: str) -> Optional[str]:
@@ -242,7 +242,7 @@ class LogcodeDatastore:
         cursor = self.conn.cursor()
         cursor.execute('''
             SELECT table_number FROM versions WHERE logcode = ? AND version = ?
-        ''', (logcode, version))
+        ''', (logcode.upper(), version))
         row = cursor.fetchone()
         return row['table_number'] if row else None
     
@@ -250,9 +250,9 @@ class LogcodeDatastore:
         """Get all dependencies for a table"""
         cursor = self.conn.cursor()
         cursor.execute('''
-            SELECT dep_table_number FROM table_deps 
+            SELECT dep_table_number FROM table_deps
             WHERE logcode = ? AND table_number = ?
-        ''', (logcode, table_number))
+        ''', (logcode.upper(), table_number))
         return [row['dep_table_number'] for row in cursor.fetchall()]
     
     def get_table_rows(self, logcode: str, table_number: str) -> List[Dict]:
@@ -263,7 +263,7 @@ class LogcodeDatastore:
             FROM table_rows
             WHERE logcode = ? AND table_number = ?
             ORDER BY row_index
-        ''', (logcode, table_number))
+        ''', (logcode.upper(), table_number))
         return [dict(row) for row in cursor.fetchall()]
 
     def store_revision_history(self, revisions: List[RevisionEntry], doc_id: int):

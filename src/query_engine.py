@@ -111,7 +111,7 @@ class QueryEngine:
         cursor = self.db.conn.cursor()
         cursor.execute('''
             SELECT title FROM tables WHERE logcode = ? AND table_number = ?
-        ''', (logcode, table_number))
+        ''', (logcode.upper(), table_number))
         table_row = cursor.fetchone()
         title = table_row['title'] if table_row else table_number
         
@@ -228,20 +228,21 @@ class QueryEngine:
     def search_logcode(self, search_term: str) -> List[Dict[str, str]]:
         """
         Search for logcodes by code or name.
-        
+
         Args:
             search_term: Partial logcode or name to search for
-        
+
         Returns:
             List of matching logcodes
         """
         cursor = self.db.conn.cursor()
+        search_upper = search_term.upper()
         cursor.execute('''
-            SELECT logcode, name, section 
-            FROM logcodes 
-            WHERE logcode LIKE ? OR name LIKE ?
+            SELECT logcode, name, section
+            FROM logcodes
+            WHERE logcode LIKE ? OR UPPER(name) LIKE ?
             ORDER BY logcode
-        ''', (f'%{search_term}%', f'%{search_term}%'))
+        ''', (f'%{search_upper}%', f'%{search_upper}%'))
         return [dict(row) for row in cursor.fetchall()]
     
     def close(self):

@@ -51,13 +51,19 @@ class PDFExtractor:
         self.pdf_path = pdf_path
         self.doc = fitz.open(pdf_path)
         self.plumber_pdf = pdfplumber.open(pdf_path)
-        
+
+    def close(self):
+        """Explicitly close PDF resources to free memory"""
+        if hasattr(self, 'doc') and self.doc:
+            self.doc.close()
+            self.doc = None
+        if hasattr(self, 'plumber_pdf') and self.plumber_pdf:
+            self.plumber_pdf.close()
+            self.plumber_pdf = None
+
     def __del__(self):
         """Cleanup resources"""
-        if hasattr(self, 'doc'):
-            self.doc.close()
-        if hasattr(self, 'plumber_pdf'):
-            self.plumber_pdf.close()
+        self.close()
     
     def extract_section_context(self, page_num: int) -> Optional[Dict[str, str]]:
         """
