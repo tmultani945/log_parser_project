@@ -1,0 +1,97 @@
+{
+  "logcode": {
+    "id_hex": "0xB823",
+    "id_decimal": 47139,
+    "name": "Nr5g_RrcServingCellInfo"
+  },
+  "version": {
+    "raw": "0x00030003",
+    "resolved_layout": "4-4"
+  },
+  "header": {
+    "length_bytes": 61,
+    "sequence": 17288308,
+    "timestamp_raw": 4220039016
+  },
+  "fields": {
+    "Standby Mode": {
+      "type": "Uint8",
+      "raw": 1,
+      "description": "Device standby mode"
+    },
+    "DDS sub": {
+      "type": "Bool",
+      "raw": 1,
+      "decoded": "true",
+      "description": "DDS subscription flag"
+    },
+    "HST mode": {
+      "type": "Bool",
+      "raw": 0,
+      "decoded": "false",
+      "description": "HST mode flag"
+    },
+    "Physical Cell ID": {
+      "type": "Uint16",
+      "raw": 392,
+      "description": "Physical cell identifier"
+    },
+    "DL Frequency": {
+      "type": "Uint32",
+      "raw": 899622,
+      "description": "Downlink frequency in kHz"
+    },
+    "UL Frequency": {
+      "type": "Uint32",
+      "raw": 646730,
+      "description": "Uplink frequency in kHz"
+    },
+    "DL Bandwidth_MHz": {
+      "type": "Uint16",
+      "raw": 100,
+      "description": "Downlink bandwidth in MHz"
+    },
+    "UL Bandwidth_MHz": {
+      "type": "Uint16",
+      "raw": 100,
+      "description": "Uplink bandwidth in MHz"
+    },
+    "TAC": {
+      "type": "Uint32",
+      "raw": 899622,
+      "description": "Tracking Area Code"
+    },
+    "NR Cell Global Identity": {
+      "type": "Uint64",
+      "raw": 1,
+      "description": "NR cell global identity"
+    },
+    "PLMN MCC": {
+      "type": "Uint16",
+      "raw": 311,
+      "description": "Mobile Country Code"
+    },
+    "PLMN MNC": {
+      "type": "Uint16",
+      "raw": 480,
+      "description": "Mobile Network Code"
+    },
+    "Num MNC Digits": {
+      "type": "Uint8",
+      "raw": 3,
+      "description": "Number of MNC digits"
+    },
+    "Freq Band Indicator": {
+      "type": "Uint16",
+      "raw": 77,
+      "description": "NR frequency band indicator"
+    }
+  },
+  "metadata": {
+    "section": "4.3",
+    "total_fields": 14,
+    "decode_time_ms": 3456.78,
+    "cache_enabled": true,
+    "cache_size": 1
+  }
+}

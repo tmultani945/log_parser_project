@@ -1,0 +1,125 @@
+{
+  "logcode": {
+    "id_hex": "0xB888",
+    "id_decimal": 47240,
+    "name": "NR5G MAC PDSCH Stats"
+  },
+  "version": {
+    "raw": "0x00030000",
+    "resolved_layout": "7-2802"
+  },
+  "header": {
+    "length_bytes": 104,
+    "sequence": 17213173,
+    "timestamp_raw": 2506050888
+  },
+  "fields": {
+    "Num Records": {
+      "type": "Uint8",
+      "raw": 1,
+      "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct"
+    },
+    "Num Total Slots": {
+      "type": "Uint32",
+      "raw": 16777216,
+      "description": ""
+    },
+    "Flush Gap Count": {
+      "type": "Uint8",
+      "raw": 0,
+      "description": "sync frame count since last pdsch stats log flush"
+    },
+    "Num Total Slots Raw": {
+      "type": "Uint32",
+      "raw": 2364,
+      "description": "Total number of slots"
+    },
+    "Num CA": {
+      "type": "Uint32",
+      "raw": 3,
+      "description": "Total number of active carriers in pdsch_stats_ca"
+    },
+    "Cumulative Bitmask": {
+      "type": "Uint32",
+      "raw": 7,
+      "description": "Bitmask which tracks all currently and previously active carriers.\nThis is because we want to display stats for previously active\ncarriers even after they are deactivated."
+    },
+    "Carrier ID": {
+      "type": "Uint32",
+      "raw": 0,
+      "description": "Carrier ID"
+    },
+    "Num Slots Elapsed": {
+      "type": "Uint32",
+      "raw": 1181866,
+      "description": "Number of slots elapsed"
+    },
+    "Num PDSCH Decode": {
+      "type": "Uint32",
+      "raw": 9512,
+      "description": "Number of PDSCH decode completed per CA. This equals\ntotal number of TB decoded. It is the sum of crc_pass + crc_fail\n+ tb_discard"
+    },
+    "Num CRC Pass TB": {
+      "type": "Uint32",
+      "raw": 9079,
+      "description": "Number of CRC pass TB per CA"
+    },
+    "Num CRC Fail TB": {
+      "type": "Uint32",
+      "raw": 433,
+      "description": "Number of CRC fail TB per CA"
+    },
+    "Num ReTx": {
+      "type": "Uint32",
+      "raw": 328,
+      "description": "Number of TB retransmissions per CA"
+    },
+    "ACK As NACK": {
+      "type": "Uint32",
+      "raw": 52,
+      "description": "ACK as NACK (duplicate)"
+    },
+    "HARQ Failure": {
+      "type": "Uint32",
+      "raw": 4,
+      "description": "HARQ failure"
+    },
+    "CRC Pass TB Bytes": {
+      "type": "Uint64",
+      "raw": 13903873,
+      "description": "Number of CRC pass TB bytes per CA"
+    },
+    "CRC Fail TB Bytes": {
+      "type": "Uint64",
+      "raw": 2625492,
+      "description": "Number of CRC fail TB bytes per CA"
+    },
+    "TB Bytes": {
+      "type": "Uint64",
+      "raw": 16529365,
+      "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes"
+    },
+    "Padding Bytes": {
+      "type": "Uint64",
+      "raw": 964704,
+      "description": "Total number of padding bytes"
+    },
+    "ReTx Bytes": {
+      "type": "Uint64",
+      "raw": 2659707,
+      "description": "Total number of re-transmit bytes"
+    },
+    "BLER": {
+      "type": "Float64",
+      "raw": 5076075818254336,
+      "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\""
+    }
+  },
+  "metadata": {
+    "section": "7.6",
+    "total_fields": 20,
+    "decode_time_ms": 27112.7,
+    "cache_enabled": true,
+    "cache_size": 1
+  }
+}

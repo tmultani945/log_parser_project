@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python:*)",
-      "Bash(tee:*)"
+      "Bash(tee:*)",
+      "Read(//c/Users/proca/ICD_code_for_version_ch/**)",
+      "Bash(sqlite3:*)"
     ],
     "deny": [],
     "ask": []
