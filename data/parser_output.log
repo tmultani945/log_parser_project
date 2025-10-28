@@ -1,0 +1,777 @@
+2025-10-26 17:04:32,436 - INFO - Starting parse of 5209 pages (batch size: 100)
+2025-10-26 17:04:32,437 - INFO - PDF: ../data/input/80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf
+2025-10-26 17:04:32,437 - INFO - Database: ../data/parsed_logcodes.db
+2025-10-26 17:04:32,437 - INFO - 
+=== PHASE 1: Table Extraction ===
+2025-10-26 17:04:32,437 - INFO - Processing batch: pages 0-99 (100 pages)
+2025-10-26 17:04:32,437 - INFO - Page 0/5209 (0.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:04:37,469 - INFO - Page 10/5209 (0.2%) | Avg: 0.46s/page | ETA: 39.6 min
+2025-10-26 17:04:38,647 - INFO - Page 20/5209 (0.4%) | Avg: 0.30s/page | ETA: 25.6 min
+2025-10-26 17:04:40,531 - INFO - Page 30/5209 (0.6%) | Avg: 0.26s/page | ETA: 22.5 min
+2025-10-26 17:04:42,589 - INFO - Page 40/5209 (0.8%) | Avg: 0.25s/page | ETA: 21.3 min
+2025-10-26 17:04:44,371 - INFO - Page 50/5209 (1.0%) | Avg: 0.23s/page | ETA: 20.1 min
+2025-10-26 17:04:45,958 - INFO - Page 60/5209 (1.2%) | Avg: 0.22s/page | ETA: 19.0 min
+2025-10-26 17:04:47,583 - INFO - Page 70/5209 (1.3%) | Avg: 0.21s/page | ETA: 18.3 min
+2025-10-26 17:04:49,238 - INFO - Page 80/5209 (1.5%) | Avg: 0.21s/page | ETA: 17.7 min
+2025-10-26 17:04:51,536 - INFO - Page 90/5209 (1.7%) | Avg: 0.21s/page | ETA: 17.9 min
+2025-10-26 17:04:53,074 - INFO - Batch complete: 100 pages in 20.6s (0.21s/page), 316 tables found
+2025-10-26 17:04:53,075 - INFO - Checkpoint saved at page 100
+2025-10-26 17:04:53,075 - INFO - Processing batch: pages 100-199 (100 pages)
+2025-10-26 17:04:53,075 - INFO - Page 100/5209 (1.9%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:04:55,075 - INFO - Page 110/5209 (2.1%) | Avg: 0.18s/page | ETA: 15.4 min
+2025-10-26 17:04:56,785 - INFO - Page 120/5209 (2.3%) | Avg: 0.18s/page | ETA: 15.0 min
+2025-10-26 17:04:58,334 - INFO - Page 130/5209 (2.5%) | Avg: 0.17s/page | ETA: 14.4 min
+2025-10-26 17:04:59,991 - INFO - Page 140/5209 (2.7%) | Avg: 0.17s/page | ETA: 14.2 min
+2025-10-26 17:05:01,348 - INFO - Page 150/5209 (2.9%) | Avg: 0.16s/page | ETA: 13.7 min
+2025-10-26 17:05:02,673 - INFO - Page 160/5209 (3.1%) | Avg: 0.16s/page | ETA: 13.2 min
+2025-10-26 17:05:04,006 - INFO - Page 170/5209 (3.3%) | Avg: 0.15s/page | ETA: 12.9 min
+2025-10-26 17:05:05,721 - INFO - Page 180/5209 (3.5%) | Avg: 0.16s/page | ETA: 13.1 min
+2025-10-26 17:05:07,933 - INFO - Page 190/5209 (3.6%) | Avg: 0.16s/page | ETA: 13.7 min
+2025-10-26 17:05:10,316 - INFO - Batch complete: 100 pages in 17.2s (0.17s/page), 270 tables found
+2025-10-26 17:05:10,317 - INFO - Checkpoint saved at page 200
+2025-10-26 17:05:10,317 - INFO - Processing batch: pages 200-299 (100 pages)
+2025-10-26 17:05:10,317 - INFO - Page 200/5209 (3.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:05:12,713 - INFO - Page 210/5209 (4.0%) | Avg: 0.22s/page | ETA: 18.1 min
+2025-10-26 17:05:14,451 - INFO - Page 220/5209 (4.2%) | Avg: 0.20s/page | ETA: 16.4 min
+2025-10-26 17:05:16,237 - INFO - Page 230/5209 (4.4%) | Avg: 0.19s/page | ETA: 15.8 min
+2025-10-26 17:05:18,021 - INFO - Page 240/5209 (4.6%) | Avg: 0.19s/page | ETA: 15.6 min
+2025-10-26 17:05:19,869 - INFO - Page 250/5209 (4.8%) | Avg: 0.19s/page | ETA: 15.5 min
+2025-10-26 17:05:22,297 - INFO - Page 260/5209 (5.0%) | Avg: 0.20s/page | ETA: 16.2 min
+2025-10-26 17:05:24,088 - INFO - Page 270/5209 (5.2%) | Avg: 0.19s/page | ETA: 16.0 min
+2025-10-26 17:05:25,934 - INFO - Page 280/5209 (5.4%) | Avg: 0.19s/page | ETA: 15.8 min
+2025-10-26 17:05:27,664 - INFO - Page 290/5209 (5.6%) | Avg: 0.19s/page | ETA: 15.6 min
+2025-10-26 17:05:29,442 - INFO - Batch complete: 100 pages in 19.1s (0.19s/page), 399 tables found
+2025-10-26 17:05:29,444 - INFO - Checkpoint saved at page 300
+2025-10-26 17:05:29,444 - INFO - Processing batch: pages 300-399 (100 pages)
+2025-10-26 17:05:29,445 - INFO - Page 300/5209 (5.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:05:31,332 - INFO - Page 310/5209 (6.0%) | Avg: 0.17s/page | ETA: 14.0 min
+2025-10-26 17:05:33,989 - INFO - Page 320/5209 (6.1%) | Avg: 0.22s/page | ETA: 17.6 min
+2025-10-26 17:05:35,787 - INFO - Page 330/5209 (6.3%) | Avg: 0.20s/page | ETA: 16.6 min
+2025-10-26 17:05:37,625 - INFO - Page 340/5209 (6.5%) | Avg: 0.20s/page | ETA: 16.2 min
+2025-10-26 17:05:39,498 - INFO - Page 350/5209 (6.7%) | Avg: 0.20s/page | ETA: 16.0 min
+2025-10-26 17:05:41,568 - INFO - Page 360/5209 (6.9%) | Avg: 0.20s/page | ETA: 16.1 min
+2025-10-26 17:05:43,347 - INFO - Page 370/5209 (7.1%) | Avg: 0.20s/page | ETA: 15.8 min
+2025-10-26 17:05:45,210 - INFO - Page 380/5209 (7.3%) | Avg: 0.19s/page | ETA: 15.7 min
+2025-10-26 17:05:48,147 - INFO - Page 390/5209 (7.5%) | Avg: 0.21s/page | ETA: 16.5 min
+2025-10-26 17:05:49,754 - INFO - Batch complete: 100 pages in 20.3s (0.20s/page), 436 tables found
+2025-10-26 17:05:49,755 - INFO - Checkpoint saved at page 400
+2025-10-26 17:05:49,756 - INFO - Processing batch: pages 400-499 (100 pages)
+2025-10-26 17:05:49,756 - INFO - Page 400/5209 (7.7%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:05:51,442 - INFO - Page 410/5209 (7.9%) | Avg: 0.15s/page | ETA: 12.3 min
+2025-10-26 17:05:53,053 - INFO - Page 420/5209 (8.1%) | Avg: 0.16s/page | ETA: 12.5 min
+2025-10-26 17:05:54,611 - INFO - Page 430/5209 (8.3%) | Avg: 0.16s/page | ETA: 12.5 min
+2025-10-26 17:05:56,315 - INFO - Page 440/5209 (8.4%) | Avg: 0.16s/page | ETA: 12.7 min
+2025-10-26 17:05:58,026 - INFO - Page 450/5209 (8.6%) | Avg: 0.16s/page | ETA: 12.9 min
+2025-10-26 17:05:59,577 - INFO - Page 460/5209 (8.8%) | Avg: 0.16s/page | ETA: 12.7 min
+2025-10-26 17:06:01,235 - INFO - Page 470/5209 (9.0%) | Avg: 0.16s/page | ETA: 12.8 min
+2025-10-26 17:06:04,130 - INFO - Page 480/5209 (9.2%) | Avg: 0.18s/page | ETA: 14.0 min
+2025-10-26 17:06:05,643 - INFO - Page 490/5209 (9.4%) | Avg: 0.17s/page | ETA: 13.7 min
+2025-10-26 17:06:07,315 - INFO - Batch complete: 100 pages in 17.6s (0.18s/page), 421 tables found
+2025-10-26 17:06:07,317 - INFO - Checkpoint saved at page 500
+2025-10-26 17:06:07,317 - INFO - Processing batch: pages 500-599 (100 pages)
+2025-10-26 17:06:07,317 - INFO - Page 500/5209 (9.6%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:06:09,152 - INFO - Page 510/5209 (9.8%) | Avg: 0.17s/page | ETA: 13.1 min
+2025-10-26 17:06:10,875 - INFO - Page 520/5209 (10.0%) | Avg: 0.17s/page | ETA: 13.2 min
+2025-10-26 17:06:12,755 - INFO - Page 530/5209 (10.2%) | Avg: 0.18s/page | ETA: 13.7 min
+2025-10-26 17:06:14,346 - INFO - Page 540/5209 (10.4%) | Avg: 0.17s/page | ETA: 13.3 min
+2025-10-26 17:06:15,766 - INFO - Page 550/5209 (10.6%) | Avg: 0.17s/page | ETA: 12.9 min
+2025-10-26 17:06:16,949 - INFO - Page 560/5209 (10.8%) | Avg: 0.16s/page | ETA: 12.2 min
+2025-10-26 17:06:18,231 - INFO - Page 570/5209 (10.9%) | Avg: 0.15s/page | ETA: 11.9 min
+2025-10-26 17:06:19,606 - INFO - Page 580/5209 (11.1%) | Avg: 0.15s/page | ETA: 11.7 min
+2025-10-26 17:06:22,680 - INFO - Page 590/5209 (11.3%) | Avg: 0.17s/page | ETA: 13.0 min
+2025-10-26 17:06:24,214 - INFO - Batch complete: 100 pages in 16.9s (0.17s/page), 385 tables found
+2025-10-26 17:06:24,215 - INFO - Checkpoint saved at page 600
+2025-10-26 17:06:24,215 - INFO - Processing batch: pages 600-699 (100 pages)
+2025-10-26 17:06:24,215 - INFO - Page 600/5209 (11.5%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:06:25,670 - INFO - Page 610/5209 (11.7%) | Avg: 0.13s/page | ETA: 10.1 min
+2025-10-26 17:06:27,296 - INFO - Page 620/5209 (11.9%) | Avg: 0.15s/page | ETA: 11.2 min
+2025-10-26 17:06:28,734 - INFO - Page 630/5209 (12.1%) | Avg: 0.15s/page | ETA: 11.1 min
+2025-10-26 17:06:30,288 - INFO - Page 640/5209 (12.3%) | Avg: 0.15s/page | ETA: 11.3 min
+2025-10-26 17:06:31,621 - INFO - Page 650/5209 (12.5%) | Avg: 0.15s/page | ETA: 11.0 min
+2025-10-26 17:06:33,156 - INFO - Page 660/5209 (12.7%) | Avg: 0.15s/page | ETA: 11.1 min
+2025-10-26 17:06:34,637 - INFO - Page 670/5209 (12.9%) | Avg: 0.15s/page | ETA: 11.1 min
+2025-10-26 17:06:36,255 - INFO - Page 680/5209 (13.1%) | Avg: 0.15s/page | ETA: 11.2 min
+2025-10-26 17:06:37,730 - INFO - Page 690/5209 (13.2%) | Avg: 0.15s/page | ETA: 11.2 min
+2025-10-26 17:06:39,280 - INFO - Batch complete: 100 pages in 15.1s (0.15s/page), 288 tables found
+2025-10-26 17:06:39,281 - INFO - Checkpoint saved at page 700
+2025-10-26 17:06:39,281 - INFO - Processing batch: pages 700-799 (100 pages)
+2025-10-26 17:06:39,281 - INFO - Page 700/5209 (13.4%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:06:42,848 - INFO - Page 710/5209 (13.6%) | Avg: 0.32s/page | ETA: 24.3 min
+2025-10-26 17:06:44,367 - INFO - Page 720/5209 (13.8%) | Avg: 0.24s/page | ETA: 18.1 min
+2025-10-26 17:06:45,834 - INFO - Page 730/5209 (14.0%) | Avg: 0.21s/page | ETA: 15.8 min
+2025-10-26 17:06:47,385 - INFO - Page 740/5209 (14.2%) | Avg: 0.20s/page | ETA: 14.7 min
+2025-10-26 17:06:48,863 - INFO - Page 750/5209 (14.4%) | Avg: 0.19s/page | ETA: 14.0 min
+2025-10-26 17:06:50,336 - INFO - Page 760/5209 (14.6%) | Avg: 0.18s/page | ETA: 13.4 min
+2025-10-26 17:06:51,899 - INFO - Page 770/5209 (14.8%) | Avg: 0.18s/page | ETA: 13.1 min
+2025-10-26 17:06:53,363 - INFO - Page 780/5209 (15.0%) | Avg: 0.17s/page | ETA: 12.8 min
+2025-10-26 17:06:54,902 - INFO - Page 790/5209 (15.2%) | Avg: 0.17s/page | ETA: 12.6 min
+2025-10-26 17:06:56,391 - INFO - Batch complete: 100 pages in 17.1s (0.17s/page), 226 tables found
+2025-10-26 17:06:56,392 - INFO - Checkpoint saved at page 800
+2025-10-26 17:06:56,393 - INFO - Processing batch: pages 800-899 (100 pages)
+2025-10-26 17:06:56,393 - INFO - Page 800/5209 (15.4%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:06:57,911 - INFO - Page 810/5209 (15.6%) | Avg: 0.14s/page | ETA: 10.1 min
+2025-10-26 17:06:59,295 - INFO - Page 820/5209 (15.7%) | Avg: 0.14s/page | ETA: 10.1 min
+2025-10-26 17:07:00,817 - INFO - Page 830/5209 (15.9%) | Avg: 0.14s/page | ETA: 10.4 min
+2025-10-26 17:07:02,151 - INFO - Page 840/5209 (16.1%) | Avg: 0.14s/page | ETA: 10.2 min
+2025-10-26 17:07:03,659 - INFO - Page 850/5209 (16.3%) | Avg: 0.14s/page | ETA: 10.4 min
+2025-10-26 17:07:07,062 - INFO - Page 860/5209 (16.5%) | Avg: 0.17s/page | ETA: 12.7 min
+2025-10-26 17:07:08,504 - INFO - Page 870/5209 (16.7%) | Avg: 0.17s/page | ETA: 12.3 min
+2025-10-26 17:07:11,923 - INFO - Page 880/5209 (16.9%) | Avg: 0.19s/page | ETA: 13.8 min
+2025-10-26 17:08:52,142 - INFO - Page 890/5209 (17.1%) | Avg: 1.27s/page | ETA: 91.6 min
+2025-10-26 17:10:19,759 - INFO - Batch complete: 100 pages in 203.4s (2.03s/page), 225 tables found
+2025-10-26 17:10:19,761 - INFO - Checkpoint saved at page 900
+2025-10-26 17:10:19,761 - INFO - Processing batch: pages 900-999 (100 pages)
+2025-10-26 17:10:19,762 - INFO - Page 900/5209 (17.3%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:10:21,250 - INFO - Page 910/5209 (17.5%) | Avg: 0.14s/page | ETA: 9.7 min
+2025-10-26 17:10:22,692 - INFO - Page 920/5209 (17.7%) | Avg: 0.14s/page | ETA: 10.0 min
+2025-10-26 17:10:24,107 - INFO - Page 930/5209 (17.9%) | Avg: 0.14s/page | ETA: 10.0 min
+2025-10-26 17:10:25,470 - INFO - Page 940/5209 (18.0%) | Avg: 0.14s/page | ETA: 9.9 min
+2025-10-26 17:10:26,868 - INFO - Page 950/5209 (18.2%) | Avg: 0.14s/page | ETA: 9.9 min
+2025-10-26 17:10:28,746 - INFO - Page 960/5209 (18.4%) | Avg: 0.15s/page | ETA: 10.4 min
+2025-10-26 17:10:30,929 - INFO - Page 970/5209 (18.6%) | Avg: 0.16s/page | ETA: 11.1 min
+2025-10-26 17:10:32,343 - INFO - Page 980/5209 (18.8%) | Avg: 0.16s/page | ETA: 10.9 min
+2025-10-26 17:10:33,863 - INFO - Page 990/5209 (19.0%) | Avg: 0.15s/page | ETA: 10.9 min
+2025-10-26 17:10:35,574 - INFO - Batch complete: 100 pages in 15.8s (0.16s/page), 232 tables found
+2025-10-26 17:10:35,576 - INFO - Checkpoint saved at page 1000
+2025-10-26 17:10:35,576 - INFO - Processing batch: pages 1000-1099 (100 pages)
+2025-10-26 17:10:35,576 - INFO - Page 1000/5209 (19.2%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:10:37,254 - INFO - Page 1010/5209 (19.4%) | Avg: 0.15s/page | ETA: 10.7 min
+2025-10-26 17:10:39,045 - INFO - Page 1020/5209 (19.6%) | Avg: 0.17s/page | ETA: 11.5 min
+2025-10-26 17:10:40,614 - INFO - Page 1030/5209 (19.8%) | Avg: 0.16s/page | ETA: 11.3 min
+2025-10-26 17:10:42,522 - INFO - Page 1040/5209 (20.0%) | Avg: 0.17s/page | ETA: 11.8 min
+2025-10-26 17:10:44,665 - INFO - Page 1050/5209 (20.2%) | Avg: 0.18s/page | ETA: 12.4 min
+2025-10-26 17:10:49,804 - INFO - Page 1060/5209 (20.3%) | Avg: 0.23s/page | ETA: 16.1 min
+2025-10-26 17:10:51,679 - INFO - Page 1070/5209 (20.5%) | Avg: 0.23s/page | ETA: 15.6 min
+2025-10-26 17:10:53,432 - INFO - Page 1080/5209 (20.7%) | Avg: 0.22s/page | ETA: 15.2 min
+2025-10-26 17:10:55,049 - INFO - Page 1090/5209 (20.9%) | Avg: 0.21s/page | ETA: 14.7 min
+2025-10-26 17:10:56,308 - INFO - Batch complete: 100 pages in 20.7s (0.21s/page), 266 tables found
+2025-10-26 17:10:56,309 - INFO - Checkpoint saved at page 1100
+2025-10-26 17:10:56,310 - INFO - Processing batch: pages 1100-1199 (100 pages)
+2025-10-26 17:10:56,310 - INFO - Page 1100/5209 (21.1%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:10:57,714 - INFO - Page 1110/5209 (21.3%) | Avg: 0.13s/page | ETA: 8.7 min
+2025-10-26 17:10:59,531 - INFO - Page 1120/5209 (21.5%) | Avg: 0.15s/page | ETA: 10.5 min
+2025-10-26 17:11:01,072 - INFO - Page 1130/5209 (21.7%) | Avg: 0.15s/page | ETA: 10.4 min
+2025-10-26 17:11:02,753 - INFO - Page 1140/5209 (21.9%) | Avg: 0.16s/page | ETA: 10.7 min
+2025-10-26 17:11:04,436 - INFO - Page 1150/5209 (22.1%) | Avg: 0.16s/page | ETA: 10.8 min
+2025-10-26 17:11:06,242 - INFO - Page 1160/5209 (22.3%) | Avg: 0.16s/page | ETA: 11.0 min
+2025-10-26 17:11:07,902 - INFO - Page 1170/5209 (22.5%) | Avg: 0.16s/page | ETA: 11.0 min
+2025-10-26 17:11:09,557 - INFO - Page 1180/5209 (22.7%) | Avg: 0.16s/page | ETA: 11.0 min
+2025-10-26 17:11:11,316 - INFO - Page 1190/5209 (22.8%) | Avg: 0.16s/page | ETA: 11.0 min
+2025-10-26 17:11:12,860 - INFO - Batch complete: 100 pages in 16.6s (0.17s/page), 213 tables found
+2025-10-26 17:11:12,862 - INFO - Checkpoint saved at page 1200
+2025-10-26 17:11:12,862 - INFO - Processing batch: pages 1200-1299 (100 pages)
+2025-10-26 17:11:12,862 - INFO - Page 1200/5209 (23.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:11:14,418 - INFO - Page 1210/5209 (23.2%) | Avg: 0.14s/page | ETA: 9.4 min
+2025-10-26 17:11:15,879 - INFO - Page 1220/5209 (23.4%) | Avg: 0.14s/page | ETA: 9.6 min
+2025-10-26 17:11:17,368 - INFO - Page 1230/5209 (23.6%) | Avg: 0.15s/page | ETA: 9.6 min
+2025-10-26 17:11:18,662 - INFO - Page 1240/5209 (23.8%) | Avg: 0.14s/page | ETA: 9.4 min
+2025-10-26 17:11:19,978 - INFO - Page 1250/5209 (24.0%) | Avg: 0.14s/page | ETA: 9.2 min
+2025-10-26 17:11:21,243 - INFO - Page 1260/5209 (24.2%) | Avg: 0.14s/page | ETA: 9.0 min
+2025-10-26 17:11:25,459 - INFO - Page 1270/5209 (24.4%) | Avg: 0.18s/page | ETA: 11.6 min
+2025-10-26 17:11:26,949 - INFO - Page 1280/5209 (24.6%) | Avg: 0.17s/page | ETA: 11.4 min
+2025-10-26 17:11:28,334 - INFO - Page 1290/5209 (24.8%) | Avg: 0.17s/page | ETA: 11.1 min
+2025-10-26 17:11:29,637 - INFO - Batch complete: 100 pages in 16.8s (0.17s/page), 294 tables found
+2025-10-26 17:11:29,638 - INFO - Checkpoint saved at page 1300
+2025-10-26 17:11:29,638 - INFO - Processing batch: pages 1300-1399 (100 pages)
+2025-10-26 17:11:29,638 - INFO - Page 1300/5209 (25.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:11:31,018 - INFO - Page 1310/5209 (25.1%) | Avg: 0.13s/page | ETA: 8.2 min
+2025-10-26 17:11:32,436 - INFO - Page 1320/5209 (25.3%) | Avg: 0.13s/page | ETA: 8.6 min
+2025-10-26 17:11:33,906 - INFO - Page 1330/5209 (25.5%) | Avg: 0.14s/page | ETA: 8.9 min
+2025-10-26 17:11:35,324 - INFO - Page 1340/5209 (25.7%) | Avg: 0.14s/page | ETA: 8.9 min
+2025-10-26 17:11:36,649 - INFO - Page 1350/5209 (25.9%) | Avg: 0.14s/page | ETA: 8.8 min
+2025-10-26 17:11:38,056 - INFO - Page 1360/5209 (26.1%) | Avg: 0.14s/page | ETA: 8.9 min
+2025-10-26 17:11:39,334 - INFO - Page 1370/5209 (26.3%) | Avg: 0.14s/page | ETA: 8.7 min
+2025-10-26 17:11:40,667 - INFO - Page 1380/5209 (26.5%) | Avg: 0.14s/page | ETA: 8.7 min
+2025-10-26 17:11:41,783 - INFO - Page 1390/5209 (26.7%) | Avg: 0.13s/page | ETA: 8.5 min
+2025-10-26 17:11:43,096 - INFO - Batch complete: 100 pages in 13.5s (0.13s/page), 331 tables found
+2025-10-26 17:11:43,097 - INFO - Checkpoint saved at page 1400
+2025-10-26 17:11:43,097 - INFO - Processing batch: pages 1400-1499 (100 pages)
+2025-10-26 17:11:43,098 - INFO - Page 1400/5209 (26.9%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:11:44,502 - INFO - Page 1410/5209 (27.1%) | Avg: 0.13s/page | ETA: 8.1 min
+2025-10-26 17:11:45,650 - INFO - Page 1420/5209 (27.3%) | Avg: 0.12s/page | ETA: 7.7 min
+2025-10-26 17:11:46,830 - INFO - Page 1430/5209 (27.5%) | Avg: 0.12s/page | ETA: 7.6 min
+2025-10-26 17:11:48,173 - INFO - Page 1440/5209 (27.6%) | Avg: 0.12s/page | ETA: 7.8 min
+2025-10-26 17:11:49,394 - INFO - Page 1450/5209 (27.8%) | Avg: 0.12s/page | ETA: 7.7 min
+2025-10-26 17:11:50,929 - INFO - Page 1460/5209 (28.0%) | Avg: 0.13s/page | ETA: 8.0 min
+2025-10-26 17:11:52,427 - INFO - Page 1470/5209 (28.2%) | Avg: 0.13s/page | ETA: 8.2 min
+2025-10-26 17:11:53,799 - INFO - Page 1480/5209 (28.4%) | Avg: 0.13s/page | ETA: 8.2 min
+2025-10-26 17:11:54,953 - INFO - Page 1490/5209 (28.6%) | Avg: 0.13s/page | ETA: 8.1 min
+2025-10-26 17:11:56,393 - INFO - Batch complete: 100 pages in 13.3s (0.13s/page), 302 tables found
+2025-10-26 17:11:56,396 - INFO - Checkpoint saved at page 1500
+2025-10-26 17:11:56,396 - INFO - Processing batch: pages 1500-1599 (100 pages)
+2025-10-26 17:11:56,396 - INFO - Page 1500/5209 (28.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:11:57,831 - INFO - Page 1510/5209 (29.0%) | Avg: 0.13s/page | ETA: 8.0 min
+2025-10-26 17:11:59,034 - INFO - Page 1520/5209 (29.2%) | Avg: 0.13s/page | ETA: 7.7 min
+2025-10-26 17:12:00,497 - INFO - Page 1530/5209 (29.4%) | Avg: 0.13s/page | ETA: 8.1 min
+2025-10-26 17:12:01,777 - INFO - Page 1540/5209 (29.6%) | Avg: 0.13s/page | ETA: 8.0 min
+2025-10-26 17:12:03,314 - INFO - Page 1550/5209 (29.8%) | Avg: 0.14s/page | ETA: 8.3 min
+2025-10-26 17:12:04,618 - INFO - Page 1560/5209 (29.9%) | Avg: 0.13s/page | ETA: 8.2 min
+2025-10-26 17:12:05,989 - INFO - Page 1570/5209 (30.1%) | Avg: 0.14s/page | ETA: 8.2 min
+2025-10-26 17:12:12,088 - INFO - Page 1580/5209 (30.3%) | Avg: 0.19s/page | ETA: 11.7 min
+2025-10-26 17:12:14,031 - INFO - Page 1590/5209 (30.5%) | Avg: 0.19s/page | ETA: 11.7 min
+2025-10-26 17:12:15,845 - INFO - Batch complete: 100 pages in 19.4s (0.19s/page), 347 tables found
+2025-10-26 17:12:15,846 - INFO - Checkpoint saved at page 1600
+2025-10-26 17:12:15,846 - INFO - Processing batch: pages 1600-1699 (100 pages)
+2025-10-26 17:12:15,846 - INFO - Page 1600/5209 (30.7%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:12:17,714 - INFO - Page 1610/5209 (30.9%) | Avg: 0.17s/page | ETA: 10.2 min
+2025-10-26 17:12:19,388 - INFO - Page 1620/5209 (31.1%) | Avg: 0.17s/page | ETA: 10.1 min
+2025-10-26 17:12:21,090 - INFO - Page 1630/5209 (31.3%) | Avg: 0.17s/page | ETA: 10.1 min
+2025-10-26 17:12:22,785 - INFO - Page 1640/5209 (31.5%) | Avg: 0.17s/page | ETA: 10.1 min
+2025-10-26 17:12:25,067 - INFO - Page 1650/5209 (31.7%) | Avg: 0.18s/page | ETA: 10.7 min
+2025-10-26 17:12:26,700 - INFO - Page 1660/5209 (31.9%) | Avg: 0.18s/page | ETA: 10.5 min
+2025-10-26 17:12:28,366 - INFO - Page 1670/5209 (32.1%) | Avg: 0.18s/page | ETA: 10.4 min
+2025-10-26 17:12:29,971 - INFO - Page 1680/5209 (32.3%) | Avg: 0.17s/page | ETA: 10.3 min
+2025-10-26 17:12:31,562 - INFO - Page 1690/5209 (32.4%) | Avg: 0.17s/page | ETA: 10.1 min
+2025-10-26 17:12:33,054 - INFO - Batch complete: 100 pages in 17.2s (0.17s/page), 458 tables found
+2025-10-26 17:12:33,056 - INFO - Checkpoint saved at page 1700
+2025-10-26 17:12:33,056 - INFO - Processing batch: pages 1700-1799 (100 pages)
+2025-10-26 17:12:33,056 - INFO - Page 1700/5209 (32.6%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:12:34,668 - INFO - Page 1710/5209 (32.8%) | Avg: 0.15s/page | ETA: 8.5 min
+2025-10-26 17:12:36,758 - INFO - Page 1720/5209 (33.0%) | Avg: 0.18s/page | ETA: 10.3 min
+2025-10-26 17:12:38,673 - INFO - Page 1730/5209 (33.2%) | Avg: 0.18s/page | ETA: 10.5 min
+2025-10-26 17:12:40,331 - INFO - Page 1740/5209 (33.4%) | Avg: 0.18s/page | ETA: 10.3 min
+2025-10-26 17:12:42,109 - INFO - Page 1750/5209 (33.6%) | Avg: 0.18s/page | ETA: 10.2 min
+2025-10-26 17:12:43,724 - INFO - Page 1760/5209 (33.8%) | Avg: 0.17s/page | ETA: 10.1 min
+2025-10-26 17:12:45,522 - INFO - Page 1770/5209 (34.0%) | Avg: 0.18s/page | ETA: 10.1 min
+2025-10-26 17:12:47,437 - INFO - Page 1780/5209 (34.2%) | Avg: 0.18s/page | ETA: 10.1 min
+2025-10-26 17:12:49,257 - INFO - Page 1790/5209 (34.4%) | Avg: 0.18s/page | ETA: 10.1 min
+2025-10-26 17:12:51,102 - INFO - Batch complete: 100 pages in 18.0s (0.18s/page), 301 tables found
+2025-10-26 17:12:51,104 - INFO - Checkpoint saved at page 1800
+2025-10-26 17:12:51,104 - INFO - Processing batch: pages 1800-1899 (100 pages)
+2025-10-26 17:12:51,104 - INFO - Page 1800/5209 (34.6%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:12:52,787 - INFO - Page 1810/5209 (34.7%) | Avg: 0.15s/page | ETA: 8.7 min
+2025-10-26 17:12:54,559 - INFO - Page 1820/5209 (34.9%) | Avg: 0.16s/page | ETA: 9.3 min
+2025-10-26 17:12:56,446 - INFO - Page 1830/5209 (35.1%) | Avg: 0.17s/page | ETA: 9.7 min
+2025-10-26 17:12:58,356 - INFO - Page 1840/5209 (35.3%) | Avg: 0.18s/page | ETA: 9.9 min
+2025-10-26 17:13:00,180 - INFO - Page 1850/5209 (35.5%) | Avg: 0.18s/page | ETA: 10.0 min
+2025-10-26 17:13:01,926 - INFO - Page 1860/5209 (35.7%) | Avg: 0.18s/page | ETA: 9.9 min
+2025-10-26 17:13:17,124 - INFO - Page 1870/5209 (35.9%) | Avg: 0.37s/page | ETA: 20.4 min
+2025-10-26 17:13:18,490 - INFO - Page 1880/5209 (36.1%) | Avg: 0.34s/page | ETA: 18.8 min
+2025-10-26 17:13:19,746 - INFO - Page 1890/5209 (36.3%) | Avg: 0.31s/page | ETA: 17.4 min
+2025-10-26 17:13:21,187 - INFO - Batch complete: 100 pages in 30.1s (0.30s/page), 220 tables found
+2025-10-26 17:13:21,192 - INFO - Checkpoint saved at page 1900
+2025-10-26 17:13:21,193 - INFO - Processing batch: pages 1900-1999 (100 pages)
+2025-10-26 17:13:21,193 - INFO - Page 1900/5209 (36.5%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:13:22,656 - INFO - Page 1910/5209 (36.7%) | Avg: 0.13s/page | ETA: 7.3 min
+2025-10-26 17:13:24,527 - INFO - Page 1920/5209 (36.9%) | Avg: 0.16s/page | ETA: 8.7 min
+2025-10-26 17:13:26,373 - INFO - Page 1930/5209 (37.1%) | Avg: 0.17s/page | ETA: 9.1 min
+2025-10-26 17:13:27,759 - INFO - Page 1940/5209 (37.2%) | Avg: 0.16s/page | ETA: 8.7 min
+2025-10-26 17:13:28,995 - INFO - Page 1950/5209 (37.4%) | Avg: 0.15s/page | ETA: 8.3 min
+2025-10-26 17:13:30,208 - INFO - Page 1960/5209 (37.6%) | Avg: 0.15s/page | ETA: 8.0 min
+2025-10-26 17:13:31,421 - INFO - Page 1970/5209 (37.8%) | Avg: 0.14s/page | ETA: 7.8 min
+2025-10-26 17:13:33,308 - INFO - Page 1980/5209 (38.0%) | Avg: 0.15s/page | ETA: 8.0 min
+2025-10-26 17:13:34,818 - INFO - Page 1990/5209 (38.2%) | Avg: 0.15s/page | ETA: 8.0 min
+2025-10-26 17:13:36,362 - INFO - Batch complete: 100 pages in 15.2s (0.15s/page), 265 tables found
+2025-10-26 17:13:36,363 - INFO - Checkpoint saved at page 2000
+2025-10-26 17:13:36,363 - INFO - Processing batch: pages 2000-2099 (100 pages)
+2025-10-26 17:13:36,364 - INFO - Page 2000/5209 (38.4%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:13:37,833 - INFO - Page 2010/5209 (38.6%) | Avg: 0.13s/page | ETA: 7.1 min
+2025-10-26 17:13:39,330 - INFO - Page 2020/5209 (38.8%) | Avg: 0.14s/page | ETA: 7.5 min
+2025-10-26 17:13:40,882 - INFO - Page 2030/5209 (39.0%) | Avg: 0.15s/page | ETA: 7.7 min
+2025-10-26 17:13:42,156 - INFO - Page 2040/5209 (39.2%) | Avg: 0.14s/page | ETA: 7.5 min
+2025-10-26 17:13:43,398 - INFO - Page 2050/5209 (39.4%) | Avg: 0.14s/page | ETA: 7.3 min
+2025-10-26 17:13:44,622 - INFO - Page 2060/5209 (39.5%) | Avg: 0.14s/page | ETA: 7.1 min
+2025-10-26 17:13:45,847 - INFO - Page 2070/5209 (39.7%) | Avg: 0.13s/page | ETA: 7.0 min
+2025-10-26 17:13:47,055 - INFO - Page 2080/5209 (39.9%) | Avg: 0.13s/page | ETA: 6.9 min
+2025-10-26 17:13:48,182 - INFO - Page 2090/5209 (40.1%) | Avg: 0.13s/page | ETA: 6.8 min
+2025-10-26 17:13:49,414 - INFO - Batch complete: 100 pages in 13.1s (0.13s/page), 263 tables found
+2025-10-26 17:13:49,415 - INFO - Checkpoint saved at page 2100
+2025-10-26 17:13:49,416 - INFO - Processing batch: pages 2100-2199 (100 pages)
+2025-10-26 17:13:49,416 - INFO - Page 2100/5209 (40.3%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:13:50,648 - INFO - Page 2110/5209 (40.5%) | Avg: 0.11s/page | ETA: 5.8 min
+2025-10-26 17:13:51,972 - INFO - Page 2120/5209 (40.7%) | Avg: 0.12s/page | ETA: 6.3 min
+2025-10-26 17:13:53,201 - INFO - Page 2130/5209 (40.9%) | Avg: 0.12s/page | ETA: 6.3 min
+2025-10-26 17:13:54,601 - INFO - Page 2140/5209 (41.1%) | Avg: 0.13s/page | ETA: 6.5 min
+2025-10-26 17:13:56,056 - INFO - Page 2150/5209 (41.3%) | Avg: 0.13s/page | ETA: 6.6 min
+2025-10-26 17:13:57,422 - INFO - Page 2160/5209 (41.5%) | Avg: 0.13s/page | ETA: 6.7 min
+2025-10-26 17:13:58,856 - INFO - Page 2170/5209 (41.7%) | Avg: 0.13s/page | ETA: 6.7 min
+2025-10-26 17:14:00,318 - INFO - Page 2180/5209 (41.9%) | Avg: 0.13s/page | ETA: 6.8 min
+2025-10-26 17:14:01,584 - INFO - Page 2190/5209 (42.0%) | Avg: 0.13s/page | ETA: 6.7 min
+2025-10-26 17:14:03,390 - INFO - Batch complete: 100 pages in 14.0s (0.14s/page), 276 tables found
+2025-10-26 17:14:03,392 - INFO - Checkpoint saved at page 2200
+2025-10-26 17:14:03,392 - INFO - Processing batch: pages 2200-2299 (100 pages)
+2025-10-26 17:14:03,392 - INFO - Page 2200/5209 (42.2%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:14:05,235 - INFO - Page 2210/5209 (42.4%) | Avg: 0.17s/page | ETA: 8.4 min
+2025-10-26 17:14:06,831 - INFO - Page 2220/5209 (42.6%) | Avg: 0.16s/page | ETA: 8.2 min
+2025-10-26 17:14:08,320 - INFO - Page 2230/5209 (42.8%) | Avg: 0.16s/page | ETA: 7.9 min
+2025-10-26 17:14:09,605 - INFO - Page 2240/5209 (43.0%) | Avg: 0.15s/page | ETA: 7.5 min
+2025-10-26 17:14:11,160 - INFO - Page 2250/5209 (43.2%) | Avg: 0.15s/page | ETA: 7.5 min
+2025-10-26 17:14:12,804 - INFO - Page 2260/5209 (43.4%) | Avg: 0.15s/page | ETA: 7.6 min
+2025-10-26 17:14:48,772 - INFO - Page 2270/5209 (43.6%) | Avg: 0.64s/page | ETA: 31.3 min
+2025-10-26 17:14:50,707 - INFO - Page 2280/5209 (43.8%) | Avg: 0.58s/page | ETA: 28.5 min
+2025-10-26 17:14:52,479 - INFO - Page 2290/5209 (44.0%) | Avg: 0.54s/page | ETA: 26.2 min
+2025-10-26 17:14:54,202 - INFO - Batch complete: 100 pages in 50.8s (0.51s/page), 341 tables found
+2025-10-26 17:14:54,205 - INFO - Checkpoint saved at page 2300
+2025-10-26 17:14:54,205 - INFO - Processing batch: pages 2300-2399 (100 pages)
+2025-10-26 17:14:54,206 - INFO - Page 2300/5209 (44.2%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:14:56,228 - INFO - Page 2310/5209 (44.3%) | Avg: 0.18s/page | ETA: 8.9 min
+2025-10-26 17:14:57,978 - INFO - Page 2320/5209 (44.5%) | Avg: 0.18s/page | ETA: 8.6 min
+2025-10-26 17:14:59,457 - INFO - Page 2330/5209 (44.7%) | Avg: 0.17s/page | ETA: 8.1 min
+2025-10-26 17:15:00,416 - INFO - Page 2340/5209 (44.9%) | Avg: 0.15s/page | ETA: 7.2 min
+2025-10-26 17:15:01,350 - INFO - Page 2350/5209 (45.1%) | Avg: 0.14s/page | ETA: 6.7 min
+2025-10-26 17:15:02,476 - INFO - Page 2360/5209 (45.3%) | Avg: 0.14s/page | ETA: 6.4 min
+2025-10-26 17:15:03,805 - INFO - Page 2370/5209 (45.5%) | Avg: 0.14s/page | ETA: 6.4 min
+2025-10-26 17:15:05,021 - INFO - Page 2380/5209 (45.7%) | Avg: 0.13s/page | ETA: 6.3 min
+2025-10-26 17:15:06,117 - INFO - Page 2390/5209 (45.9%) | Avg: 0.13s/page | ETA: 6.1 min
+2025-10-26 17:15:07,283 - INFO - Batch complete: 100 pages in 13.1s (0.13s/page), 271 tables found
+2025-10-26 17:15:07,285 - INFO - Checkpoint saved at page 2400
+2025-10-26 17:15:07,285 - INFO - Processing batch: pages 2400-2499 (100 pages)
+2025-10-26 17:15:07,285 - INFO - Page 2400/5209 (46.1%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:15:08,799 - INFO - Page 2410/5209 (46.3%) | Avg: 0.14s/page | ETA: 6.4 min
+2025-10-26 17:15:10,223 - INFO - Page 2420/5209 (46.5%) | Avg: 0.14s/page | ETA: 6.5 min
+2025-10-26 17:15:11,130 - INFO - Page 2430/5209 (46.7%) | Avg: 0.12s/page | ETA: 5.7 min
+2025-10-26 17:15:12,460 - INFO - Page 2440/5209 (46.8%) | Avg: 0.13s/page | ETA: 5.8 min
+2025-10-26 17:15:13,931 - INFO - Page 2450/5209 (47.0%) | Avg: 0.13s/page | ETA: 6.0 min
+2025-10-26 17:15:15,101 - INFO - Page 2460/5209 (47.2%) | Avg: 0.13s/page | ETA: 5.9 min
+2025-10-26 17:15:16,198 - INFO - Page 2470/5209 (47.4%) | Avg: 0.13s/page | ETA: 5.7 min
+2025-10-26 17:15:17,563 - INFO - Page 2480/5209 (47.6%) | Avg: 0.13s/page | ETA: 5.8 min
+2025-10-26 17:15:18,842 - INFO - Page 2490/5209 (47.8%) | Avg: 0.13s/page | ETA: 5.8 min
+2025-10-26 17:15:19,824 - INFO - Batch complete: 100 pages in 12.5s (0.13s/page), 262 tables found
+2025-10-26 17:15:19,826 - INFO - Checkpoint saved at page 2500
+2025-10-26 17:15:19,826 - INFO - Processing batch: pages 2500-2599 (100 pages)
+2025-10-26 17:15:19,826 - INFO - Page 2500/5209 (48.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:15:21,163 - INFO - Page 2510/5209 (48.2%) | Avg: 0.12s/page | ETA: 5.5 min
+2025-10-26 17:15:22,714 - INFO - Page 2520/5209 (48.4%) | Avg: 0.14s/page | ETA: 6.2 min
+2025-10-26 17:15:23,835 - INFO - Page 2530/5209 (48.6%) | Avg: 0.13s/page | ETA: 5.8 min
+2025-10-26 17:15:24,750 - INFO - Page 2540/5209 (48.8%) | Avg: 0.12s/page | ETA: 5.3 min
+2025-10-26 17:15:26,089 - INFO - Page 2550/5209 (49.0%) | Avg: 0.12s/page | ETA: 5.4 min
+2025-10-26 17:15:27,482 - INFO - Page 2560/5209 (49.1%) | Avg: 0.13s/page | ETA: 5.5 min
+2025-10-26 17:15:28,620 - INFO - Page 2570/5209 (49.3%) | Avg: 0.12s/page | ETA: 5.4 min
+2025-10-26 17:15:29,695 - INFO - Page 2580/5209 (49.5%) | Avg: 0.12s/page | ETA: 5.3 min
+2025-10-26 17:15:31,094 - INFO - Page 2590/5209 (49.7%) | Avg: 0.12s/page | ETA: 5.4 min
+2025-10-26 17:15:32,269 - INFO - Batch complete: 100 pages in 12.4s (0.12s/page), 264 tables found
+2025-10-26 17:15:32,270 - INFO - Checkpoint saved at page 2600
+2025-10-26 17:15:32,270 - INFO - Processing batch: pages 2600-2699 (100 pages)
+2025-10-26 17:15:32,270 - INFO - Page 2600/5209 (49.9%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:15:33,318 - INFO - Page 2610/5209 (50.1%) | Avg: 0.10s/page | ETA: 4.1 min
+2025-10-26 17:15:34,834 - INFO - Page 2620/5209 (50.3%) | Avg: 0.12s/page | ETA: 5.3 min
+2025-10-26 17:15:36,281 - INFO - Page 2630/5209 (50.5%) | Avg: 0.13s/page | ETA: 5.6 min
+2025-10-26 17:15:37,395 - INFO - Page 2640/5209 (50.7%) | Avg: 0.13s/page | ETA: 5.4 min
+2025-10-26 17:15:38,366 - INFO - Page 2650/5209 (50.9%) | Avg: 0.12s/page | ETA: 5.1 min
+2025-10-26 17:15:39,797 - INFO - Page 2660/5209 (51.1%) | Avg: 0.12s/page | ETA: 5.2 min
+2025-10-26 17:15:41,290 - INFO - Page 2670/5209 (51.3%) | Avg: 0.13s/page | ETA: 5.4 min
+2025-10-26 17:15:42,304 - INFO - Page 2680/5209 (51.4%) | Avg: 0.12s/page | ETA: 5.2 min
+2025-10-26 17:15:43,413 - INFO - Page 2690/5209 (51.6%) | Avg: 0.12s/page | ETA: 5.1 min
+2025-10-26 17:15:44,731 - INFO - Batch complete: 100 pages in 12.5s (0.12s/page), 255 tables found
+2025-10-26 17:15:44,733 - INFO - Checkpoint saved at page 2700
+2025-10-26 17:15:44,733 - INFO - Processing batch: pages 2700-2799 (100 pages)
+2025-10-26 17:15:44,733 - INFO - Page 2700/5209 (51.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:15:46,053 - INFO - Page 2710/5209 (52.0%) | Avg: 0.12s/page | ETA: 5.0 min
+2025-10-26 17:15:47,002 - INFO - Page 2720/5209 (52.2%) | Avg: 0.11s/page | ETA: 4.5 min
+2025-10-26 17:15:48,449 - INFO - Page 2730/5209 (52.4%) | Avg: 0.12s/page | ETA: 5.0 min
+2025-10-26 17:15:50,301 - INFO - Page 2740/5209 (52.6%) | Avg: 0.14s/page | ETA: 5.6 min
+2025-10-26 17:15:51,574 - INFO - Page 2750/5209 (52.8%) | Avg: 0.13s/page | ETA: 5.5 min
+2025-10-26 17:15:52,632 - INFO - Page 2760/5209 (53.0%) | Avg: 0.13s/page | ETA: 5.3 min
+2025-10-26 17:20:38,810 - INFO - Page 2770/5209 (53.2%) | Avg: 4.14s/page | ETA: 168.4 min
+2025-10-26 17:20:40,330 - INFO - Page 2780/5209 (53.4%) | Avg: 3.65s/page | ETA: 147.7 min
+2025-10-26 17:20:42,779 - INFO - Page 2790/5209 (53.6%) | Avg: 3.28s/page | ETA: 132.0 min
+2025-10-26 17:20:44,615 - INFO - Batch complete: 100 pages in 299.9s (3.00s/page), 276 tables found
+2025-10-26 17:20:44,628 - INFO - Checkpoint saved at page 2800
+2025-10-26 17:20:44,628 - INFO - Processing batch: pages 2800-2899 (100 pages)
+2025-10-26 17:20:44,628 - INFO - Page 2800/5209 (53.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:20:46,115 - INFO - Page 2810/5209 (53.9%) | Avg: 0.14s/page | ETA: 5.4 min
+2025-10-26 17:20:48,255 - INFO - Page 2820/5209 (54.1%) | Avg: 0.17s/page | ETA: 6.9 min
+2025-10-26 17:20:49,595 - INFO - Page 2830/5209 (54.3%) | Avg: 0.16s/page | ETA: 6.4 min
+2025-10-26 17:20:50,839 - INFO - Page 2840/5209 (54.5%) | Avg: 0.15s/page | ETA: 6.0 min
+2025-10-26 17:20:51,822 - INFO - Page 2850/5209 (54.7%) | Avg: 0.14s/page | ETA: 5.5 min
+2025-10-26 17:20:54,057 - INFO - Page 2860/5209 (54.9%) | Avg: 0.15s/page | ETA: 6.1 min
+2025-10-26 17:20:57,855 - INFO - Page 2870/5209 (55.1%) | Avg: 0.19s/page | ETA: 7.3 min
+2025-10-26 17:21:00,970 - INFO - Page 2880/5209 (55.3%) | Avg: 0.20s/page | ETA: 7.8 min
+2025-10-26 17:21:02,564 - INFO - Page 2890/5209 (55.5%) | Avg: 0.20s/page | ETA: 7.6 min
+2025-10-26 17:21:05,794 - INFO - Batch complete: 100 pages in 21.2s (0.21s/page), 277 tables found
+2025-10-26 17:21:05,796 - INFO - Checkpoint saved at page 2900
+2025-10-26 17:21:05,797 - INFO - Processing batch: pages 2900-2999 (100 pages)
+2025-10-26 17:21:05,797 - INFO - Page 2900/5209 (55.7%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:21:08,511 - INFO - Page 2910/5209 (55.9%) | Avg: 0.25s/page | ETA: 9.5 min
+2025-10-26 17:21:12,417 - INFO - Page 2920/5209 (56.1%) | Avg: 0.32s/page | ETA: 12.0 min
+2025-10-26 17:21:16,219 - INFO - Page 2930/5209 (56.2%) | Avg: 0.34s/page | ETA: 12.8 min
+2025-10-26 17:21:19,040 - INFO - Page 2940/5209 (56.4%) | Avg: 0.32s/page | ETA: 12.2 min
+2025-10-26 17:21:21,739 - INFO - Page 2950/5209 (56.6%) | Avg: 0.31s/page | ETA: 11.8 min
+2025-10-26 17:21:24,008 - INFO - Page 2960/5209 (56.8%) | Avg: 0.30s/page | ETA: 11.2 min
+2025-10-26 17:21:25,256 - INFO - Page 2970/5209 (57.0%) | Avg: 0.27s/page | ETA: 10.2 min
+2025-10-26 17:21:26,321 - INFO - Page 2980/5209 (57.2%) | Avg: 0.25s/page | ETA: 9.4 min
+2025-10-26 17:21:27,338 - INFO - Page 2990/5209 (57.4%) | Avg: 0.24s/page | ETA: 8.8 min
+2025-10-26 17:21:29,151 - INFO - Batch complete: 100 pages in 23.4s (0.23s/page), 248 tables found
+2025-10-26 17:21:29,154 - INFO - Checkpoint saved at page 3000
+2025-10-26 17:21:29,154 - INFO - Processing batch: pages 3000-3099 (100 pages)
+2025-10-26 17:21:29,154 - INFO - Page 3000/5209 (57.6%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:21:31,237 - INFO - Page 3010/5209 (57.8%) | Avg: 0.19s/page | ETA: 6.9 min
+2025-10-26 17:21:33,745 - INFO - Page 3020/5209 (58.0%) | Avg: 0.22s/page | ETA: 8.0 min
+2025-10-26 17:21:35,916 - INFO - Page 3030/5209 (58.2%) | Avg: 0.22s/page | ETA: 7.9 min
+2025-10-26 17:21:37,288 - INFO - Page 3040/5209 (58.4%) | Avg: 0.20s/page | ETA: 7.2 min
+2025-10-26 17:21:38,302 - INFO - Page 3050/5209 (58.6%) | Avg: 0.18s/page | ETA: 6.5 min
+2025-10-26 17:21:39,217 - INFO - Page 3060/5209 (58.7%) | Avg: 0.16s/page | ETA: 5.9 min
+2025-10-26 17:21:42,101 - INFO - Page 3070/5209 (58.9%) | Avg: 0.18s/page | ETA: 6.5 min
+2025-10-26 17:21:46,050 - INFO - Page 3080/5209 (59.1%) | Avg: 0.21s/page | ETA: 7.4 min
+2025-10-26 17:21:50,787 - INFO - Page 3090/5209 (59.3%) | Avg: 0.24s/page | ETA: 8.4 min
+2025-10-26 17:21:53,352 - INFO - Batch complete: 100 pages in 24.2s (0.24s/page), 267 tables found
+2025-10-26 17:21:53,353 - INFO - Checkpoint saved at page 3100
+2025-10-26 17:21:53,353 - INFO - Processing batch: pages 3100-3199 (100 pages)
+2025-10-26 17:21:53,353 - INFO - Page 3100/5209 (59.5%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:21:56,321 - INFO - Page 3110/5209 (59.7%) | Avg: 0.27s/page | ETA: 9.4 min
+2025-10-26 17:21:58,337 - INFO - Page 3120/5209 (59.9%) | Avg: 0.24s/page | ETA: 8.3 min
+2025-10-26 17:22:00,608 - INFO - Page 3130/5209 (60.1%) | Avg: 0.23s/page | ETA: 8.1 min
+2025-10-26 17:22:03,990 - INFO - Page 3140/5209 (60.3%) | Avg: 0.26s/page | ETA: 8.9 min
+2025-10-26 17:22:09,895 - INFO - Page 3150/5209 (60.5%) | Avg: 0.32s/page | ETA: 11.1 min
+2025-10-26 17:22:12,517 - INFO - Page 3160/5209 (60.7%) | Avg: 0.31s/page | ETA: 10.7 min
+2025-10-26 17:22:15,542 - INFO - Page 3170/5209 (60.9%) | Avg: 0.31s/page | ETA: 10.6 min
+2025-10-26 17:22:17,626 - INFO - Page 3180/5209 (61.0%) | Avg: 0.30s/page | ETA: 10.1 min
+2025-10-26 17:22:19,221 - INFO - Page 3190/5209 (61.2%) | Avg: 0.28s/page | ETA: 9.6 min
+2025-10-26 17:22:22,308 - INFO - Batch complete: 100 pages in 29.0s (0.29s/page), 430 tables found
+2025-10-26 17:22:22,311 - INFO - Checkpoint saved at page 3200
+2025-10-26 17:22:22,311 - INFO - Processing batch: pages 3200-3299 (100 pages)
+2025-10-26 17:22:22,311 - INFO - Page 3200/5209 (61.4%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:22:24,750 - INFO - Page 3210/5209 (61.6%) | Avg: 0.22s/page | ETA: 7.4 min
+2025-10-26 17:22:27,193 - INFO - Page 3220/5209 (61.8%) | Avg: 0.23s/page | ETA: 7.7 min
+2025-10-26 17:22:29,206 - INFO - Page 3230/5209 (62.0%) | Avg: 0.22s/page | ETA: 7.3 min
+2025-10-26 17:22:31,470 - INFO - Page 3240/5209 (62.2%) | Avg: 0.22s/page | ETA: 7.3 min
+2025-10-26 17:22:33,180 - INFO - Page 3250/5209 (62.4%) | Avg: 0.21s/page | ETA: 7.0 min
+2025-10-26 17:22:35,996 - INFO - Page 3260/5209 (62.6%) | Avg: 0.22s/page | ETA: 7.3 min
+2025-10-26 17:22:39,123 - INFO - Page 3270/5209 (62.8%) | Avg: 0.24s/page | ETA: 7.7 min
+2025-10-26 17:22:41,668 - INFO - Page 3280/5209 (63.0%) | Avg: 0.24s/page | ETA: 7.7 min
+2025-10-26 17:22:43,940 - INFO - Page 3290/5209 (63.2%) | Avg: 0.24s/page | ETA: 7.6 min
+2025-10-26 17:22:46,357 - INFO - Batch complete: 100 pages in 24.0s (0.24s/page), 244 tables found
+2025-10-26 17:22:46,358 - INFO - Checkpoint saved at page 3300
+2025-10-26 17:22:46,359 - INFO - Processing batch: pages 3300-3399 (100 pages)
+2025-10-26 17:22:46,359 - INFO - Page 3300/5209 (63.4%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:22:49,062 - INFO - Page 3310/5209 (63.5%) | Avg: 0.25s/page | ETA: 7.8 min
+2025-10-26 17:22:52,015 - INFO - Page 3320/5209 (63.7%) | Avg: 0.27s/page | ETA: 8.5 min
+2025-10-26 17:22:55,692 - INFO - Page 3330/5209 (63.9%) | Avg: 0.30s/page | ETA: 9.4 min
+2025-10-26 17:22:58,517 - INFO - Page 3340/5209 (64.1%) | Avg: 0.30s/page | ETA: 9.2 min
+2025-10-26 17:23:02,035 - INFO - Page 3350/5209 (64.3%) | Avg: 0.31s/page | ETA: 9.5 min
+2025-10-26 17:23:05,634 - INFO - Page 3360/5209 (64.5%) | Avg: 0.32s/page | ETA: 9.7 min
+2025-10-26 17:23:07,837 - INFO - Page 3370/5209 (64.7%) | Avg: 0.30s/page | ETA: 9.3 min
+2025-10-26 17:23:09,227 - INFO - Page 3380/5209 (64.9%) | Avg: 0.28s/page | ETA: 8.6 min
+2025-10-26 17:23:10,788 - INFO - Page 3390/5209 (65.1%) | Avg: 0.27s/page | ETA: 8.1 min
+2025-10-26 17:23:12,446 - INFO - Batch complete: 100 pages in 26.1s (0.26s/page), 283 tables found
+2025-10-26 17:23:12,448 - INFO - Checkpoint saved at page 3400
+2025-10-26 17:23:12,448 - INFO - Processing batch: pages 3400-3499 (100 pages)
+2025-10-26 17:23:12,448 - INFO - Page 3400/5209 (65.3%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:23:14,330 - INFO - Page 3410/5209 (65.5%) | Avg: 0.17s/page | ETA: 5.1 min
+2025-10-26 17:23:15,747 - INFO - Page 3420/5209 (65.7%) | Avg: 0.16s/page | ETA: 4.7 min
+2025-10-26 17:23:17,215 - INFO - Page 3430/5209 (65.8%) | Avg: 0.15s/page | ETA: 4.6 min
+2025-10-26 17:31:28,803 - INFO - Page 3440/5209 (66.0%) | Avg: 12.11s/page | ETA: 356.9 min
+2025-10-26 17:31:30,124 - INFO - Page 3450/5209 (66.2%) | Avg: 9.76s/page | ETA: 286.1 min
+2025-10-26 17:31:31,599 - INFO - Page 3460/5209 (66.4%) | Avg: 8.18s/page | ETA: 238.5 min
+2025-10-26 17:31:33,926 - INFO - Page 3470/5209 (66.6%) | Avg: 7.06s/page | ETA: 204.7 min
+2025-10-26 17:31:35,758 - INFO - Page 3480/5209 (66.8%) | Avg: 6.21s/page | ETA: 179.1 min
+2025-10-26 17:31:37,902 - INFO - Page 3490/5209 (67.0%) | Avg: 5.55s/page | ETA: 159.1 min
+2025-10-26 17:31:39,762 - INFO - Batch complete: 100 pages in 507.3s (5.07s/page), 346 tables found
+2025-10-26 17:31:39,774 - INFO - Checkpoint saved at page 3500
+2025-10-26 17:31:39,775 - INFO - Processing batch: pages 3500-3599 (100 pages)
+2025-10-26 17:31:39,775 - INFO - Page 3500/5209 (67.2%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:31:41,754 - INFO - Page 3510/5209 (67.4%) | Avg: 0.18s/page | ETA: 5.1 min
+2025-10-26 17:31:43,424 - INFO - Page 3520/5209 (67.6%) | Avg: 0.17s/page | ETA: 4.9 min
+2025-10-26 17:31:45,003 - INFO - Page 3530/5209 (67.8%) | Avg: 0.17s/page | ETA: 4.7 min
+2025-10-26 17:31:46,543 - INFO - Page 3540/5209 (68.0%) | Avg: 0.17s/page | ETA: 4.6 min
+2025-10-26 17:31:47,511 - INFO - Page 3550/5209 (68.2%) | Avg: 0.15s/page | ETA: 4.2 min
+2025-10-26 17:31:48,573 - INFO - Page 3560/5209 (68.3%) | Avg: 0.14s/page | ETA: 4.0 min
+2025-10-26 17:31:50,106 - INFO - Page 3570/5209 (68.5%) | Avg: 0.15s/page | ETA: 4.0 min
+2025-10-26 17:31:51,460 - INFO - Page 3580/5209 (68.7%) | Avg: 0.14s/page | ETA: 3.9 min
+2025-10-26 17:31:52,364 - INFO - Page 3590/5209 (68.9%) | Avg: 0.14s/page | ETA: 3.7 min
+2025-10-26 17:31:53,263 - INFO - Batch complete: 100 pages in 13.5s (0.13s/page), 247 tables found
+2025-10-26 17:31:53,264 - INFO - Checkpoint saved at page 3600
+2025-10-26 17:31:53,266 - INFO - Processing batch: pages 3600-3699 (100 pages)
+2025-10-26 17:31:53,266 - INFO - Page 3600/5209 (69.1%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:31:54,153 - INFO - Page 3610/5209 (69.3%) | Avg: 0.08s/page | ETA: 2.1 min
+2025-10-26 17:31:55,037 - INFO - Page 3620/5209 (69.5%) | Avg: 0.08s/page | ETA: 2.2 min
+2025-10-26 17:31:55,844 - INFO - Page 3630/5209 (69.7%) | Avg: 0.08s/page | ETA: 2.2 min
+2025-10-26 17:31:56,658 - INFO - Page 3640/5209 (69.9%) | Avg: 0.08s/page | ETA: 2.2 min
+2025-10-26 17:31:57,462 - INFO - Page 3650/5209 (70.1%) | Avg: 0.08s/page | ETA: 2.1 min
+2025-10-26 17:31:58,249 - INFO - Page 3660/5209 (70.3%) | Avg: 0.08s/page | ETA: 2.1 min
+2025-10-26 17:31:59,023 - INFO - Page 3670/5209 (70.5%) | Avg: 0.08s/page | ETA: 2.1 min
+2025-10-26 17:31:59,822 - INFO - Page 3680/5209 (70.6%) | Avg: 0.08s/page | ETA: 2.1 min
+2025-10-26 17:32:00,566 - INFO - Page 3690/5209 (70.8%) | Avg: 0.08s/page | ETA: 2.0 min
+2025-10-26 17:32:01,330 - INFO - Batch complete: 100 pages in 8.1s (0.08s/page), 155 tables found
+2025-10-26 17:32:01,331 - INFO - Checkpoint saved at page 3700
+2025-10-26 17:32:01,331 - INFO - Processing batch: pages 3700-3799 (100 pages)
+2025-10-26 17:32:01,332 - INFO - Page 3700/5209 (71.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:32:02,024 - INFO - Page 3710/5209 (71.2%) | Avg: 0.06s/page | ETA: 1.6 min
+2025-10-26 17:32:02,765 - INFO - Page 3720/5209 (71.4%) | Avg: 0.07s/page | ETA: 1.7 min
+2025-10-26 17:32:03,649 - INFO - Page 3730/5209 (71.6%) | Avg: 0.07s/page | ETA: 1.8 min
+2025-10-26 17:32:04,369 - INFO - Page 3740/5209 (71.8%) | Avg: 0.07s/page | ETA: 1.8 min
+2025-10-26 17:32:05,143 - INFO - Page 3750/5209 (72.0%) | Avg: 0.07s/page | ETA: 1.8 min
+2025-10-26 17:32:06,097 - INFO - Page 3760/5209 (72.2%) | Avg: 0.08s/page | ETA: 1.9 min
+2025-10-26 17:32:06,727 - INFO - Page 3770/5209 (72.4%) | Avg: 0.08s/page | ETA: 1.8 min
+2025-10-26 17:32:07,438 - INFO - Page 3780/5209 (72.6%) | Avg: 0.08s/page | ETA: 1.8 min
+2025-10-26 17:32:08,109 - INFO - Page 3790/5209 (72.8%) | Avg: 0.07s/page | ETA: 1.8 min
+2025-10-26 17:32:08,798 - INFO - Batch complete: 100 pages in 7.5s (0.07s/page), 155 tables found
+2025-10-26 17:32:08,799 - INFO - Checkpoint saved at page 3800
+2025-10-26 17:32:08,799 - INFO - Processing batch: pages 3800-3899 (100 pages)
+2025-10-26 17:32:08,800 - INFO - Page 3800/5209 (73.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:32:09,499 - INFO - Page 3810/5209 (73.1%) | Avg: 0.06s/page | ETA: 1.5 min
+2025-10-26 17:32:10,288 - INFO - Page 3820/5209 (73.3%) | Avg: 0.07s/page | ETA: 1.6 min
+2025-10-26 17:32:10,988 - INFO - Page 3830/5209 (73.5%) | Avg: 0.07s/page | ETA: 1.6 min
+2025-10-26 17:32:11,705 - INFO - Page 3840/5209 (73.7%) | Avg: 0.07s/page | ETA: 1.6 min
+2025-10-26 17:32:12,370 - INFO - Page 3850/5209 (73.9%) | Avg: 0.07s/page | ETA: 1.6 min
+2025-10-26 17:32:13,033 - INFO - Page 3860/5209 (74.1%) | Avg: 0.07s/page | ETA: 1.6 min
+2025-10-26 17:32:13,719 - INFO - Page 3870/5209 (74.3%) | Avg: 0.07s/page | ETA: 1.5 min
+2025-10-26 17:32:14,431 - INFO - Page 3880/5209 (74.5%) | Avg: 0.07s/page | ETA: 1.5 min
+2025-10-26 17:32:15,136 - INFO - Page 3890/5209 (74.7%) | Avg: 0.07s/page | ETA: 1.5 min
+2025-10-26 17:32:15,819 - INFO - Batch complete: 100 pages in 7.0s (0.07s/page), 135 tables found
+2025-10-26 17:32:15,821 - INFO - Checkpoint saved at page 3900
+2025-10-26 17:32:15,821 - INFO - Processing batch: pages 3900-3999 (100 pages)
+2025-10-26 17:32:15,821 - INFO - Page 3900/5209 (74.9%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:32:16,549 - INFO - Page 3910/5209 (75.1%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:17,252 - INFO - Page 3920/5209 (75.3%) | Avg: 0.07s/page | ETA: 1.5 min
+2025-10-26 17:32:17,924 - INFO - Page 3930/5209 (75.4%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:18,632 - INFO - Page 3940/5209 (75.6%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:19,323 - INFO - Page 3950/5209 (75.8%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:20,026 - INFO - Page 3960/5209 (76.0%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:20,714 - INFO - Page 3970/5209 (76.2%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:21,544 - INFO - Page 3980/5209 (76.4%) | Avg: 0.07s/page | ETA: 1.4 min
+2025-10-26 17:32:22,562 - INFO - Page 3990/5209 (76.6%) | Avg: 0.07s/page | ETA: 1.5 min
+2025-10-26 17:32:23,476 - INFO - Batch complete: 100 pages in 7.7s (0.08s/page), 153 tables found
+2025-10-26 17:32:23,477 - INFO - Checkpoint saved at page 4000
+2025-10-26 17:32:23,477 - INFO - Processing batch: pages 4000-4099 (100 pages)
+2025-10-26 17:32:23,478 - INFO - Page 4000/5209 (76.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:32:24,341 - INFO - Page 4010/5209 (77.0%) | Avg: 0.08s/page | ETA: 1.6 min
+2025-10-26 17:32:25,314 - INFO - Page 4020/5209 (77.2%) | Avg: 0.09s/page | ETA: 1.7 min
+2025-10-26 17:32:26,600 - INFO - Page 4030/5209 (77.4%) | Avg: 0.10s/page | ETA: 2.0 min
+2025-10-26 17:32:28,000 - INFO - Page 4040/5209 (77.6%) | Avg: 0.11s/page | ETA: 2.1 min
+2025-10-26 17:32:29,275 - INFO - Page 4050/5209 (77.8%) | Avg: 0.11s/page | ETA: 2.2 min
+2025-10-26 17:32:30,597 - INFO - Page 4060/5209 (77.9%) | Avg: 0.12s/page | ETA: 2.2 min
+2025-10-26 17:32:31,865 - INFO - Page 4070/5209 (78.1%) | Avg: 0.12s/page | ETA: 2.2 min
+2025-10-26 17:32:33,114 - INFO - Page 4080/5209 (78.3%) | Avg: 0.12s/page | ETA: 2.2 min
+2025-10-26 17:32:34,341 - INFO - Page 4090/5209 (78.5%) | Avg: 0.12s/page | ETA: 2.2 min
+2025-10-26 17:32:35,287 - INFO - Batch complete: 100 pages in 11.8s (0.12s/page), 233 tables found
+2025-10-26 17:32:35,288 - INFO - Checkpoint saved at page 4100
+2025-10-26 17:32:35,288 - INFO - Processing batch: pages 4100-4199 (100 pages)
+2025-10-26 17:32:35,288 - INFO - Page 4100/5209 (78.7%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:32:36,398 - INFO - Page 4110/5209 (78.9%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:37,302 - INFO - Page 4120/5209 (79.1%) | Avg: 0.10s/page | ETA: 1.7 min
+2025-10-26 17:32:38,452 - INFO - Page 4130/5209 (79.3%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:39,391 - INFO - Page 4140/5209 (79.5%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:40,483 - INFO - Page 4150/5209 (79.7%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:41,470 - INFO - Page 4160/5209 (79.9%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:42,543 - INFO - Page 4170/5209 (80.1%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:43,610 - INFO - Page 4180/5209 (80.2%) | Avg: 0.10s/page | ETA: 1.8 min
+2025-10-26 17:32:44,844 - INFO - Page 4190/5209 (80.4%) | Avg: 0.11s/page | ETA: 1.8 min
+2025-10-26 17:32:45,939 - INFO - Batch complete: 100 pages in 10.7s (0.11s/page), 169 tables found
+2025-10-26 17:32:45,940 - INFO - Checkpoint saved at page 4200
+2025-10-26 17:32:45,940 - INFO - Processing batch: pages 4200-4299 (100 pages)
+2025-10-26 17:32:45,940 - INFO - Page 4200/5209 (80.6%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:32:47,001 - INFO - Page 4210/5209 (80.8%) | Avg: 0.10s/page | ETA: 1.6 min
+2025-10-26 17:32:48,135 - INFO - Page 4220/5209 (81.0%) | Avg: 0.10s/page | ETA: 1.7 min
+2025-10-26 17:32:49,167 - INFO - Page 4230/5209 (81.2%) | Avg: 0.10s/page | ETA: 1.7 min
+2025-10-26 17:32:50,239 - INFO - Page 4240/5209 (81.4%) | Avg: 0.10s/page | ETA: 1.7 min
+2025-10-26 17:32:51,248 - INFO - Page 4250/5209 (81.6%) | Avg: 0.10s/page | ETA: 1.7 min
+2025-10-26 17:32:52,344 - INFO - Page 4260/5209 (81.8%) | Avg: 0.10s/page | ETA: 1.7 min
+2025-10-26 17:41:14,583 - INFO - Page 4270/5209 (82.0%) | Avg: 7.16s/page | ETA: 112.1 min
+2025-10-26 17:41:17,405 - INFO - Page 4280/5209 (82.2%) | Avg: 6.31s/page | ETA: 97.8 min
+2025-10-26 17:41:19,732 - INFO - Page 4290/5209 (82.4%) | Avg: 5.65s/page | ETA: 86.5 min
+2025-10-26 17:41:22,355 - INFO - Batch complete: 100 pages in 516.4s (5.16s/page), 243 tables found
+2025-10-26 17:41:22,384 - INFO - Checkpoint saved at page 4300
+2025-10-26 17:41:22,385 - INFO - Processing batch: pages 4300-4399 (100 pages)
+2025-10-26 17:41:22,386 - INFO - Page 4300/5209 (82.5%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:41:25,845 - INFO - Page 4310/5209 (82.7%) | Avg: 0.31s/page | ETA: 4.7 min
+2025-10-26 17:41:27,706 - INFO - Page 4320/5209 (82.9%) | Avg: 0.25s/page | ETA: 3.8 min
+2025-10-26 17:41:30,048 - INFO - Page 4330/5209 (83.1%) | Avg: 0.25s/page | ETA: 3.6 min
+2025-10-26 17:41:31,335 - INFO - Page 4340/5209 (83.3%) | Avg: 0.22s/page | ETA: 3.2 min
+2025-10-26 17:41:33,691 - INFO - Page 4350/5209 (83.5%) | Avg: 0.22s/page | ETA: 3.2 min
+2025-10-26 17:41:35,289 - INFO - Page 4360/5209 (83.7%) | Avg: 0.21s/page | ETA: 3.0 min
+2025-10-26 17:41:36,666 - INFO - Page 4370/5209 (83.9%) | Avg: 0.20s/page | ETA: 2.8 min
+2025-10-26 17:41:37,811 - INFO - Page 4380/5209 (84.1%) | Avg: 0.19s/page | ETA: 2.6 min
+2025-10-26 17:41:40,266 - INFO - Page 4390/5209 (84.3%) | Avg: 0.20s/page | ETA: 2.7 min
+2025-10-26 17:41:42,902 - INFO - Batch complete: 100 pages in 20.5s (0.21s/page), 231 tables found
+2025-10-26 17:41:42,904 - INFO - Checkpoint saved at page 4400
+2025-10-26 17:41:42,904 - INFO - Processing batch: pages 4400-4499 (100 pages)
+2025-10-26 17:41:42,905 - INFO - Page 4400/5209 (84.5%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:41:45,738 - INFO - Page 4410/5209 (84.7%) | Avg: 0.26s/page | ETA: 3.4 min
+2025-10-26 17:41:48,919 - INFO - Page 4420/5209 (84.9%) | Avg: 0.29s/page | ETA: 3.8 min
+2025-10-26 17:41:51,750 - INFO - Page 4430/5209 (85.0%) | Avg: 0.29s/page | ETA: 3.7 min
+2025-10-26 17:41:55,068 - INFO - Page 4440/5209 (85.2%) | Avg: 0.30s/page | ETA: 3.8 min
+2025-10-26 17:41:57,747 - INFO - Page 4450/5209 (85.4%) | Avg: 0.29s/page | ETA: 3.7 min
+2025-10-26 17:42:00,632 - INFO - Page 4460/5209 (85.6%) | Avg: 0.29s/page | ETA: 3.6 min
+2025-10-26 17:42:03,180 - INFO - Page 4470/5209 (85.8%) | Avg: 0.29s/page | ETA: 3.5 min
+2025-10-26 17:42:05,210 - INFO - Page 4480/5209 (86.0%) | Avg: 0.28s/page | ETA: 3.3 min
+2025-10-26 17:42:07,148 - INFO - Page 4490/5209 (86.2%) | Avg: 0.27s/page | ETA: 3.2 min
+2025-10-26 17:42:10,123 - INFO - Batch complete: 100 pages in 27.2s (0.27s/page), 390 tables found
+2025-10-26 17:42:10,125 - INFO - Checkpoint saved at page 4500
+2025-10-26 17:42:10,125 - INFO - Processing batch: pages 4500-4599 (100 pages)
+2025-10-26 17:42:10,125 - INFO - Page 4500/5209 (86.4%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:42:13,340 - INFO - Page 4510/5209 (86.6%) | Avg: 0.29s/page | ETA: 3.4 min
+2025-10-26 17:42:15,935 - INFO - Page 4520/5209 (86.8%) | Avg: 0.28s/page | ETA: 3.2 min
+2025-10-26 17:42:19,934 - INFO - Page 4530/5209 (87.0%) | Avg: 0.32s/page | ETA: 3.6 min
+2025-10-26 17:42:23,507 - INFO - Page 4540/5209 (87.2%) | Avg: 0.33s/page | ETA: 3.6 min
+2025-10-26 17:42:25,848 - INFO - Page 4550/5209 (87.3%) | Avg: 0.31s/page | ETA: 3.4 min
+2025-10-26 17:42:28,153 - INFO - Page 4560/5209 (87.5%) | Avg: 0.30s/page | ETA: 3.2 min
+2025-10-26 17:42:31,718 - INFO - Page 4570/5209 (87.7%) | Avg: 0.30s/page | ETA: 3.2 min
+2025-10-26 17:42:34,952 - INFO - Page 4580/5209 (87.9%) | Avg: 0.31s/page | ETA: 3.2 min
+2025-10-26 17:42:37,558 - INFO - Page 4590/5209 (88.1%) | Avg: 0.30s/page | ETA: 3.1 min
+2025-10-26 17:42:39,834 - INFO - Batch complete: 100 pages in 29.7s (0.30s/page), 233 tables found
+2025-10-26 17:42:39,835 - INFO - Checkpoint saved at page 4600
+2025-10-26 17:42:39,835 - INFO - Processing batch: pages 4600-4699 (100 pages)
+2025-10-26 17:42:39,835 - INFO - Page 4600/5209 (88.3%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:42:42,835 - INFO - Page 4610/5209 (88.5%) | Avg: 0.27s/page | ETA: 2.7 min
+2025-10-26 17:42:45,519 - INFO - Page 4620/5209 (88.7%) | Avg: 0.27s/page | ETA: 2.7 min
+2025-10-26 17:42:48,070 - INFO - Page 4630/5209 (88.9%) | Avg: 0.27s/page | ETA: 2.6 min
+2025-10-26 17:42:50,754 - INFO - Page 4640/5209 (89.1%) | Avg: 0.27s/page | ETA: 2.5 min
+2025-10-26 17:42:53,237 - INFO - Page 4650/5209 (89.3%) | Avg: 0.26s/page | ETA: 2.4 min
+2025-10-26 17:42:56,250 - INFO - Page 4660/5209 (89.5%) | Avg: 0.27s/page | ETA: 2.5 min
+2025-10-26 17:43:00,418 - INFO - Page 4670/5209 (89.7%) | Avg: 0.29s/page | ETA: 2.6 min
+2025-10-26 17:43:03,541 - INFO - Page 4680/5209 (89.8%) | Avg: 0.29s/page | ETA: 2.6 min
+2025-10-26 17:43:05,580 - INFO - Page 4690/5209 (90.0%) | Avg: 0.28s/page | ETA: 2.4 min
+2025-10-26 17:43:08,880 - INFO - Batch complete: 100 pages in 29.0s (0.29s/page), 207 tables found
+2025-10-26 17:43:08,881 - INFO - Checkpoint saved at page 4700
+2025-10-26 17:43:08,882 - INFO - Processing batch: pages 4700-4799 (100 pages)
+2025-10-26 17:43:08,882 - INFO - Page 4700/5209 (90.2%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:43:13,190 - INFO - Page 4710/5209 (90.4%) | Avg: 0.39s/page | ETA: 3.3 min
+2025-10-26 17:43:17,126 - INFO - Page 4720/5209 (90.6%) | Avg: 0.39s/page | ETA: 3.2 min
+2025-10-26 17:43:19,088 - INFO - Page 4730/5209 (90.8%) | Avg: 0.33s/page | ETA: 2.6 min
+2025-10-26 17:43:21,250 - INFO - Page 4740/5209 (91.0%) | Avg: 0.30s/page | ETA: 2.4 min
+2025-10-26 17:43:22,857 - INFO - Page 4750/5209 (91.2%) | Avg: 0.27s/page | ETA: 2.1 min
+2025-10-26 17:43:25,291 - INFO - Page 4760/5209 (91.4%) | Avg: 0.27s/page | ETA: 2.0 min
+2025-10-26 17:43:26,627 - INFO - Page 4770/5209 (91.6%) | Avg: 0.25s/page | ETA: 1.8 min
+2025-10-26 17:43:28,921 - INFO - Page 4780/5209 (91.8%) | Avg: 0.25s/page | ETA: 1.8 min
+2025-10-26 17:43:30,132 - INFO - Page 4790/5209 (92.0%) | Avg: 0.23s/page | ETA: 1.6 min
+2025-10-26 17:43:31,262 - INFO - Batch complete: 100 pages in 22.4s (0.22s/page), 171 tables found
+2025-10-26 17:43:31,264 - INFO - Checkpoint saved at page 4800
+2025-10-26 17:43:31,264 - INFO - Processing batch: pages 4800-4899 (100 pages)
+2025-10-26 17:43:31,264 - INFO - Page 4800/5209 (92.1%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:43:33,354 - INFO - Page 4810/5209 (92.3%) | Avg: 0.19s/page | ETA: 1.3 min
+2025-10-26 17:43:34,812 - INFO - Page 4820/5209 (92.5%) | Avg: 0.17s/page | ETA: 1.1 min
+2025-10-26 17:43:35,970 - INFO - Page 4830/5209 (92.7%) | Avg: 0.15s/page | ETA: 1.0 min
+2025-10-26 17:43:36,718 - INFO - Page 4840/5209 (92.9%) | Avg: 0.13s/page | ETA: 0.8 min
+2025-10-26 17:43:37,810 - INFO - Page 4850/5209 (93.1%) | Avg: 0.13s/page | ETA: 0.8 min
+2025-10-26 17:43:38,913 - INFO - Page 4860/5209 (93.3%) | Avg: 0.13s/page | ETA: 0.7 min
+2025-10-26 17:43:40,260 - INFO - Page 4870/5209 (93.5%) | Avg: 0.13s/page | ETA: 0.7 min
+2025-10-26 17:43:41,079 - INFO - Page 4880/5209 (93.7%) | Avg: 0.12s/page | ETA: 0.7 min
+2025-10-26 17:43:42,190 - INFO - Page 4890/5209 (93.9%) | Avg: 0.12s/page | ETA: 0.6 min
+2025-10-26 17:43:43,221 - INFO - Batch complete: 100 pages in 12.0s (0.12s/page), 145 tables found
+2025-10-26 17:43:43,223 - INFO - Checkpoint saved at page 4900
+2025-10-26 17:43:43,223 - INFO - Processing batch: pages 4900-4999 (100 pages)
+2025-10-26 17:43:43,223 - INFO - Page 4900/5209 (94.1%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:43:44,670 - INFO - Page 4910/5209 (94.3%) | Avg: 0.13s/page | ETA: 0.7 min
+2025-10-26 17:43:45,455 - INFO - Page 4920/5209 (94.5%) | Avg: 0.11s/page | ETA: 0.5 min
+2025-10-26 17:43:47,268 - INFO - Page 4930/5209 (94.6%) | Avg: 0.13s/page | ETA: 0.6 min
+2025-10-26 17:43:51,802 - INFO - Page 4940/5209 (94.8%) | Avg: 0.21s/page | ETA: 0.9 min
+2025-10-26 17:43:55,209 - INFO - Page 4950/5209 (95.0%) | Avg: 0.24s/page | ETA: 1.0 min
+2025-10-26 17:43:58,046 - INFO - Page 4960/5209 (95.2%) | Avg: 0.24s/page | ETA: 1.0 min
+2025-10-26 17:43:59,903 - INFO - Page 4970/5209 (95.4%) | Avg: 0.23s/page | ETA: 0.9 min
+2025-10-26 17:44:01,923 - INFO - Page 4980/5209 (95.6%) | Avg: 0.23s/page | ETA: 0.9 min
+2025-10-26 17:44:03,521 - INFO - Page 4990/5209 (95.8%) | Avg: 0.22s/page | ETA: 0.8 min
+2025-10-26 17:44:05,188 - INFO - Batch complete: 100 pages in 22.0s (0.22s/page), 270 tables found
+2025-10-26 17:44:05,189 - INFO - Checkpoint saved at page 5000
+2025-10-26 17:44:05,190 - INFO - Processing batch: pages 5000-5099 (100 pages)
+2025-10-26 17:44:05,190 - INFO - Page 5000/5209 (96.0%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 17:44:07,570 - INFO - Page 5010/5209 (96.2%) | Avg: 0.22s/page | ETA: 0.7 min
+2025-10-26 17:44:09,473 - INFO - Page 5020/5209 (96.4%) | Avg: 0.20s/page | ETA: 0.6 min
+2025-10-26 17:44:11,761 - INFO - Page 5030/5209 (96.6%) | Avg: 0.21s/page | ETA: 0.6 min
+2025-10-26 17:44:13,312 - INFO - Page 5040/5209 (96.8%) | Avg: 0.20s/page | ETA: 0.6 min
+2025-10-26 17:44:14,755 - INFO - Page 5050/5209 (96.9%) | Avg: 0.19s/page | ETA: 0.5 min
+2025-10-26 17:44:17,154 - INFO - Page 5060/5209 (97.1%) | Avg: 0.20s/page | ETA: 0.5 min
+2025-10-26 17:59:52,366 - INFO - Page 5070/5209 (97.3%) | Avg: 13.34s/page | ETA: 30.9 min
+2025-10-26 17:59:55,317 - INFO - Page 5080/5209 (97.5%) | Avg: 11.73s/page | ETA: 25.2 min
+2025-10-26 17:59:57,077 - INFO - Page 5090/5209 (97.7%) | Avg: 10.46s/page | ETA: 20.7 min
+2025-10-26 17:59:59,909 - INFO - Batch complete: 100 pages in 954.7s (9.55s/page), 323 tables found
+2025-10-26 17:59:59,934 - INFO - Checkpoint saved at page 5100
+2025-10-26 17:59:59,935 - INFO - Processing batch: pages 5100-5199 (100 pages)
+2025-10-26 17:59:59,935 - INFO - Page 5100/5209 (97.9%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 18:00:04,384 - INFO - Page 5110/5209 (98.1%) | Avg: 0.40s/page | ETA: 0.7 min
+2025-10-26 18:00:06,770 - INFO - Page 5120/5209 (98.3%) | Avg: 0.33s/page | ETA: 0.5 min
+2025-10-26 18:00:09,122 - INFO - Page 5130/5209 (98.5%) | Avg: 0.30s/page | ETA: 0.4 min
+2025-10-26 18:00:10,893 - INFO - Page 5140/5209 (98.7%) | Avg: 0.27s/page | ETA: 0.3 min
+2025-10-26 18:00:14,067 - INFO - Page 5150/5209 (98.9%) | Avg: 0.28s/page | ETA: 0.3 min
+2025-10-26 18:00:15,940 - INFO - Page 5160/5209 (99.1%) | Avg: 0.26s/page | ETA: 0.2 min
+2025-10-26 18:00:18,736 - INFO - Page 5170/5209 (99.3%) | Avg: 0.26s/page | ETA: 0.2 min
+2025-10-26 18:00:20,595 - INFO - Page 5180/5209 (99.4%) | Avg: 0.26s/page | ETA: 0.1 min
+2025-10-26 18:00:22,792 - INFO - Page 5190/5209 (99.6%) | Avg: 0.25s/page | ETA: 0.1 min
+2025-10-26 18:00:23,702 - INFO - Batch complete: 100 pages in 23.8s (0.24s/page), 328 tables found
+2025-10-26 18:00:23,705 - INFO - Checkpoint saved at page 5200
+2025-10-26 18:00:23,706 - INFO - Processing batch: pages 5200-5208 (9 pages)
+2025-10-26 18:00:23,706 - INFO - Page 5200/5209 (99.8%) | Avg: 0.00s/page | ETA: 0.0 min
+2025-10-26 18:00:25,822 - INFO - Batch complete: 9 pages in 2.1s (0.24s/page), 19 tables found
+2025-10-26 18:00:25,826 - INFO - Checkpoint saved at page 5209
+2025-10-26 18:00:25,829 - INFO - Table extraction complete: 14305 tables found
+2025-10-26 18:00:25,829 - INFO - 
+=== PHASE 2: Merging Table Continuations ===
+2025-10-26 18:00:31,793 - INFO - Merged into 10785 logical tables
+2025-10-26 18:00:31,794 - INFO - 
+=== PHASE 3: Parsing Logcode Sections ===
+2025-10-26 18:00:37,008 - INFO - Scanning for logcode sections: page 0/5209
+2025-10-26 18:00:37,946 - INFO - Scanning for logcode sections: page 100/5209
+2025-10-26 18:00:38,597 - INFO - Scanning for logcode sections: page 200/5209
+2025-10-26 18:00:39,226 - INFO - Scanning for logcode sections: page 300/5209
+2025-10-26 18:00:40,328 - INFO - Scanning for logcode sections: page 400/5209
+2025-10-26 18:00:41,480 - INFO - Scanning for logcode sections: page 500/5209
+2025-10-26 18:00:42,635 - INFO - Scanning for logcode sections: page 600/5209
+2025-10-26 18:00:43,329 - INFO - Scanning for logcode sections: page 700/5209
+2025-10-26 18:00:43,619 - INFO - Scanning for logcode sections: page 800/5209
+2025-10-26 18:00:43,939 - INFO - Scanning for logcode sections: page 900/5209
+2025-10-26 18:00:44,166 - INFO - Scanning for logcode sections: page 1000/5209
+2025-10-26 18:00:44,467 - INFO - Scanning for logcode sections: page 1100/5209
+2025-10-26 18:00:44,847 - INFO - Scanning for logcode sections: page 1200/5209
+2025-10-26 18:00:45,142 - INFO - Scanning for logcode sections: page 1300/5209
+2025-10-26 18:00:45,417 - INFO - Scanning for logcode sections: page 1400/5209
+2025-10-26 18:00:45,725 - INFO - Scanning for logcode sections: page 1500/5209
+2025-10-26 18:00:45,992 - INFO - Scanning for logcode sections: page 1600/5209
+2025-10-26 18:00:46,258 - INFO - Scanning for logcode sections: page 1700/5209
+2025-10-26 18:00:46,513 - INFO - Scanning for logcode sections: page 1800/5209
+2025-10-26 18:00:46,871 - INFO - Scanning for logcode sections: page 1900/5209
+2025-10-26 18:00:47,188 - INFO - Scanning for logcode sections: page 2000/5209
+2025-10-26 18:00:47,489 - INFO - Scanning for logcode sections: page 2100/5209
+2025-10-26 18:00:47,843 - INFO - Scanning for logcode sections: page 2200/5209
+2025-10-26 18:00:48,095 - INFO - Scanning for logcode sections: page 2300/5209
+2025-10-26 18:00:48,302 - INFO - Scanning for logcode sections: page 2400/5209
+2025-10-26 18:00:48,515 - INFO - Scanning for logcode sections: page 2500/5209
+2025-10-26 18:00:48,934 - INFO - Scanning for logcode sections: page 2600/5209
+2025-10-26 18:00:49,335 - INFO - Scanning for logcode sections: page 2700/5209
+2025-10-26 18:00:49,869 - INFO - Scanning for logcode sections: page 2800/5209
+2025-10-26 18:00:50,415 - INFO - Scanning for logcode sections: page 2900/5209
+2025-10-26 18:00:51,061 - INFO - Scanning for logcode sections: page 3000/5209
+2025-10-26 18:00:51,347 - INFO - Scanning for logcode sections: page 3100/5209
+2025-10-26 18:00:51,820 - INFO - Scanning for logcode sections: page 3200/5209
+2025-10-26 18:00:52,304 - INFO - Scanning for logcode sections: page 3300/5209
+2025-10-26 18:00:52,828 - INFO - Scanning for logcode sections: page 3400/5209
+2025-10-26 18:00:53,411 - INFO - Scanning for logcode sections: page 3500/5209
+2025-10-26 18:00:53,946 - INFO - Scanning for logcode sections: page 3600/5209
+2025-10-26 18:00:54,312 - INFO - Scanning for logcode sections: page 3700/5209
+2025-10-26 18:00:54,726 - INFO - Scanning for logcode sections: page 3800/5209
+2025-10-26 18:00:55,061 - INFO - Scanning for logcode sections: page 3900/5209
+2025-10-26 18:00:55,496 - INFO - Scanning for logcode sections: page 4000/5209
+2025-10-26 18:00:56,347 - INFO - Scanning for logcode sections: page 4100/5209
+2025-10-26 18:00:56,969 - INFO - Scanning for logcode sections: page 4200/5209
+2025-10-26 18:00:57,830 - INFO - Scanning for logcode sections: page 4300/5209
+2025-10-26 18:00:58,440 - INFO - Scanning for logcode sections: page 4400/5209
+2025-10-26 18:00:58,865 - INFO - Scanning for logcode sections: page 4500/5209
+2025-10-26 18:00:59,219 - INFO - Scanning for logcode sections: page 4600/5209
+2025-10-26 18:00:59,523 - INFO - Scanning for logcode sections: page 4700/5209
+2025-10-26 18:00:59,828 - INFO - Scanning for logcode sections: page 4800/5209
+2025-10-26 18:00:59,998 - INFO - Scanning for logcode sections: page 4900/5209
+2025-10-26 18:01:00,299 - INFO - Scanning for logcode sections: page 5000/5209
+2025-10-26 18:01:00,570 - INFO - Scanning for logcode sections: page 5100/5209
+2025-10-26 18:01:00,896 - INFO - Scanning for logcode sections: page 5200/5209
+2025-10-26 18:01:00,939 - INFO - Found 155 logcode sections
+2025-10-26 18:01:00,939 - INFO - 
+=== PHASE 4: Grouping Tables and Storing ===
+2025-10-26 18:01:01,529 - INFO - Storing 155 logcodes to database...
+2025-10-26 18:01:01,724 - INFO - Storing logcode 10/155: 0X1C2C
+2025-10-26 18:01:02,309 - INFO - Storing logcode 20/155: 0XB84F
+2025-10-26 18:01:03,144 - INFO - Storing logcode 30/155: 0XB883
+2025-10-26 18:01:04,513 - INFO - Storing logcode 40/155: 0XB89B
+2025-10-26 18:01:05,596 - INFO - Storing logcode 50/155: 0XB96D
+2025-10-26 18:01:05,922 - INFO - Storing logcode 60/155: 0XB9A7
+2025-10-26 18:01:06,150 - INFO - Storing logcode 70/155: 0XB809
+2025-10-26 18:01:06,304 - INFO - Storing logcode 80/155: 0XB813
+2025-10-26 18:01:06,653 - INFO - Storing logcode 90/155: 0XB822
+2025-10-26 18:01:07,229 - INFO - Storing logcode 100/155: 0XB999
+2025-10-26 18:01:09,071 - INFO - Storing logcode 110/155: 0XB872
+2025-10-26 18:01:09,617 - INFO - Storing logcode 120/155: 0XC8E
+2025-10-26 18:01:09,775 - INFO - Storing logcode 130/155: 0XCC7
+2025-10-26 18:01:09,950 - INFO - Storing logcode 140/155: 0XCF3
+2025-10-26 18:01:10,117 - INFO - Storing logcode 150/155: 0XD3D
+2025-10-26 18:01:10,202 - INFO - 
+=== PHASE 5: Extracting Revision History ===
+2025-10-26 18:01:11,045 - INFO - Found 105 revision entries
+2025-10-26 18:01:11,099 - INFO - Stored 105 revision entries
+2025-10-26 18:01:11,138 - INFO - Checkpoint file removed (parsing complete)
+2025-10-26 18:01:11,138 - INFO - 
+============================================================
+2025-10-26 18:01:11,139 - INFO - PARSING COMPLETE
+2025-10-26 18:01:11,140 - INFO - Total time: 56.6 minutes (3398.8 seconds)
+2025-10-26 18:01:11,141 - INFO - Total pages: 5209
+2025-10-26 18:01:11,142 - INFO - Total logcodes: 155
+2025-10-26 18:01:11,142 - INFO - Total tables: 10785
+2025-10-26 18:01:11,142 - INFO - Average time per page: 0.65s
+2025-10-26 18:01:11,142 - INFO - ============================================================

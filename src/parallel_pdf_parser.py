@@ -95,6 +95,11 @@ def scan_pages_for_logcodes(args: Tuple[str, int, int, int]) -> List[Dict]:
         sections = []
         for page_num in range(start_page, end_page):
             try:
+                # Skip table of contents pages (first 20 pages) to avoid duplicate detection
+                # Sections appear in both TOC and on actual content pages
+                if page_num < 20:
+                    continue
+
                 page = extractor.doc[page_num]
                 text = page.get_text()
                 sections_on_page = parser.detect_logcode_sections(text)
@@ -348,6 +353,7 @@ class ParallelPDFParser:
                     if table_major != section_major:
                         continue
 
+                    # Look for tables on the same page or next page as the section header
                     if table.metadata.page_start in [section['page'], section['page'] + 1]:
                         candidates.append(table)
 
@@ -359,7 +365,31 @@ class ParallelPDFParser:
                     section['first_table'] = table.metadata.table_number
                     break
 
-            # Strategy 2: If no match, try first 10 chars (more lenient)
+            # Strategy 2: Fuzzy word matching - extract significant words and check overlap
+            if not section['first_table']:
+                def extract_words(text):
+                    """Extract significant words (2+ chars, not common words)"""
+                    import re
+                    # Split camelCase: insert space before capital letters
+                    text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
+                    # Replace separators with spaces
+                    words = text.upper().replace('_', ' ').replace('-', ' ').split()
+                    # Filter out very common words
+                    skip = {'NR5G', 'NR', '5G', 'LOG', 'PACKET', 'V1', 'V2', 'V3', 'THE', 'AND', 'OR'}
+                    return set(w for w in words if len(w) >= 2 and w not in skip)
+
+                section_words = extract_words(section['name'])
+
+                for table in candidates:
+                    table_words = extract_words(table.metadata.title)
+                    # Check for at least 2 common significant words
+                    common = section_words & table_words
+                    if len(common) >= 2:
+                        section['first_table'] = table.metadata.table_number
+                        logger.info(f"  Fuzzy match: '{section['name']}' → '{table.metadata.title}' (common: {common})")
+                        break
+
+            # Strategy 3: If no match, try first 10 chars (more lenient)
             if not section['first_table']:
                 for table in candidates:
                     section_keywords = section['name'].replace(' ', '').replace('5G', '5g')
@@ -368,7 +398,7 @@ class ParallelPDFParser:
                         section['first_table'] = table.metadata.table_number
                         break
 
-            # Strategy 3: If still no match, take first candidate table on same page
+            # Strategy 4: If still no match, take first candidate table on same page
             if not section['first_table'] and candidates:
                 section['first_table'] = candidates[0].metadata.table_number
 
@@ -386,11 +416,32 @@ class ParallelPDFParser:
                 'tables': []
             }
 
-            if section['first_table']:
+            # Special handling for event sections (16, 17, 18, 19): direct 1-to-1 mapping
+            # Section X.Y should map to Table X-Y only
+            section_parts = section['section'].split('.')
+            if len(section_parts) == 2 and section_parts[0] in ['16', '17', '18', '19']:
+                section_major = section_parts[0]
+                section_minor = section_parts[1]
+                expected_table_num = f"{section_major}-{section_minor}"
+                logger.info(f"Event section {section_major} logcode {logcode} (section {section['section']}): looking for table {expected_table_num}")
+
+                for table in merged_tables:
+                    if table.metadata.table_number == expected_table_num:
+                        logcodes[logcode]['tables'].append(table)
+                        logger.info(f"  -> Assigned table {expected_table_num} to {logcode}")
+                        break
+            # Standard range-based assignment for all other sections
+            elif section['first_table']:
                 start_major, start_minor = map(int, section['first_table'].split('-'))
                 if i + 1 < len(logcode_sections) and logcode_sections[i + 1]['first_table']:
                     end_major, end_minor = map(int, logcode_sections[i + 1]['first_table'].split('-'))
-                    end_minor -= 1
+                    # If next logcode is in a different major section, include all tables
+                    # in current section (up to 999). Otherwise, go up to (but not including)
+                    # the next logcode's first table.
+                    if end_major != start_major:
+                        end_major, end_minor = start_major, 999
+                    else:
+                        end_minor -= 1
                 else:
                     end_major, end_minor = 999, 999
 

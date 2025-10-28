@@ -13,8 +13,8 @@ from pdf_extractor import ExtractedTable, RevisionEntry
 
 class LogcodeDatastore:
     """SQLite datastore for logcode information"""
-    
-    def __init__(self, db_path: str = "data/parsed_logcodes.db"):
+
+    def __init__(self, db_path: str = "../data/parsed_logcodes.db"):
         self.db_path = db_path
         Path(db_path).parent.mkdir(parents=True, exist_ok=True)
         self.conn = sqlite3.connect(db_path)

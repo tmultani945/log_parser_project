@@ -320,8 +320,8 @@ Examples:
 
     # Global arguments
     parser.add_argument('--database', '-d',
-                       default='data/parsed_logcodes.db',
-                       help='Path to SQLite database (default: data/parsed_logcodes.db)')
+                       default='../data/parsed_logcodes.db',
+                       help='Path to SQLite database (default: ../data/parsed_logcodes.db)')
 
     subparsers = parser.add_subparsers(dest='command', help='Commands')
 

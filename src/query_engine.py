@@ -24,8 +24,8 @@ class QueryEngine:
     """Query interface for logcode data"""
     
     STANDARD_HEADERS = ["Name", "Type Name", "Cnt", "Off", "Len", "Description"]
-    
-    def __init__(self, db_path: str = "data/parsed_logcodes.db"):
+
+    def __init__(self, db_path: str = "../data/parsed_logcodes.db"):
         self.db = LogcodeDatastore(db_path)
     
     def get_table(self, logcode: str, version: str) -> List[TableDisplay]:
