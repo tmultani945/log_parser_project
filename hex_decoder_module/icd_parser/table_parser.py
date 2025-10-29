@@ -136,6 +136,7 @@ class TableParser:
             offset_str = ''
             length_str = ''
             description = ''
+            count_str = ''
 
             if 'Off' in header_map and header_map['Off'] < len(row):
                 offset_str = row[header_map['Off']]
@@ -144,6 +145,10 @@ class TableParser:
             if 'Len' in header_map and header_map['Len'] < len(row):
                 length_str = row[header_map['Len']]
                 length_str = length_str.strip() if isinstance(length_str, str) else ''
+
+            if 'Cnt' in header_map and header_map['Cnt'] < len(row):
+                count_str = row[header_map['Cnt']]
+                count_str = count_str.strip() if isinstance(count_str, str) else ''
 
             if 'Description' in header_map and header_map['Description'] < len(row):
                 description = row[header_map['Description']]
@@ -172,6 +177,20 @@ class TableParser:
             if 'enum' in type_name.lower() and description:
                 enum_mappings = self._parse_enum_mappings(description)
 
+            # Parse count (may be a number or field reference)
+            count = None
+            if count_str:
+                # Try to parse as integer
+                if count_str.isdigit():
+                    count = int(count_str)
+                # Otherwise, it's likely a field reference (e.g., "Num Records")
+                # Store as a special marker: use -1 to indicate "read from field"
+                # We'll handle dynamic counts later
+                elif count_str.strip():
+                    # For now, mark it as needing dynamic resolution
+                    # Store the field name in the description for later use
+                    count = -1  # Marker for "dynamic count"
+
             return FieldDefinition(
                 name=name,
                 type_name=type_name,
@@ -179,7 +198,8 @@ class TableParser:
                 offset_bits=offset_bits,
                 length_bits=length_bits,
                 description=description,
-                enum_mappings=enum_mappings
+                enum_mappings=enum_mappings,
+                count=count
             )
 
         except (KeyError, ValueError, IndexError, AttributeError) as e:

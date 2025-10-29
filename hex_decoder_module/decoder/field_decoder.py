@@ -5,7 +5,7 @@ Decode individual fields from payload.
 from ..models.icd import FieldDefinition
 from ..models.decoded import DecodedField
 from ..models.errors import PayloadTooShortError, FieldDecodingError
-from ..utils.type_converters import decode_uint, decode_bool, decode_enum, decode_signed_int
+from ..utils.type_converters import decode_uint, decode_bool, decode_enum, decode_signed_int, decode_float
 
 
 class FieldDecoder:
@@ -81,6 +81,16 @@ class FieldDecoder:
                         field_def.offset_bits
                     )
                     friendly_value = None
+
+            elif 'float' in type_name or 'double' in type_name:
+                # IEEE 754 floating-point
+                raw_value = decode_float(
+                    payload,
+                    field_def.offset_bytes,
+                    field_def.length_bits,
+                    field_def.offset_bits
+                )
+                friendly_value = None
 
             else:
                 # Unknown type - treat as raw bytes

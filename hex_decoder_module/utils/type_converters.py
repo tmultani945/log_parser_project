@@ -2,6 +2,7 @@
 Type-specific decoders for different field types.
 """
 
+import struct
 from typing import Dict, Tuple
 from .byte_ops import bytes_to_uint_le, slice_bits
 
@@ -138,3 +139,45 @@ def decode_string(payload: bytes, offset_bytes: int, length_bytes: int, encoding
     except UnicodeDecodeError:
         # Fallback to raw hex
         return raw_bytes.hex()
+
+
+def decode_float(payload: bytes, offset_bytes: int, length_bits: int, offset_bits: int = 0) -> float:
+    """
+    Decode IEEE 754 floating-point number (Float32 or Float64).
+
+    Args:
+        payload: Raw payload bytes
+        offset_bytes: Byte offset
+        length_bits: Bit length (32 for float, 64 for double)
+        offset_bits: Additional bit offset (must be 0 for floats)
+
+    Returns:
+        Floating-point value
+
+    Raises:
+        ValueError: If offset_bits is non-zero or length_bits is invalid
+    """
+    if offset_bits != 0:
+        raise ValueError("Float decoding does not support bit-level offsets")
+
+    if length_bits not in [32, 64]:
+        raise ValueError(f"Float must be 32 or 64 bits, got {length_bits}")
+
+    length_bytes = length_bits // 8
+
+    if offset_bytes + length_bytes > len(payload):
+        raise ValueError(
+            f"Cannot read {length_bytes} bytes at offset {offset_bytes} "
+            f"from {len(payload)}-byte buffer"
+        )
+
+    # Extract bytes
+    raw_bytes = payload[offset_bytes:offset_bytes + length_bytes]
+
+    # Decode using struct (little-endian)
+    if length_bits == 32:
+        # Float32 - single precision
+        return struct.unpack('<f', raw_bytes)[0]
+    else:  # length_bits == 64
+        # Float64 - double precision
+        return struct.unpack('<d', raw_bytes)[0]

@@ -34,6 +34,7 @@ class FieldDefinition:
     length_bits: int               # Length in bits
     description: str
     enum_mappings: Optional[Dict[int, str]] = None  # For enum types
+    count: Optional[int] = None    # Repetition count (from Cnt column)
 
 
 @dataclass

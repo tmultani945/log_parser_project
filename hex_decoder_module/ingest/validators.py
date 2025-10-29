@@ -43,7 +43,7 @@ def validate_hex_format(hex_input: str) -> None:
     """
     Validate the overall hex input format.
 
-    Expected format:
+    Expected format (flexible whitespace):
         Length: <number>
         Header: <hex bytes>
         Payload: <hex bytes>
@@ -54,12 +54,12 @@ def validate_hex_format(hex_input: str) -> None:
     Raises:
         MalformedHexError: If format is invalid
     """
-    # Check for required sections
-    if 'Length:' not in hex_input:
+    # Check for required sections (case-insensitive, flexible whitespace)
+    if not re.search(r'\bLength\s*:', hex_input, re.IGNORECASE):
         raise MalformedHexError("Missing 'Length:' section")
 
-    if 'Header:' not in hex_input:
+    if not re.search(r'\bHeader\s*:', hex_input, re.IGNORECASE):
         raise MalformedHexError("Missing 'Header:' section")
 
-    if 'Payload:' not in hex_input:
+    if not re.search(r'\bPayload\s*:', hex_input, re.IGNORECASE):
         raise MalformedHexError("Missing 'Payload:' section")

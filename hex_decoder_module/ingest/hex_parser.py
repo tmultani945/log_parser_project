@@ -88,40 +88,49 @@ class HexInputParser:
         """
         Extract a hex section (Header or Payload) from input.
 
+        Handles various formats:
+        - Single line: "Header: F8 00 88 B8..."
+        - Multi-line with indentation: "Payload: 00 00 03 00\n        CF CC CC..."
+        - Extra whitespace before/after colons
+
         Args:
             hex_input: Raw input string
             section_name: Section name ('Header' or 'Payload')
 
         Returns:
-            Hex string for the section
+            Hex string for the section (cleaned, all on one logical line)
 
         Raises:
             MalformedHexError: If section cannot be found
         """
-        # Pattern: "Section: <hex data until next section or end>"
-        # Need to capture everything after "Section:" until the next section or end
-        pattern = rf'{section_name}:\s*((?:[0-9A-Fa-f\s\r\n]+))'
+        # Find the section start
+        section_pattern = rf'{section_name}\s*:'
+        section_match = re.search(section_pattern, hex_input, re.IGNORECASE)
 
-        match = re.search(pattern, hex_input, re.IGNORECASE | re.MULTILINE)
-        if not match:
+        if not section_match:
             raise MalformedHexError(f"Could not find '{section_name}' section")
 
-        hex_data = match.group(1).strip()
+        # Extract everything after the section label
+        start_pos = section_match.end()
+        remaining = hex_input[start_pos:]
 
-        # Stop at next section if present
-        # Look for patterns like "Length:", "Header:", "Payload:" that might come after
-        next_section_patterns = [r'\bLength:', r'\bHeader:', r'\bPayload:']
+        # Find the next section (Length/Header/Payload) or end of string
+        next_section_pattern = r'(?:Length|Header|Payload)\s*:'
+        next_match = re.search(next_section_pattern, remaining, re.IGNORECASE)
 
-        for pattern in next_section_patterns:
-            split_match = re.search(pattern, hex_data, re.IGNORECASE)
-            if split_match:
-                hex_data = hex_data[:split_match.start()].strip()
-                break
+        if next_match:
+            hex_data = remaining[:next_match.start()]
+        else:
+            hex_data = remaining
 
-        if not hex_data:
+        # Clean up: remove all whitespace/newlines but preserve hex characters
+        # This handles indented continuation lines automatically
+        hex_data_cleaned = re.sub(r'\s+', ' ', hex_data).strip()
+
+        if not hex_data_cleaned:
             raise MalformedHexError(f"'{section_name}' section is empty")
 
-        return hex_data
+        return hex_data_cleaned
 
 
 def parse_hex_input(hex_input: str) -> ParsedPacket:

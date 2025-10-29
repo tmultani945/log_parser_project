@@ -11,7 +11,7 @@
   "header": {
     "length_bytes": 248,
     "sequence": 17636316,
-    "timestamp_raw": 999176097
+    "timestamp_raw": 998913368
   },
   "fields": {
     "Num Records": {
@@ -31,7 +31,7 @@
     },
     "Num Total Slots Raw": {
       "type": "Uint32",
-      "raw": 581,
+      "raw": 576,
       "description": "Total number of slots"
     },
     "Num CA": {
@@ -51,7 +51,7 @@
     },
     "Num Slots Elapsed (Record 0)": {
       "type": "Uint32",
-      "raw": 1774267,
+      "raw": 1774262,
       "description": "Number of slots elapsed"
     },
     "Num PDSCH Decode (Record 0)": {
@@ -261,7 +261,7 @@
   "metadata": {
     "section": "7.6",
     "total_fields": 48,
-    "decode_time_ms": 20411.19,
+    "decode_time_ms": 44217.73,
     "cache_enabled": true,
     "cache_size": 1
   }
