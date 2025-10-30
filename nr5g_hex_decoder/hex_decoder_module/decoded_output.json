@@ -1,0 +1,50 @@
+{
+  "LogRecordDescription": "NR5G MAC PDSCH Stats",
+  "MAC Version": [
+    {
+      "MajorMinorVersion": "3.1"
+    }
+  ],
+  "NumRecords": "1",
+  "FlushGapCount": "0",
+  "NumTotalSlots": "12908",
+  "NumCA": "6",
+  "CumulativeBitmask": "119",
+  "Records": [
+    {
+      "CarrierID": "0",
+      "Numerology": "30KHZ",
+      "NumSlotsElapsed": "6589921",
+      "NumPDSCHDecode": "133714",
+      "NumCRCPassTB": "133142",
+      "NumCRCFailTB": "572",
+      "NumReTx": "3203",
+      "ACKAsNACK": "1157",
+      "HARQFailure": "42",
+      "CRCPassTBBytes": "62206859",
+      "CRCFailTBBytes": "5825445",
+      "TBBytes": "68032304",
+      "ReTxBytes": "6077790",
+      "BLER": "0.43",
+      "ResidualBLER": "0.03"
+    },
+    {
+      "CarrierID": "1",
+      "Numerology": "30KHZ",
+      "NumSlotsElapsed": "1973",
+      "NumPDSCHDecode": "11",
+      "NumCRCPassTB": "7",
+      "NumCRCFailTB": "4",
+      "NumReTx": "4",
+      "ACKAsNACK": "0",
+      "HARQFailure": "0",
+      "CRCPassTBBytes": "152396",
+      "CRCFailTBBytes": "114744",
+      "TBBytes": "267140",
+      "ReTxBytes": "114744",
+      "BLER": "36.36",
+      "ResidualBLER": "0.00"
+    }
+  ],
+  "Version": 196609
+}
