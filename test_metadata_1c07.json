@@ -1,0 +1,2383 @@
+{
+  "logcode_id": "0X1C07",
+  "logcode_name": "NR5G Sub6 TxAGC",
+  "section": "4.1",
+  "description": "",
+  "version_offset": 0,
+  "version_length": 32,
+  "version_map": {
+    "2": "4-4",
+    "3": "4-6",
+    "5": "4-8",
+    "6": "4-10",
+    "7": "4-14",
+    "8": "4-18"
+  },
+  "available_versions": [
+    "2",
+    "3",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "versions": {
+    "2": {
+      "version_value": 2,
+      "table_name": "4-4",
+      "direct_dependencies": [
+        "4-5"
+      ],
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sys FN",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 10,
+          "description": "Sysframe Number, range [0 to 1023]",
+          "count": 1
+        },
+        {
+          "name": "Sub FN",
+          "type_name": "Uint16",
+          "offset_bytes": 9,
+          "offset_bits": 2,
+          "length_bits": 6,
+          "description": "Subframe Number, range [0 to 9]",
+          "count": 1
+        },
+        {
+          "name": "Slot",
+          "type_name": "Uint16",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ",
+          "count": 1
+        },
+        {
+          "name": "SCS",
+          "type_name": "Enumeration",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Numerology or SCS\nValues:\n• 0 – 15\n• 1 – 30\n• 2 – 60\n• 3 – 120",
+          "count": 1,
+          "enum_mappings": {
+            "0": "15",
+            "1": "30",
+            "2": "60",
+            "3": "120"
+          }
+        },
+        {
+          "name": "Sym Index",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Symbol number having Tx activity",
+          "count": 1
+        },
+        {
+          "name": "Channel Type",
+          "type_name": "Enumeration",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "validation: 15 != .\"Channel Type\"\nValues:\n• 0 – PUCCH\n• 1 – PUSCH\n• 2 – SRS_0\n• 3 – SRS_1\n• 4 – SRS_2\n• 5 – PRACH",
+          "count": 1,
+          "enum_mappings": {
+            "0": "PUCCH",
+            "1": "PUSCH",
+            "2": "SRS_0",
+            "3": "SRS_1",
+            "4": "SRS_2",
+            "5": "PRACH"
+          }
+        },
+        {
+          "name": "Tx Chain Mask",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 1,
+          "length_bits": 2,
+          "description": "Tx chain mask",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power Raw",
+          "type_name": "Int16",
+          "offset_bytes": 13,
+          "offset_bits": 4,
+          "length_bits": 16,
+          "description": "Request Tx power",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power",
+          "type_name": "Float32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "MTPL Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 18,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Final MTPL for power limiting",
+          "count": 1
+        },
+        {
+          "name": "MTPL",
+          "type_name": "Float32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "MTPL",
+          "count": 1
+        },
+        {
+          "name": "PA State",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 3,
+          "description": "PA state index",
+          "count": 1
+        },
+        {
+          "name": "XPT",
+          "type_name": "Enumeration",
+          "offset_bytes": 21,
+          "offset_bits": 7,
+          "length_bits": 2,
+          "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n• 0 – APT\n• 1 – EPT\n• 2 – ET\n• 3 – NA",
+          "count": 1,
+          "enum_mappings": {
+            "0": "APT",
+            "1": "EPT",
+            "2": "ET",
+            "3": "NA"
+          }
+        },
+        {
+          "name": "BW",
+          "type_name": "Uint32",
+          "offset_bytes": 36,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "channel bandwidth",
+          "count": 1
+        },
+        {
+          "name": "Wave form",
+          "type_name": "Enumeration",
+          "offset_bytes": 37,
+          "offset_bits": 0,
+          "length_bits": 2,
+          "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n• 0 – CP\n• 1 – DFT",
+          "count": 1,
+          "enum_mappings": {
+            "0": "CP",
+            "1": "DFT"
+          }
+        },
+        {
+          "name": "Mod Scheme",
+          "type_name": "Enumeration",
+          "offset_bytes": 37,
+          "offset_bits": 2,
+          "length_bits": 3,
+          "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n• 0 – BPSK\n• 1 – QPSK\n• 2 – 16QAM\n• 3 – 64QAM\n• 4 – 256QAM",
+          "count": 1,
+          "enum_mappings": {
+            "0": "BPSK",
+            "1": "QPSK",
+            "2": "16QAM",
+            "3": "64QAM",
+            "4": "256QAM"
+          }
+        },
+        {
+          "name": "RB Start",
+          "type_name": "Uint32",
+          "offset_bytes": 37,
+          "offset_bits": 5,
+          "length_bits": 9,
+          "description": "Start RB index",
+          "count": 1
+        },
+        {
+          "name": "RB Num",
+          "type_name": "Uint32",
+          "offset_bytes": 38,
+          "offset_bits": 6,
+          "length_bits": 10,
+          "description": "< refer to ul_tx_on_type_e",
+          "count": 1
+        },
+        {
+          "name": "MPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "MPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 41,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR ENDC Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 42,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR in ENDC mode",
+          "count": 1
+        },
+        {
+          "name": "Tot Back off Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 43,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Total MPR&AMPR backoff",
+          "count": 1
+        },
+        {
+          "name": "Therm Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 44,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Thermal limit",
+          "count": 1
+        },
+        {
+          "name": "SAR Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 46,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "SAR limit",
+          "count": 1
+        },
+        {
+          "name": "PE Max Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Network signalled PeMax",
+          "count": 1
+        }
+      ],
+      "total_fields": 26
+    },
+    "3": {
+      "version_value": 3,
+      "table_name": "4-6",
+      "direct_dependencies": [
+        "4-7"
+      ],
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sys FN",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 10,
+          "description": "Sysframe Number, range [0 to 1023]",
+          "count": 1
+        },
+        {
+          "name": "Sub FN",
+          "type_name": "Uint16",
+          "offset_bytes": 9,
+          "offset_bits": 2,
+          "length_bits": 6,
+          "description": "Subframe Number, range [0 to 9]",
+          "count": 1
+        },
+        {
+          "name": "Slot",
+          "type_name": "Uint16",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ",
+          "count": 1
+        },
+        {
+          "name": "SCS",
+          "type_name": "Enumeration",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Numerology or SCS\nValues:\n• 0 – 15\n• 1 – 30\n• 2 – 60\n• 3 – 120",
+          "count": 1,
+          "enum_mappings": {
+            "0": "15",
+            "1": "30",
+            "2": "60",
+            "3": "120"
+          }
+        },
+        {
+          "name": "Sym Index",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Symbol number having Tx activity",
+          "count": 1
+        },
+        {
+          "name": "Channel Type",
+          "type_name": "Enumeration",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Values:\n• 0 – PUCCH\n• 1 – PUSCH\n• 2 – SRS_0",
+          "count": 1,
+          "enum_mappings": {
+            "0": "PUCCH",
+            "1": "PUSCH",
+            "2": "SRS_0"
+          }
+        },
+        {
+          "name": "Tx Chain Mask",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 1,
+          "length_bits": 2,
+          "description": "Tx chain mask",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power Raw",
+          "type_name": "Int16",
+          "offset_bytes": 13,
+          "offset_bits": 4,
+          "length_bits": 16,
+          "description": "Request Tx power",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power",
+          "type_name": "Float32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "MTPL Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 18,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Final MTPL for power limiting",
+          "count": 1
+        },
+        {
+          "name": "MTPL",
+          "type_name": "Float32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "MTPL",
+          "count": 1
+        },
+        {
+          "name": "PA State",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 3,
+          "description": "PA state index",
+          "count": 1
+        },
+        {
+          "name": "XPT",
+          "type_name": "Enumeration",
+          "offset_bytes": 21,
+          "offset_bits": 7,
+          "length_bits": 2,
+          "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n• 0 – APT\n• 1 – EPT\n• 2 – ET\n• 3 – NA",
+          "count": 1,
+          "enum_mappings": {
+            "0": "APT",
+            "1": "EPT",
+            "2": "ET",
+            "3": "NA"
+          }
+        },
+        {
+          "name": "BW",
+          "type_name": "Uint32",
+          "offset_bytes": 36,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "channel bandwidth",
+          "count": 1
+        },
+        {
+          "name": "Wave form",
+          "type_name": "Enumeration",
+          "offset_bytes": 37,
+          "offset_bits": 0,
+          "length_bits": 2,
+          "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n• 0 – CP\n• 1 – DFT",
+          "count": 1,
+          "enum_mappings": {
+            "0": "CP",
+            "1": "DFT"
+          }
+        },
+        {
+          "name": "Mod Scheme",
+          "type_name": "Enumeration",
+          "offset_bytes": 37,
+          "offset_bits": 2,
+          "length_bits": 3,
+          "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n• 0 – BPSK\n• 1 – QPSK\n• 2 – 16QAM\n• 3 – 64QAM\n• 4 – 256QAM",
+          "count": 1,
+          "enum_mappings": {
+            "0": "BPSK",
+            "1": "QPSK",
+            "2": "16QAM",
+            "3": "64QAM",
+            "4": "256QAM"
+          }
+        },
+        {
+          "name": "RB Start",
+          "type_name": "Uint32",
+          "offset_bytes": 37,
+          "offset_bits": 5,
+          "length_bits": 9,
+          "description": "Start RB index",
+          "count": 1
+        },
+        {
+          "name": "RB Num",
+          "type_name": "Uint32",
+          "offset_bytes": 38,
+          "offset_bits": 6,
+          "length_bits": 10,
+          "description": "< refer to ul_tx_on_type_e",
+          "count": 1
+        },
+        {
+          "name": "MPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "MPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 41,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR ENDC Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 42,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR in ENDC mode",
+          "count": 1
+        },
+        {
+          "name": "Tot Back off Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 43,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Total MPR&AMPR backoff",
+          "count": 1
+        },
+        {
+          "name": "Therm Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 44,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Thermal limit",
+          "count": 1
+        },
+        {
+          "name": "SAR Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 46,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "SAR limit",
+          "count": 1
+        },
+        {
+          "name": "PE Max Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Network signalled PeMax",
+          "count": 1
+        },
+        {
+          "name": "Ant Swt En",
+          "type_name": "Uint32",
+          "offset_bytes": 50,
+          "offset_bits": 0,
+          "length_bits": 1,
+          "description": "Ant_Switch enable",
+          "count": 1
+        },
+        {
+          "name": "Ant Swt Idx",
+          "type_name": "Uint32",
+          "offset_bytes": 50,
+          "offset_bits": 1,
+          "length_bits": 3,
+          "description": "Ant_Switch index",
+          "count": 1
+        },
+        {
+          "name": "TA Timing Fix Up",
+          "type_name": "Uint32",
+          "offset_bytes": 51,
+          "offset_bits": 0,
+          "length_bits": 1,
+          "description": "Timing fixup due to TA change",
+          "count": 1
+        },
+        {
+          "name": "Total TA",
+          "type_name": "Int16",
+          "offset_bytes": 52,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Total TA value",
+          "count": 1
+        }
+      ],
+      "total_fields": 30
+    },
+    "5": {
+      "version_value": 5,
+      "table_name": "4-8",
+      "direct_dependencies": [
+        "4-9"
+      ],
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "log_ustmr_value",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Log USTMR value",
+          "count": 1
+        },
+        {
+          "name": "freq_error_in_hz",
+          "type_name": "Int16",
+          "offset_bytes": 18,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Frequency error(Hz)",
+          "count": 1
+        },
+        {
+          "name": "freq_error_ppm",
+          "type_name": "Int32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Frequency error(ppm)",
+          "count": 1
+        },
+        {
+          "name": "qet_alarm_register_value",
+          "type_name": "Uint16",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "QET alarm register value",
+          "count": 1
+        },
+        {
+          "name": "therm_device_type",
+          "type_name": "Uint8",
+          "offset_bytes": 26,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm object type",
+          "count": 1
+        },
+        {
+          "name": "therm_value_in_degC",
+          "type_name": "Int16",
+          "offset_bytes": 27,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm object type",
+          "count": 1
+        },
+        {
+          "name": "therm_scaled_value",
+          "type_name": "Uint16",
+          "offset_bytes": 29,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm scaled value",
+          "count": 1
+        },
+        {
+          "name": "therm_bin_value",
+          "type_name": "Uint8",
+          "offset_bytes": 31,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm bin value",
+          "count": 1
+        },
+        {
+          "name": "Num Chains",
+          "type_name": "Uint8",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "channel_number",
+          "type_name": "Uint32",
+          "offset_bytes": 37,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Channel number(khz)",
+          "count": 1
+        },
+        {
+          "name": "p_powerclass_nr_db10",
+          "type_name": "Int16",
+          "offset_bytes": 42,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Power class limit - NR",
+          "count": 1
+        },
+        {
+          "name": "ns_value",
+          "type_name": "Uint8",
+          "offset_bytes": 46,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "NS value",
+          "count": 1
+        }
+      ],
+      "total_fields": 13
+    },
+    "6": {
+      "version_value": 6,
+      "table_name": "4-10",
+      "direct_dependencies": [
+        "4-11"
+      ],
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": ""
+        },
+        {
+          "name": "Ref Time",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Reference Time"
+        },
+        {
+          "name": "num_cc",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "num_cc"
+        },
+        {
+          "name": "CA_combo_PC",
+          "type_name": "Uint8",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "CA_combo_PC"
+        },
+        {
+          "name": "variant_id",
+          "type_name": "Uint8",
+          "offset_bytes": 14,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Variant_id"
+        },
+        {
+          "name": "cc_id",
+          "type_name": "Uint8",
+          "offset_bytes": 15,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "num_chains",
+          "type_name": "Uint8",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-12",
+          "offset_bytes": 17,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 2
+        }
+      ],
+      "total_fields": 8
+    },
+    "7": {
+      "version_value": 7,
+      "table_name": "4-14",
+      "direct_dependencies": [
+        "4-15"
+      ],
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": ""
+        },
+        {
+          "name": "Ref Time",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Reference Time"
+        },
+        {
+          "name": "num_cc",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "num_cc"
+        },
+        {
+          "name": "CA_combo_PC",
+          "type_name": "Uint8",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "CA_combo_PC"
+        },
+        {
+          "name": "variant_id",
+          "type_name": "Uint8",
+          "offset_bytes": 14,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Variant_id"
+        },
+        {
+          "name": "cc_id",
+          "type_name": "Uint8",
+          "offset_bytes": 15,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "num_chains",
+          "type_name": "Uint8",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-16",
+          "offset_bytes": 17,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 2
+        }
+      ],
+      "total_fields": 8
+    },
+    "8": {
+      "version_value": 8,
+      "table_name": "4-18",
+      "direct_dependencies": [
+        "4-19"
+      ],
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": ""
+        },
+        {
+          "name": "Ref Time",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Reference Time"
+        },
+        {
+          "name": "num_entries",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "num_entries"
+        },
+        {
+          "name": "CA_combo_PC",
+          "type_name": "Uint8",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "CA_combo_PC"
+        },
+        {
+          "name": "variant_id",
+          "type_name": "Uint8",
+          "offset_bytes": 14,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Variant_id"
+        },
+        {
+          "name": "cc_id",
+          "type_name": "Uint8",
+          "offset_bytes": 15,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "chain_id",
+          "type_name": "Uint8",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-20",
+          "offset_bytes": 17,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        }
+      ],
+      "total_fields": 8
+    }
+  },
+  "all_tables": {
+    "4-1": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Versions",
+          "type_name": "Table 4-2",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 2,
+      "dependencies": [
+        "4-2"
+      ]
+    },
+    "4-3": {
+      "fields": [
+        {
+          "name": "Unsupported Version",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        }
+      ],
+      "field_count": 1,
+      "dependencies": []
+    },
+    "4-4": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Systime",
+          "type_name": "Table 4-5",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "systime",
+          "count": 1
+        },
+        {
+          "name": "Sym Index",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Symbol number having Tx activity",
+          "count": 1
+        },
+        {
+          "name": "Channel Type",
+          "type_name": "Enumeration",
+          "offset_bytes": 8,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "validation: 15 != .\"Channel Type\"\nValues:\n• 0 – PUCCH\n• 1 – PUSCH\n• 2 – SRS_0\n• 3 – SRS_1\n• 4 – SRS_2\n• 5 – PRACH",
+          "count": 1,
+          "enum_mappings": {
+            "0": "PUCCH",
+            "1": "PUSCH",
+            "2": "SRS_0",
+            "3": "SRS_1",
+            "4": "SRS_2",
+            "5": "PRACH"
+          }
+        },
+        {
+          "name": "Tx Chain Mask",
+          "type_name": "Uint32",
+          "offset_bytes": 9,
+          "offset_bits": 1,
+          "length_bits": 2,
+          "description": "Tx chain mask",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power Raw",
+          "type_name": "Int16",
+          "offset_bytes": 9,
+          "offset_bits": 4,
+          "length_bits": 16,
+          "description": "Request Tx power",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power",
+          "type_name": "Float32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "MTPL Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 14,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Final MTPL for power limiting",
+          "count": 1
+        },
+        {
+          "name": "MTPL",
+          "type_name": "Float32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "MTPL",
+          "count": 1
+        },
+        {
+          "name": "PA State",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 3,
+          "description": "PA state index",
+          "count": 1
+        },
+        {
+          "name": "XPT",
+          "type_name": "Enumeration",
+          "offset_bytes": 17,
+          "offset_bits": 7,
+          "length_bits": 2,
+          "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n• 0 – APT\n• 1 – EPT\n• 2 – ET\n• 3 – NA",
+          "count": 1,
+          "enum_mappings": {
+            "0": "APT",
+            "1": "EPT",
+            "2": "ET",
+            "3": "NA"
+          }
+        },
+        {
+          "name": "BW",
+          "type_name": "Uint32",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "channel bandwidth",
+          "count": 1
+        },
+        {
+          "name": "Wave form",
+          "type_name": "Enumeration",
+          "offset_bytes": 33,
+          "offset_bits": 0,
+          "length_bits": 2,
+          "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n• 0 – CP\n• 1 – DFT",
+          "count": 1,
+          "enum_mappings": {
+            "0": "CP",
+            "1": "DFT"
+          }
+        },
+        {
+          "name": "Mod Scheme",
+          "type_name": "Enumeration",
+          "offset_bytes": 33,
+          "offset_bits": 2,
+          "length_bits": 3,
+          "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n• 0 – BPSK\n• 1 – QPSK\n• 2 – 16QAM\n• 3 – 64QAM\n• 4 – 256QAM",
+          "count": 1,
+          "enum_mappings": {
+            "0": "BPSK",
+            "1": "QPSK",
+            "2": "16QAM",
+            "3": "64QAM",
+            "4": "256QAM"
+          }
+        },
+        {
+          "name": "RB Start",
+          "type_name": "Uint32",
+          "offset_bytes": 33,
+          "offset_bits": 5,
+          "length_bits": 9,
+          "description": "Start RB index",
+          "count": 1
+        },
+        {
+          "name": "RB Num",
+          "type_name": "Uint32",
+          "offset_bytes": 34,
+          "offset_bits": 6,
+          "length_bits": 10,
+          "description": "< refer to ul_tx_on_type_e",
+          "count": 1
+        },
+        {
+          "name": "MPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 36,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "MPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 37,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR ENDC Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 38,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR in ENDC mode",
+          "count": 1
+        },
+        {
+          "name": "Tot Back off Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 39,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Total MPR&AMPR backoff",
+          "count": 1
+        },
+        {
+          "name": "Therm Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Thermal limit",
+          "count": 1
+        },
+        {
+          "name": "SAR Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 42,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "SAR limit",
+          "count": 1
+        },
+        {
+          "name": "PE Max Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 44,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Network signalled PeMax",
+          "count": 1
+        }
+      ],
+      "field_count": 23,
+      "dependencies": [
+        "4-5"
+      ]
+    },
+    "4-5": {
+      "fields": [
+        {
+          "name": "Sys FN",
+          "type_name": "Uint16",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 10,
+          "description": "Sysframe Number, range [0 to 1023]",
+          "count": 1
+        },
+        {
+          "name": "Sub FN",
+          "type_name": "Uint16",
+          "offset_bytes": 1,
+          "offset_bits": 2,
+          "length_bits": 6,
+          "description": "Subframe Number, range [0 to 9]",
+          "count": 1
+        },
+        {
+          "name": "Slot",
+          "type_name": "Uint16",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ",
+          "count": 1
+        },
+        {
+          "name": "SCS",
+          "type_name": "Enumeration",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Numerology or SCS\nValues:\n• 0 – 15\n• 1 – 30\n• 2 – 60\n• 3 – 120",
+          "count": 1,
+          "enum_mappings": {
+            "0": "15",
+            "1": "30",
+            "2": "60",
+            "3": "120"
+          }
+        }
+      ],
+      "field_count": 4,
+      "dependencies": []
+    },
+    "4-6": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Systime",
+          "type_name": "Table 4-7",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "systime",
+          "count": 1
+        },
+        {
+          "name": "Sym Index",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Symbol number having Tx activity",
+          "count": 1
+        },
+        {
+          "name": "Channel Type",
+          "type_name": "Enumeration",
+          "offset_bytes": 8,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Values:\n• 0 – PUCCH\n• 1 – PUSCH\n• 2 – SRS_0",
+          "count": 1,
+          "enum_mappings": {
+            "0": "PUCCH",
+            "1": "PUSCH",
+            "2": "SRS_0"
+          }
+        },
+        {
+          "name": "Tx Chain Mask",
+          "type_name": "Uint32",
+          "offset_bytes": 9,
+          "offset_bits": 1,
+          "length_bits": 2,
+          "description": "Tx chain mask",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power Raw",
+          "type_name": "Int16",
+          "offset_bytes": 9,
+          "offset_bits": 4,
+          "length_bits": 16,
+          "description": "Request Tx power",
+          "count": 1
+        },
+        {
+          "name": "Req Tx Power",
+          "type_name": "Float32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "MTPL Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 14,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Final MTPL for power limiting",
+          "count": 1
+        },
+        {
+          "name": "MTPL",
+          "type_name": "Float32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "MTPL",
+          "count": 1
+        },
+        {
+          "name": "PA State",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 3,
+          "description": "PA state index",
+          "count": 1
+        },
+        {
+          "name": "XPT",
+          "type_name": "Enumeration",
+          "offset_bytes": 17,
+          "offset_bits": 7,
+          "length_bits": 2,
+          "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n• 0 – APT\n• 1 – EPT\n• 2 – ET\n• 3 – NA",
+          "count": 1,
+          "enum_mappings": {
+            "0": "APT",
+            "1": "EPT",
+            "2": "ET",
+            "3": "NA"
+          }
+        },
+        {
+          "name": "BW",
+          "type_name": "Uint32",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "channel bandwidth",
+          "count": 1
+        },
+        {
+          "name": "Wave form",
+          "type_name": "Enumeration",
+          "offset_bytes": 33,
+          "offset_bits": 0,
+          "length_bits": 2,
+          "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n• 0 – CP\n• 1 – DFT",
+          "count": 1,
+          "enum_mappings": {
+            "0": "CP",
+            "1": "DFT"
+          }
+        },
+        {
+          "name": "Mod Scheme",
+          "type_name": "Enumeration",
+          "offset_bytes": 33,
+          "offset_bits": 2,
+          "length_bits": 3,
+          "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n• 0 – BPSK\n• 1 – QPSK\n• 2 – 16QAM\n• 3 – 64QAM\n• 4 – 256QAM",
+          "count": 1,
+          "enum_mappings": {
+            "0": "BPSK",
+            "1": "QPSK",
+            "2": "16QAM",
+            "3": "64QAM",
+            "4": "256QAM"
+          }
+        },
+        {
+          "name": "RB Start",
+          "type_name": "Uint32",
+          "offset_bytes": 33,
+          "offset_bits": 5,
+          "length_bits": 9,
+          "description": "Start RB index",
+          "count": 1
+        },
+        {
+          "name": "RB Num",
+          "type_name": "Uint32",
+          "offset_bytes": 34,
+          "offset_bits": 6,
+          "length_bits": 10,
+          "description": "< refer to ul_tx_on_type_e",
+          "count": 1
+        },
+        {
+          "name": "MPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 36,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "MPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 37,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR",
+          "count": 1
+        },
+        {
+          "name": "AMPR ENDC Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 38,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "AMPR in ENDC mode",
+          "count": 1
+        },
+        {
+          "name": "Tot Back off Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 39,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Total MPR&AMPR backoff",
+          "count": 1
+        },
+        {
+          "name": "Therm Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Thermal limit",
+          "count": 1
+        },
+        {
+          "name": "SAR Limit Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 42,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "SAR limit",
+          "count": 1
+        },
+        {
+          "name": "PE Max Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 44,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Network signalled PeMax",
+          "count": 1
+        },
+        {
+          "name": "Ant Swt En",
+          "type_name": "Uint32",
+          "offset_bytes": 46,
+          "offset_bits": 0,
+          "length_bits": 1,
+          "description": "Ant_Switch enable",
+          "count": 1
+        },
+        {
+          "name": "Ant Swt Idx",
+          "type_name": "Uint32",
+          "offset_bytes": 46,
+          "offset_bits": 1,
+          "length_bits": 3,
+          "description": "Ant_Switch index",
+          "count": 1
+        },
+        {
+          "name": "TA Timing Fix Up",
+          "type_name": "Uint32",
+          "offset_bytes": 47,
+          "offset_bits": 0,
+          "length_bits": 1,
+          "description": "Timing fixup due to TA change",
+          "count": 1
+        },
+        {
+          "name": "Total TA",
+          "type_name": "Int16",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Total TA value",
+          "count": 1
+        }
+      ],
+      "field_count": 27,
+      "dependencies": [
+        "4-7"
+      ]
+    },
+    "4-7": {
+      "fields": [
+        {
+          "name": "Sys FN",
+          "type_name": "Uint16",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 10,
+          "description": "Sysframe Number, range [0 to 1023]",
+          "count": 1
+        },
+        {
+          "name": "Sub FN",
+          "type_name": "Uint16",
+          "offset_bytes": 1,
+          "offset_bits": 2,
+          "length_bits": 6,
+          "description": "Subframe Number, range [0 to 9]",
+          "count": 1
+        },
+        {
+          "name": "Slot",
+          "type_name": "Uint16",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ",
+          "count": 1
+        },
+        {
+          "name": "SCS",
+          "type_name": "Enumeration",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Numerology or SCS\nValues:\n• 0 – 15\n• 1 – 30\n• 2 – 60\n• 3 – 120",
+          "count": 1,
+          "enum_mappings": {
+            "0": "15",
+            "1": "30",
+            "2": "60",
+            "3": "120"
+          }
+        }
+      ],
+      "field_count": 4,
+      "dependencies": []
+    },
+    "4-8": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "log_ustmr_value",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Log USTMR value",
+          "count": 1
+        },
+        {
+          "name": "freq_error_in_hz",
+          "type_name": "Int16",
+          "offset_bytes": 14,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Frequency error(Hz)",
+          "count": 1
+        },
+        {
+          "name": "freq_error_ppm",
+          "type_name": "Int32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Frequency error(ppm)",
+          "count": 1
+        },
+        {
+          "name": "qet_alarm_register_value",
+          "type_name": "Uint16",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "QET alarm register value",
+          "count": 1
+        },
+        {
+          "name": "therm_device_type",
+          "type_name": "Uint8",
+          "offset_bytes": 22,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm object type",
+          "count": 1
+        },
+        {
+          "name": "therm_value_in_degC",
+          "type_name": "Int16",
+          "offset_bytes": 23,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm object type",
+          "count": 1
+        },
+        {
+          "name": "therm_scaled_value",
+          "type_name": "Uint16",
+          "offset_bytes": 25,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm scaled value",
+          "count": 1
+        },
+        {
+          "name": "therm_bin_value",
+          "type_name": "Uint8",
+          "offset_bytes": 27,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm bin value",
+          "count": 1
+        },
+        {
+          "name": "Num Chains",
+          "type_name": "Uint8",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-9",
+          "offset_bytes": 29,
+          "offset_bits": 0,
+          "length_bits": 18144,
+          "description": "",
+          "count": 2
+        }
+      ],
+      "field_count": 11,
+      "dependencies": [
+        "4-9"
+      ]
+    },
+    "4-9": {
+      "fields": [
+        {
+          "name": "channel_number",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Channel number(khz)",
+          "count": 1
+        },
+        {
+          "name": "p_powerclass_nr_db10",
+          "type_name": "Int16",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Power class limit - NR",
+          "count": 1
+        },
+        {
+          "name": "ns_value",
+          "type_name": "Uint8",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "NS value",
+          "count": 1
+        }
+      ],
+      "field_count": 3,
+      "dependencies": []
+    },
+    "4-10": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": ""
+        },
+        {
+          "name": "Ref Time",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Reference Time"
+        },
+        {
+          "name": "num_cc",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "num_cc"
+        },
+        {
+          "name": "CA_combo_PC",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "CA_combo_PC"
+        },
+        {
+          "name": "variant_id",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Variant_id"
+        },
+        {
+          "name": "cc_info",
+          "type_name": "Table 4-11",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "CC_info",
+          "count": 2
+        }
+      ],
+      "field_count": 6,
+      "dependencies": [
+        "4-11"
+      ]
+    },
+    "4-11": {
+      "fields": [
+        {
+          "name": "cc_id",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "num_chains",
+          "type_name": "Uint8",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-12",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 2
+        }
+      ],
+      "field_count": 3,
+      "dependencies": [
+        "4-12"
+      ]
+    },
+    "4-12": {
+      "fields": [
+        {
+          "name": "NR PC limit",
+          "type_name": "Int16",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "NR PC limit"
+        },
+        {
+          "name": "Channel number",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Channel number(khz)"
+        },
+        {
+          "name": "freq_error_hz",
+          "type_name": "Int16",
+          "offset_bytes": 19,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Frequency Error in hz"
+        },
+        {
+          "name": "freq_error_ppm",
+          "type_name": "Int32",
+          "offset_bytes": 21,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Frequency Error in ppm"
+        },
+        {
+          "name": "is qet alarm reg read success",
+          "type_name": "Bool",
+          "offset_bytes": 25,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "QET Alarm Register Pass or Fail"
+        },
+        {
+          "name": "Therm Value",
+          "type_name": "Int16",
+          "offset_bytes": 26,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm Value in degC"
+        },
+        {
+          "name": "Therm Scaled Value",
+          "type_name": "Uint16",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm Scaled Value"
+        },
+        {
+          "name": "Therm Bin Value",
+          "type_name": "Uint8",
+          "offset_bytes": 30,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm Bin Value"
+        },
+        {
+          "name": "NS Value",
+          "type_name": "Uint8",
+          "offset_bytes": 31,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "NS value"
+        },
+        {
+          "name": "sub6_semi_static_fields",
+          "type_name": "Table 4-13",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "† Count: 0 + 1",
+          "count": -1
+        }
+      ],
+      "field_count": 10,
+      "dependencies": [
+        "4-13"
+      ]
+    },
+    "4-14": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": ""
+        },
+        {
+          "name": "Ref Time",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Reference Time"
+        },
+        {
+          "name": "num_cc",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "num_cc"
+        },
+        {
+          "name": "CA_combo_PC",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "CA_combo_PC"
+        },
+        {
+          "name": "variant_id",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Variant_id"
+        },
+        {
+          "name": "cc_info",
+          "type_name": "Table 4-15",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "CC_info",
+          "count": 2
+        }
+      ],
+      "field_count": 6,
+      "dependencies": [
+        "4-15"
+      ]
+    },
+    "4-15": {
+      "fields": [
+        {
+          "name": "cc_id",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "num_chains",
+          "type_name": "Uint8",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-16",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 2
+        }
+      ],
+      "field_count": 3,
+      "dependencies": [
+        "4-16"
+      ]
+    },
+    "4-16": {
+      "fields": [
+        {
+          "name": "NR PC limit",
+          "type_name": "Int16",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "NR PC limit"
+        },
+        {
+          "name": "Channel number",
+          "type_name": "Uint32",
+          "offset_bytes": 19,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Channel number(khz)"
+        },
+        {
+          "name": "freq_error_hz",
+          "type_name": "Int16",
+          "offset_bytes": 23,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Frequency Error in hz"
+        },
+        {
+          "name": "freq_error_ppm",
+          "type_name": "Int32",
+          "offset_bytes": 25,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Frequency Error in ppm"
+        },
+        {
+          "name": "is qet alarm reg read success",
+          "type_name": "Bool",
+          "offset_bytes": 29,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "QET Alarm Register Pass or Fail"
+        },
+        {
+          "name": "Therm Value",
+          "type_name": "Int16",
+          "offset_bytes": 30,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm Value in degC"
+        },
+        {
+          "name": "Therm Scaled Value",
+          "type_name": "Uint16",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm Scaled Value"
+        },
+        {
+          "name": "Therm Bin Value",
+          "type_name": "Uint8",
+          "offset_bytes": 34,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm Bin Value"
+        },
+        {
+          "name": "Tx Ant Sw Path",
+          "type_name": "Uint32",
+          "offset_bytes": 35,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Tx Ant Sw Path"
+        },
+        {
+          "name": "Alt Ant Sw Paths",
+          "type_name": "Uint32",
+          "offset_bytes": 39,
+          "offset_bits": 0,
+          "length_bits": 96,
+          "description": "Alt Ant Sw Paths",
+          "count": 3
+        },
+        {
+          "name": "NS Value",
+          "type_name": "Uint8",
+          "offset_bytes": 51,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "NS value"
+        },
+        {
+          "name": "sub6_semi_static_fields",
+          "type_name": "Table 4-17",
+          "offset_bytes": 52,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "† Count: 0 + 1",
+          "count": -1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": [
+        "4-17"
+      ]
+    },
+    "4-18": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": ""
+        },
+        {
+          "name": "Ref Time",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Reference Time"
+        },
+        {
+          "name": "num_entries",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "num_entries"
+        },
+        {
+          "name": "CA_combo_PC",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "CA_combo_PC"
+        },
+        {
+          "name": "variant_id",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Variant_id"
+        },
+        {
+          "name": "cc_info",
+          "type_name": "Table 4-19",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "CC_info\n† Count: num_entries",
+          "count": -1
+        }
+      ],
+      "field_count": 6,
+      "dependencies": [
+        "4-19"
+      ]
+    },
+    "4-19": {
+      "fields": [
+        {
+          "name": "cc_id",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "chain_id",
+          "type_name": "Uint8",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "ChainInfo",
+          "type_name": "Table 4-20",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        }
+      ],
+      "field_count": 3,
+      "dependencies": [
+        "4-20"
+      ]
+    },
+    "4-2": {
+      "fields": [
+        {
+          "name": "Unknown Versions",
+          "type_name": "Table 4-3",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 2",
+          "type_name": "Table 4-4",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Version 3",
+          "type_name": "Table 4-6",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Version 5",
+          "type_name": "Table 4-8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Version 6",
+          "type_name": "Table 4-10",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 7",
+          "type_name": "Table 4-14",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Version 8",
+          "type_name": "Table 4-18",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        }
+      ],
+      "field_count": 7,
+      "dependencies": []
+    },
+    "4-20": {
+      "fields": [
+        {
+          "name": "NR PC limit",
+          "type_name": "Int16",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "NR PC limit"
+        },
+        {
+          "name": "Channel number",
+          "type_name": "Uint32",
+          "offset_bytes": 19,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Channel number(khz)"
+        },
+        {
+          "name": "freq_error_hz",
+          "type_name": "Int16",
+          "offset_bytes": 23,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Frequency Error in hz"
+        },
+        {
+          "name": "freq_error_ppm",
+          "type_name": "Int32",
+          "offset_bytes": 25,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Frequency Error in ppm"
+        },
+        {
+          "name": "is qet alarm reg read success",
+          "type_name": "Bool",
+          "offset_bytes": 29,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "QET Alarm Register Pass or Fail"
+        },
+        {
+          "name": "Therm Value",
+          "type_name": "Int16",
+          "offset_bytes": 30,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm Value in degC"
+        },
+        {
+          "name": "Therm Scaled Value",
+          "type_name": "Uint16",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Therm Scaled Value"
+        },
+        {
+          "name": "Therm Bin Value",
+          "type_name": "Uint8",
+          "offset_bytes": 34,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Therm Bin Value"
+        },
+        {
+          "name": "Tx Ant Sw Path",
+          "type_name": "Uint32",
+          "offset_bytes": 35,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Tx Ant Sw Path"
+        },
+        {
+          "name": "Alt Ant Sw Paths",
+          "type_name": "Uint32",
+          "offset_bytes": 39,
+          "offset_bits": 0,
+          "length_bits": 96,
+          "description": "Alt Ant Sw Paths",
+          "count": 3
+        },
+        {
+          "name": "NS Value",
+          "type_name": "Uint8",
+          "offset_bytes": 51,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "NS value"
+        },
+        {
+          "name": "sub6_semi_static_fields",
+          "type_name": "Table 4-21",
+          "offset_bytes": 52,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "† Count: 0 + 1",
+          "count": -1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    }
+  }
+}

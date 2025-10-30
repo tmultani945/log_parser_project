@@ -1,0 +1,173 @@
+{
+  "logcode_id": "0X1C07",
+  "logcode_name": "NR5G Sub6 TxAGC",
+  "version": {
+    "value": 2,
+    "table": "4-4"
+  },
+  "fields": {
+    "Version": {
+      "raw": 2,
+      "type": "Uint32",
+      "value": 2
+    },
+    "Sys FN": {
+      "raw": 100,
+      "type": "Uint16",
+      "value": 100,
+      "description": "Sysframe Number, range [0 to 1023]"
+    },
+    "Sub FN": {
+      "raw": 0,
+      "type": "Uint16",
+      "value": 0,
+      "description": "Subframe Number, range [0 to 9]"
+    },
+    "Slot": {
+      "raw": 16,
+      "type": "Uint16",
+      "value": 16,
+      "description": "Slot Number, range varies depends on the subcarrier spacing: range [0] -\nNR5G_SCS_15KHZ / NR5G_SCS_DEFAULT range [0-1] - NR5G_SCS_30KHZ\nrange [0-3] - NR5G_SCS_60KHZ range [0-7] - NR5G_SCS_120KHZ"
+    },
+    "SCS": {
+      "raw": 1,
+      "type": "Enumeration",
+      "value": 1,
+      "enum": "30",
+      "description": "Numerology or SCS\nValues:\n• 0 – 15\n• 1 – 30\n• 2 – 60\n• 3 – 120"
+    },
+    "Sym Index": {
+      "raw": 1,
+      "type": "Uint32",
+      "value": 1,
+      "description": "Symbol number having Tx activity"
+    },
+    "Channel Type": {
+      "raw": 0,
+      "type": "Enumeration",
+      "value": 0,
+      "enum": "PUCCH",
+      "description": "validation: 15 != .\"Channel Type\"\nValues:\n• 0 – PUCCH\n• 1 – PUSCH\n• 2 – SRS_0\n• 3 – SRS_1\n• 4 – SRS_2\n• 5 – PRACH"
+    },
+    "Tx Chain Mask": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "Tx chain mask"
+    },
+    "Req Tx Power Raw": {
+      "raw": 0,
+      "type": "Int16",
+      "value": 0,
+      "description": "Request Tx power"
+    },
+    "Req Tx Power": {
+      "raw": 2,
+      "type": "Float32",
+      "value": 2.802596928649634e-45
+    },
+    "MTPL Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "Final MTPL for power limiting"
+    },
+    "MTPL": {
+      "raw": 2,
+      "type": "Float32",
+      "value": 2.802596928649634e-45,
+      "description": "MTPL"
+    },
+    "PA State": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "PA state index"
+    },
+    "XPT": {
+      "raw": 0,
+      "type": "Enumeration",
+      "value": 0,
+      "enum": "APT",
+      "description": "APT=0; EPT=1; ET=2; 3 is not used\nValues:\n• 0 – APT\n• 1 – EPT\n• 2 – ET\n• 3 – NA"
+    },
+    "BW": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "channel bandwidth"
+    },
+    "Wave form": {
+      "raw": 0,
+      "type": "Enumeration",
+      "value": 0,
+      "enum": "CP",
+      "description": "CP-OFDM = 0; DFT-OFDM = 1\nValues:\n• 0 – CP\n• 1 – DFT"
+    },
+    "Mod Scheme": {
+      "raw": 0,
+      "type": "Enumeration",
+      "value": 0,
+      "enum": "BPSK",
+      "description": "QPSK/BPSK = 0; 16QAM = 1;64QAM = 2; 256QAM = 3\nValues:\n• 0 – BPSK\n• 1 – QPSK\n• 2 – 16QAM\n• 3 – 64QAM\n• 4 – 256QAM"
+    },
+    "RB Start": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "Start RB index"
+    },
+    "RB Num": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "< refer to ul_tx_on_type_e"
+    },
+    "MPR Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "MPR"
+    },
+    "AMPR Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "AMPR"
+    },
+    "AMPR ENDC Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "AMPR in ENDC mode"
+    },
+    "Tot Back off Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "Total MPR&AMPR backoff"
+    },
+    "Therm Limit Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "Thermal limit"
+    },
+    "SAR Limit Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "SAR limit"
+    },
+    "PE Max Raw": {
+      "raw": 0,
+      "type": "Uint32",
+      "value": 0,
+      "description": "Network signalled PeMax"
+    }
+  },
+  "metadata": {
+    "payload_size_bytes": 49,
+    "fields_parsed": 26
+  }
+}

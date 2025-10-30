@@ -1,0 +1,4675 @@
+{
+  "logcode_id": "0XB888",
+  "logcode_name": "NR5G MAC PDSCH Stats",
+  "section": "7.6",
+  "description": "",
+  "version_offset": 0,
+  "version_length": 32,
+  "version_map": {
+    "0": "7-2771",
+    "1": "7-2773",
+    "65537": "7-2775",
+    "65538": "7-2778",
+    "65539": "7-2781",
+    "65540": "7-2784",
+    "65541": "7-2787",
+    "65542": "7-2790",
+    "131072": "7-2793",
+    "131073": "7-2796",
+    "131074": "7-2799",
+    "196608": "7-2802",
+    "196609": "7-2804",
+    "262144": "7-2807"
+  },
+  "available_versions": [
+    "0",
+    "1",
+    "131072",
+    "131073",
+    "131074",
+    "196608",
+    "196609",
+    "262144",
+    "65537",
+    "65538",
+    "65539",
+    "65540",
+    "65541",
+    "65542"
+  ],
+  "versions": {
+    "0": {
+      "version_value": 0,
+      "table_name": "7-2771",
+      "direct_dependencies": [
+        "7-2772"
+      ],
+      "fields": [
+        {
+          "name": "Records",
+          "type_name": "Table 7-2772",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 1
+    },
+    "1": {
+      "version_value": 1,
+      "table_name": "7-2773",
+      "direct_dependencies": [
+        "7-2774"
+      ],
+      "fields": [
+        {
+          "name": "PDCCH Attampts",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Total Attampts of PDCCH",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2774",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 2
+    },
+    "65537": {
+      "version_value": 65537,
+      "table_name": "7-2775",
+      "direct_dependencies": [
+        "7-2777",
+        "7-2776"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2776",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2777",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 3584,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 8
+    },
+    "65538": {
+      "version_value": 65538,
+      "table_name": "7-2778",
+      "direct_dependencies": [
+        "7-2780",
+        "7-2779"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2779",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2780",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 8
+    },
+    "65539": {
+      "version_value": 65539,
+      "table_name": "7-2781",
+      "direct_dependencies": [
+        "7-2782",
+        "7-2783"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2782",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2783",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 8
+    },
+    "65540": {
+      "version_value": 65540,
+      "table_name": "7-2784",
+      "direct_dependencies": [
+        "7-2786",
+        "7-2785"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2785",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2786",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 7
+    },
+    "65541": {
+      "version_value": 65541,
+      "table_name": "7-2787",
+      "direct_dependencies": [
+        "7-2788",
+        "7-2789"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2788",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2789",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 7
+    },
+    "65542": {
+      "version_value": 65542,
+      "table_name": "7-2790",
+      "direct_dependencies": [
+        "7-2791",
+        "7-2792"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2791",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change\nBMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active\ncarriers. This is because we want to display stats for\npreviously active carriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2792",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "total_fields": 9
+    },
+    "131072": {
+      "version_value": 131072,
+      "table_name": "7-2793",
+      "direct_dependencies": [
+        "7-2795",
+        "7-2794"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2794",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2795",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "total_fields": 8
+    },
+    "131073": {
+      "version_value": 131073,
+      "table_name": "7-2796",
+      "direct_dependencies": [
+        "7-2797",
+        "7-2798"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2797",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change\nBMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active\ncarriers. This is because we want to display stats for\npreviously active carriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2798",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "total_fields": 9
+    },
+    "131074": {
+      "version_value": 131074,
+      "table_name": "7-2799",
+      "direct_dependencies": [
+        "7-2800",
+        "7-2801"
+      ],
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2800",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change\nBMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active\ncarriers. This is because we want to display stats for\npreviously active carriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2801",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "total_fields": 9
+    },
+    "196608": {
+      "version_value": 196608,
+      "table_name": "7-2802",
+      "direct_dependencies": [
+        "7-2803"
+      ],
+      "fields": [
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 7,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active carriers.\nThis is because we want to display stats for previously active\ncarriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2803",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "total_fields": 7
+    },
+    "196609": {
+      "version_value": 196609,
+      "table_name": "7-2804",
+      "direct_dependencies": [
+        "7-2805"
+      ],
+      "fields": [
+        {
+          "name": "padding_1",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "",
+          "count": 3
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "flush_gap_cnt",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": ""
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 7,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "padding_2",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 56,
+          "description": "",
+          "count": 7
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2805",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "total_fields": 8
+    },
+    "262144": {
+      "version_value": 262144,
+      "table_name": "7-2807",
+      "direct_dependencies": [
+        "7-2808"
+      ],
+      "fields": [
+        {
+          "name": "padding_1",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "",
+          "count": 3
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "flush_gap_cnt",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": ""
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 7,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "padding_2",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 56,
+          "description": "",
+          "count": 7
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2808",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "total_fields": 8
+    }
+  },
+  "all_tables": {
+    "7-2767": {
+      "fields": [
+        {
+          "name": "Version",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Shown only when '65536 > .\"Version\"'",
+          "count": 1
+        },
+        {
+          "name": "MacVersion",
+          "type_name": "Table 7-2768",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Shown only when '65536 <= .\"Version\"'",
+          "count": 1
+        },
+        {
+          "name": "Versions",
+          "type_name": "Table 7-2769",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 3,
+      "dependencies": [
+        "7-2769",
+        "7-2768"
+      ]
+    },
+    "7-2768": {
+      "fields": [
+        {
+          "name": "Minor",
+          "type_name": "Uint16",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Major",
+          "type_name": "Uint16",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Major.Minor Version",
+          "type_name": "Uint16",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 3,
+      "dependencies": []
+    },
+    "7-2770": {
+      "fields": [
+        {
+          "name": "Unsupported Version",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        }
+      ],
+      "field_count": 1,
+      "dependencies": []
+    },
+    "7-2771": {
+      "fields": [
+        {
+          "name": "Records",
+          "type_name": "Table 7-2772",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 1,
+      "dependencies": [
+        "7-2772"
+      ]
+    },
+    "7-2772": {
+      "fields": [
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "Num RBs",
+          "type_name": "Uint64",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass and\ncrc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2773": {
+      "fields": [
+        {
+          "name": "PDCCH Attampts",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Total Attampts of PDCCH",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2774",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 2,
+      "dependencies": [
+        "7-2774"
+      ]
+    },
+    "7-2774": {
+      "fields": [
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "Num RBs",
+          "type_name": "Uint64",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass and\ncrc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2775": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2776",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2777",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 3584,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 8,
+      "dependencies": [
+        "7-2777",
+        "7-2776"
+      ]
+    },
+    "7-2776": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2777": {
+      "fields": [
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 11,
+      "dependencies": []
+    },
+    "7-2778": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2779",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2780",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 8,
+      "dependencies": [
+        "7-2780",
+        "7-2779"
+      ]
+    },
+    "7-2779": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2780": {
+      "fields": [
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2781": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2782",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2783",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 8,
+      "dependencies": [
+        "7-2782",
+        "7-2783"
+      ]
+    },
+    "7-2782": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2783": {
+      "fields": [
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2784": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2785",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2786",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 7,
+      "dependencies": [
+        "7-2786",
+        "7-2785"
+      ]
+    },
+    "7-2785": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2786": {
+      "fields": [
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2787": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2788",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2789",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 7,
+      "dependencies": [
+        "7-2788",
+        "7-2789"
+      ]
+    },
+    "7-2788": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2789": {
+      "fields": [
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2790": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2791",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change\nBMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active\ncarriers. This is because we want to display stats for\npreviously active carriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2792",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "field_count": 9,
+      "dependencies": [
+        "7-2791",
+        "7-2792"
+      ]
+    },
+    "7-2791": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2792": {
+      "fields": [
+        {
+          "name": "Carrier ID",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Carrier ID",
+          "count": 1
+        },
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 13,
+      "dependencies": []
+    },
+    "7-2793": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2794",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change BMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Sub ID",
+          "type_name": "Uint8",
+          "offset_bytes": 10,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Subscription ID",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse\nthe corresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 13,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2795",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 8
+        }
+      ],
+      "field_count": 8,
+      "dependencies": [
+        "7-2795",
+        "7-2794"
+      ]
+    },
+    "7-2794": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2795": {
+      "fields": [
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals\ntotal number of TB decoded. It is the sum of crc_pass + crc_fail\n+ tb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 12,
+      "dependencies": []
+    },
+    "7-2796": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2797",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change\nBMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active\ncarriers. This is because we want to display stats for\npreviously active carriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2798",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "field_count": 9,
+      "dependencies": [
+        "7-2797",
+        "7-2798"
+      ]
+    },
+    "7-2797": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2798": {
+      "fields": [
+        {
+          "name": "Carrier ID",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Carrier ID",
+          "count": 1
+        },
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals\ntotal number of TB decoded. It is the sum of crc_pass + crc_fail\n+ tb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 13,
+      "dependencies": []
+    },
+    "7-2799": {
+      "fields": [
+        {
+          "name": "Log Fields Change",
+          "type_name": "Table 7-2800",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Shown only when '0 != .\"Log Fields Change BMask\"'",
+          "count": 1
+        },
+        {
+          "name": "Log Fields Change\nBMask",
+          "type_name": "Uint16",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 11,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 15,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active\ncarriers. This is because we want to display stats for\npreviously active carriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2801",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "field_count": 9,
+      "dependencies": [
+        "7-2800",
+        "7-2801"
+      ]
+    },
+    "7-2800": {
+      "fields": [
+        {
+          "name": "Sleep",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X1'",
+          "count": 1
+        },
+        {
+          "name": "Beam Change",
+          "type_name": "Uint32",
+          "offset_bytes": 1,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X2'",
+          "count": 1
+        },
+        {
+          "name": "Signal Change",
+          "type_name": "Uint32",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X4'",
+          "count": 1
+        },
+        {
+          "name": "DL Dynamic Cfg Change",
+          "type_name": "Uint32",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X8'",
+          "count": 1
+        },
+        {
+          "name": "DL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X10'",
+          "count": 1
+        },
+        {
+          "name": "UL Config",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X20'",
+          "count": 1
+        },
+        {
+          "name": "ML1 State Change",
+          "type_name": "Uint32",
+          "offset_bytes": 5,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Shown only when '.^.\"Log Fields Change BMask\" & 0X40'",
+          "count": 1
+        },
+        {
+          "name": "reserved",
+          "type_name": "Uint32",
+          "offset_bytes": 6,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "",
+          "count": 1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": []
+    },
+    "7-2801": {
+      "fields": [
+        {
+          "name": "Carrier ID",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Carrier ID",
+          "count": 1
+        },
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals\ntotal number of TB decoded. It is the sum of crc_pass + crc_fail\n+ tb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "ReTx Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 64,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of re-transmit bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 14,
+      "dependencies": []
+    },
+    "7-2802": {
+      "fields": [
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Num of records in this log packet. For each record parse the\ncorresponding Log struct",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Flush Gap Count",
+          "type_name": "Uint8",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": "sync frame count since last pdsch stats log flush",
+          "count": 1
+        },
+        {
+          "name": "Num Total Slots Raw",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": "Total number of slots",
+          "count": 1
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 7,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": "Total number of active carriers in pdsch_stats_ca",
+          "count": 1
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": "Bitmask which tracks all currently and previously active carriers.\nThis is because we want to display stats for previously active\ncarriers even after they are deactivated.",
+          "count": 1
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2803",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "field_count": 7,
+      "dependencies": [
+        "7-2803"
+      ]
+    },
+    "7-2803": {
+      "fields": [
+        {
+          "name": "Carrier ID",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Carrier ID",
+          "count": 1
+        },
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed",
+          "count": 1
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals\ntotal number of TB decoded. It is the sum of crc_pass + crc_fail\n+ tb_discard",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA",
+          "count": 1
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA",
+          "count": 1
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)",
+          "count": 1
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure",
+          "count": 1
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA",
+          "count": 1
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes",
+          "count": 1
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes",
+          "count": 1
+        },
+        {
+          "name": "ReTx Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 64,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of re-transmit bytes",
+          "count": 1
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\"",
+          "count": 1
+        }
+      ],
+      "field_count": 14,
+      "dependencies": []
+    },
+    "7-2804": {
+      "fields": [
+        {
+          "name": "padding_1",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "",
+          "count": 3
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "flush_gap_cnt",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": ""
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 7,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "padding_2",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 56,
+          "description": "",
+          "count": 7
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2805",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": [
+        "7-2805"
+      ]
+    },
+    "7-2805": {
+      "fields": [
+        {
+          "name": "Carrier ID",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Carrier ID"
+        },
+        {
+          "name": "Numerology",
+          "type_name": "Enumeration",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Subcarrier Spacing\nValues:\n• 0 – 15KHZ\n• 1 – 30KHZ\n• 2 – 60KHZ\n• 3 – 120KHZ\n• 4 – DEFAULT\n• 5 – MAX",
+          "enum_mappings": {
+            "0": "15KHZ",
+            "1": "30KHZ",
+            "2": "60KHZ",
+            "3": "120KHZ",
+            "4": "DEFAULT",
+            "5": "MAX"
+          }
+        },
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed"
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard"
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA"
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA"
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA"
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)"
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure"
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA"
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA"
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes"
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes"
+        },
+        {
+          "name": "ReTx Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 64,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of re-transmit bytes"
+        },
+        {
+          "name": "BLER",
+          "type_name": "Float64",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "validation: 0 != .\"Num CRC Pass TB\" + .\"Num CRC Fail TB\""
+        },
+        {
+          "name": "dummyField",
+          "type_name": "Table 7-2806",
+          "offset_bytes": 72,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": ""
+        }
+      ],
+      "field_count": 16,
+      "dependencies": [
+        "7-2806"
+      ]
+    },
+    "7-2807": {
+      "fields": [
+        {
+          "name": "padding_1",
+          "type_name": "Uint8",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 24,
+          "description": "",
+          "count": 3
+        },
+        {
+          "name": "Num Records",
+          "type_name": "Uint8",
+          "offset_bytes": 3,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "flush_gap_cnt",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Num Total Slots",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 4,
+          "length_bits": 24,
+          "description": ""
+        },
+        {
+          "name": "Num CA",
+          "type_name": "Uint32",
+          "offset_bytes": 7,
+          "offset_bits": 4,
+          "length_bits": 4,
+          "description": ""
+        },
+        {
+          "name": "Cumulative Bitmask",
+          "type_name": "Uint8",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 8,
+          "description": ""
+        },
+        {
+          "name": "padding_2",
+          "type_name": "Uint8",
+          "offset_bytes": 9,
+          "offset_bits": 0,
+          "length_bits": 56,
+          "description": "",
+          "count": 7
+        },
+        {
+          "name": "Records",
+          "type_name": "Table 7-2808",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "† Count: Num CA",
+          "count": -1
+        }
+      ],
+      "field_count": 8,
+      "dependencies": [
+        "7-2808"
+      ]
+    },
+    "7-2808": {
+      "fields": [
+        {
+          "name": "Carrier ID",
+          "type_name": "Uint32",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Carrier ID"
+        },
+        {
+          "name": "Numerology",
+          "type_name": "Enumeration",
+          "offset_bytes": 2,
+          "offset_bits": 0,
+          "length_bits": 16,
+          "description": "Subcarrier Spacing\nValues:\n• 0 – 15KHZ\n• 1 – 30KHZ\n• 2 – 60KHZ\n• 3 – 120KHZ\n• 4 – DEFAULT\n• 5 – MAX",
+          "enum_mappings": {
+            "0": "15KHZ",
+            "1": "30KHZ",
+            "2": "60KHZ",
+            "3": "120KHZ",
+            "4": "DEFAULT",
+            "5": "MAX"
+          }
+        },
+        {
+          "name": "Num Slots Elapsed",
+          "type_name": "Uint32",
+          "offset_bytes": 4,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of slots elapsed"
+        },
+        {
+          "name": "Num PDSCH Decode",
+          "type_name": "Uint32",
+          "offset_bytes": 8,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of PDSCH decode completed per CA. This equals total\nnumber of TB decoded. It is the sum of crc_pass + crc_fail +\ntb_discard"
+        },
+        {
+          "name": "Num CRC Pass TB",
+          "type_name": "Uint32",
+          "offset_bytes": 12,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC pass TB per CA"
+        },
+        {
+          "name": "Num CRC Fail TB",
+          "type_name": "Uint32",
+          "offset_bytes": 16,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of CRC fail TB per CA"
+        },
+        {
+          "name": "Num ReTx",
+          "type_name": "Uint32",
+          "offset_bytes": 20,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "Number of TB retransmissions per CA"
+        },
+        {
+          "name": "ACK As NACK",
+          "type_name": "Uint32",
+          "offset_bytes": 24,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "ACK as NACK (duplicate)"
+        },
+        {
+          "name": "HARQ Failure",
+          "type_name": "Uint32",
+          "offset_bytes": 28,
+          "offset_bits": 0,
+          "length_bits": 32,
+          "description": "HARQ failure"
+        },
+        {
+          "name": "CRC Pass TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 32,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC pass TB bytes per CA"
+        },
+        {
+          "name": "CRC Fail TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 40,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Number of CRC fail TB bytes per CA"
+        },
+        {
+          "name": "TB Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 48,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of decoded TB bytes per CA. Sum of crc_pass\nand crc_fail bytes"
+        },
+        {
+          "name": "Padding Bytes",
+          "type_name": "Uint64",
+          "offset_bytes": 56,
+          "offset_bits": 0,
+          "length_bits": 64,
+          "description": "Total number of padding bytes"
+        }
+      ],
+      "field_count": 13,
+      "dependencies": []
+    },
+    "7-2769": {
+      "fields": [
+        {
+          "name": "Unknown Version",
+          "type_name": "Table 7-2770",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 0",
+          "type_name": "Table 7-2771",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4096,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 1",
+          "type_name": "Table 7-2773",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4160,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 65537",
+          "type_name": "Table 7-2775",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 3712,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 65538",
+          "type_name": "Table 7-2778",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4224,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 65539",
+          "type_name": "Table 7-2781",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4256,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 65540",
+          "type_name": "Table 7-2784",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4256,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 65541",
+          "type_name": "Table 7-2787",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4224,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 65542",
+          "type_name": "Table 7-2790",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 131072",
+          "type_name": "Table 7-2793",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 4224,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 131073",
+          "type_name": "Table 7-2796",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 131074",
+          "type_name": "Table 7-2799",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 196608",
+          "type_name": "Table 7-2802",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": "",
+          "count": 1
+        },
+        {
+          "name": "Version 0x30001",
+          "type_name": "Table 7-2804",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": ""
+        },
+        {
+          "name": "Version 0x40000",
+          "type_name": "Table 7-2807",
+          "offset_bytes": 0,
+          "offset_bits": 0,
+          "length_bits": 7,
+          "description": ""
+        }
+      ],
+      "field_count": 15,
+      "dependencies": []
+    }
+  }
+}

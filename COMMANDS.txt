@@ -1,0 +1,122 @@
+================================================================================
+                    TWO-STEP PAYLOAD PARSING COMMANDS
+================================================================================
+
+STEP 1: GENERATE METADATA (One-time per logcode)
+================================================================================
+
+python -m hex_decoder_module.metadata_cli single --logcode LOGCODE_ID --pdf "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_LOGCODE_ID.json -v
+
+Example:
+    python -m hex_decoder_module.metadata_cli single --logcode 0xB888 --pdf "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0xB888.json -v
+
+
+STEP 2: PARSE PAYLOAD (Use metadata repeatedly)
+================================================================================
+
+python parse_payload_from_file.py -i INPUT.hex -m METADATA.json -o OUTPUT.json -v
+
+Example:
+    python parse_payload_from_file.py -i my_payload.hex -m metadata_0xB888.json -o output.json -v
+
+
+COMPLETE WORKFLOW
+================================================================================
+
+# 1. Generate metadata (once)
+python -m hex_decoder_module.metadata_cli single --logcode 0xB888 --pdf "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0xB888.json -v
+
+# 2. Create hex input file (my_payload.hex)
+#    Format:
+#    Header:     B0 00 88 B8 94 1A 8F DF 16 26 09 01
+#    Payload:     01 00 03 00 73 5D 74 01 ...
+
+# 3. Parse payload
+python parse_payload_from_file.py -i my_payload.hex -m metadata_0xB888.json -o output.json -v
+
+# 4. View results
+type output.json
+
+
+PARSE MULTIPLE PAYLOADS (Same logcode)
+================================================================================
+
+# Generate metadata once
+python -m hex_decoder_module.metadata_cli single --logcode 0xB888 --pdf "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0xB888.json -v
+
+# Parse many payloads
+python parse_payload_from_file.py -i payload1.hex -m metadata_0xB888.json -o output1.json -v
+python parse_payload_from_file.py -i payload2.hex -m metadata_0xB888.json -o output2.json -v
+python parse_payload_from_file.py -i payload3.hex -m metadata_0xB888.json -o output3.json -v
+
+
+BATCH PROCESSING (Windows)
+================================================================================
+
+# Generate metadata once
+python -m hex_decoder_module.metadata_cli single --logcode 0xB888 --pdf "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0xB888.json -v
+
+# Parse all .hex files
+for %f in (*.hex) do python parse_payload_from_file.py -i %f -m metadata_0xB888.json -o parsed_%f.json
+
+
+GENERATE METADATA FOR MULTIPLE LOGCODES
+================================================================================
+
+# Option 1: One at a time
+python -m hex_decoder_module.metadata_cli single -l 0xB888 -p "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0xB888.json -v
+python -m hex_decoder_module.metadata_cli single -l 0x1C07 -p "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0x1C07.json -v
+python -m hex_decoder_module.metadata_cli single -l 0x1C08 -p "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0x1C08.json -v
+
+# Option 2: Multiple in one file
+python -m hex_decoder_module.metadata_cli multi --logcodes "0xB888,0x1C07,0x1C08" --pdf "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_multi.json -v
+
+
+HEX INPUT FILE FORMAT
+================================================================================
+
+Required sections:
+    Header:     B0 00 88 B8 94 1A 8F DF 16 26 09 01
+    Payload:     01 00 03 00 73 5D 74 01 C0 26 03 60
+          77 5D 78 5D 79 5D 7A 5D 00 00 01 00
+          (spacing doesn't matter - any format works)
+
+Optional section:
+    Length:     176
+
+
+QUICK EXAMPLES
+================================================================================
+
+For 0xB888 (MAC PDSCH):
+    python -m hex_decoder_module.metadata_cli single -l 0xB888 -p "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0xB888.json -v
+    python parse_payload_from_file.py -i payload.hex -m metadata_0xB888.json -o output.json -v
+
+For 0x1C07 (RF TxAGC):
+    python -m hex_decoder_module.metadata_cli single -l 0x1C07 -p "data\input\80-PC674-2_REV_FL_QTI_Tools_Serial_Interface_Control_Document_for_NR5G_Document.pdf" -o metadata_0x1C07.json -v
+    python parse_payload_from_file.py -i payload.hex -m metadata_0x1C07.json -o output.json -v
+
+
+TROUBLESHOOTING
+================================================================================
+
+"Metadata file not found"     -> Run Step 1 first to generate metadata
+"Input file not found"         -> Check hex file path
+"Could not find Payload"       -> Add "Payload:" line to hex file
+"Version not found"            -> Regenerate metadata with --force
+
+
+FILES
+================================================================================
+
+Input files:
+    - payload1.hex, payload2.hex (your hex data)
+
+Generated files:
+    - metadata_0xB888.json (from Step 1)
+    - output1.json, output2.json (from Step 2)
+
+Scripts:
+    - parse_payload_from_file.py (payload parser)
+
+================================================================================

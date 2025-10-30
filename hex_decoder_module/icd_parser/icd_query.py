@@ -159,10 +159,13 @@ class ICDQueryEngine:
             raise VersionNotFoundError(logcode_id, version)
 
         # Expand wrapper fields that reference other tables
+        # NOTE: version_offset should be 0 because the Version field is already
+        # part of the table structure at offset 0 in the ICD.
+        # The table offsets are absolute from the payload start.
         expanded_fields = self._expand_table_references(
             field_defs,
             metadata,
-            version_offset=metadata.version_offset + (metadata.version_length + 7) // 8
+            version_offset=0
         )
 
         return expanded_fields
@@ -275,9 +278,9 @@ class ICDQueryEngine:
 
         print(f"Fetching {len(missing)} dependent tables: {missing}")
 
-        # Search nearby pages (within 10 pages of section boundaries)
-        search_start = max(0, section_info.start_page - 5)
-        search_end = min(section_info.end_page + 10, section_info.end_page + 10)
+        # Search nearby pages (expanded range to 50 pages to catch distant dependent tables)
+        search_start = max(0, section_info.start_page - 10)
+        search_end = section_info.end_page + 50
 
         with pdfplumber.open(self.pdf_path) as pdf:
             for page_num in range(search_start, min(search_end + 1, len(pdf.pages))):
@@ -293,16 +296,18 @@ class ICDQueryEngine:
                 for table_num in list(missing):
                     caption_pattern = f"Table {table_num}"
 
-                    # Only check if caption is at start of line
+                    # Only check if caption is at start of line (with optional whitespace)
+                    # Must match the full table caption pattern, not a reference in table data
                     lines = text.split('\n')
                     found_on_page = False
                     for line in lines:
-                        if line.strip().startswith(caption_pattern):
+                        # Match "Table X-Y" followed by a space and table name (not part of data)
+                        if re.match(rf'^Table\s+{re.escape(table_num)}\s+\w', line, re.IGNORECASE):
                             found_on_page = True
                             break
 
                     if found_on_page:
-                        print(f"  Found Table {table_num} on page {page_num}")
+                        print(f"  Found Table {table_num} on page {page_num + 1}")
 
                         # Extract and parse this table
                         tables = page.extract_tables()
@@ -318,7 +323,7 @@ class ICDQueryEngine:
 
                         # Try to match the table with its caption
                         for i, table_data in enumerate(tables):
-                            if not table_data or len(table_data) < 2:
+                            if not table_data:
                                 continue
 
                             # Use caption if available
@@ -333,11 +338,22 @@ class ICDQueryEngine:
                                     page_num=page_num
                                 )
 
-                                field_defs = self.table_parser.parse_field_table(raw_table)
-                                if field_defs:
-                                    table_definitions[table_num] = field_defs
+                                # Handle empty structures (only header, no data rows)
+                                if len(table_data) < 2:
+                                    # Empty structure - add empty field list
+                                    table_definitions[table_num] = []
                                     missing.remove(table_num)
-                                    print(f"    Extracted {len(field_defs)} fields from Table {table_num}")
+                                    print(f"    Table {table_num} is an empty structure (no fields)")
+                                else:
+                                    field_defs = self.table_parser.parse_field_table(raw_table)
+                                    if field_defs:
+                                        table_definitions[table_num] = field_defs
+                                        missing.remove(table_num)
+                                        print(f"    Extracted {len(field_defs)} fields from Table {table_num}")
+                                    else:
+                                        # No fields returned - treat as empty structure
+                                        table_definitions[table_num] = []
+                                        missing.remove(table_num)
                                 break
 
         if missing:
