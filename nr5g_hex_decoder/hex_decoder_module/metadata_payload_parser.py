@@ -11,6 +11,8 @@ import re
 from typing import Dict, Any, Optional, List
 from pathlib import Path
 from copy import deepcopy
+from .decoder.field_post_processor import FieldPostProcessor
+from .models.decoded import DecodedField
 
 
 class MetadataPayloadParser:
@@ -123,6 +125,34 @@ class MetadataPayloadParser:
                         'raw': None
                     }
 
+        # Apply post-processing to calculate derived fields (BLER, Residual BLER, etc.)
+        post_processor = FieldPostProcessor()
+        # Convert dict fields to DecodedField objects for post-processor
+        decoded_field_objects = []
+        for field_name, field_data in parsed_fields.items():
+            if 'error' not in field_data:
+                decoded_field = DecodedField(
+                    name=field_name,
+                    raw_value=field_data.get('raw', 0),
+                    type_name=field_data.get('type', 'Unknown'),
+                    friendly_value=field_data.get('decoded', None),
+                    description=field_data.get('description', '')
+                )
+                decoded_field_objects.append(decoded_field)
+
+        # Process fields (calculates BLER, Residual BLER, etc.)
+        processed_fields = post_processor.process(decoded_field_objects, logcode_id)
+
+        # Convert back to dict format
+        for processed_field in processed_fields:
+            field_name = processed_field.name
+            if field_name in parsed_fields:
+                # Update existing field with calculated values
+                parsed_fields[field_name]['raw'] = processed_field.raw_value
+                parsed_fields[field_name]['value'] = processed_field.raw_value
+                if processed_field.friendly_value:
+                    parsed_fields[field_name]['decoded'] = processed_field.friendly_value
+
         # Build result
         result = {
             'logcode_id': logcode_id,
@@ -179,26 +209,35 @@ class MetadataPayloadParser:
         if not ref_table_fields:
             return []
 
-        # Step 2: Calculate the size of one record in bytes
-        # Filter out fields with invalid offset (e.g., calculated fields like BLER with offset=0)
-        # that appear after other fields
-        valid_fields = []
+        # Step 2: Separate raw fields from calculated fields
+        # Raw fields: have actual offsets in the payload
+        # Calculated fields: have offset 0 after other fields (e.g., BLER)
+        raw_fields = []
+        calculated_fields = []
         max_offset_seen = 0
+
         for f in ref_table_fields:
             field_offset = f['offset_bytes'] * 8 + f['offset_bits']
             field_name = f['name'].lower()
 
-            # Skip fields that have offset 0 when we've already seen larger offsets
-            # (these are likely calculated fields incorrectly included)
+            # Skip dummy/padding fields (alignment bytes like "padding_1", "padding_2")
+            # But keep legitimate data fields like "Padding Bytes"
+            if 'dummy' in field_name:
+                continue
+            if field_name.startswith('padding_') and field_name[-1].isdigit():
+                continue
+
+            # Separate calculated fields from raw fields
             if field_offset == 0 and max_offset_seen > 0:
-                continue
+                # This is a calculated field (like BLER)
+                calculated_fields.append(f)
+            else:
+                # This is a raw field in the payload
+                raw_fields.append(f)
+                max_offset_seen = max(max_offset_seen, field_offset)
 
-            # Skip dummy/padding fields (they're not actual record data)
-            if 'dummy' in field_name or 'padding' in field_name:
-                continue
-
-            valid_fields.append(f)
-            max_offset_seen = max(max_offset_seen, field_offset)
+        # Use raw_fields for size calculation
+        valid_fields = raw_fields
 
         if not valid_fields:
             return []
@@ -235,7 +274,7 @@ class MetadataPayloadParser:
             # Calculate offset for this record
             record_offset = base_offset_bytes + (record_idx * record_size_bytes)
 
-            # Decode all VALID fields in this record (skip fields with invalid offsets)
+            # Decode all raw fields in this record
             for ref_field in valid_fields:
                 # Create adjusted field definition for this record
                 adjusted_field = deepcopy(ref_field)
@@ -250,6 +289,19 @@ class MetadataPayloadParser:
                     decoded_records.append(decoded_field)
                 except Exception as e:
                     print(f"Warning: Failed to decode {field_name_with_record}: {e}")
+
+            # Add calculated fields as placeholders (will be filled by post-processor)
+            for calc_field in calculated_fields:
+                field_name_with_record = f"{calc_field['name']} (Record {record_idx})"
+                placeholder_field = {
+                    'name': field_name_with_record,
+                    'raw': 0.0,
+                    'type': calc_field['type_name'],
+                    'value': 0.0,
+                    'description': calc_field.get('description', ''),
+                    'calculated': True  # Mark as calculated field
+                }
+                decoded_records.append(placeholder_field)
 
         return decoded_records
 

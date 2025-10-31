@@ -1,0 +1,5 @@
+# ICD Metadata Extractor Dependencies
+
+# PDF parsing libraries
+pdfplumber>=0.10.3
+PyMuPDF>=1.23.8

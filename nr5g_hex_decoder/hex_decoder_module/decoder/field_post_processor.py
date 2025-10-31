@@ -31,7 +31,9 @@ class FieldPostProcessor:
         field_map = {field.name: field for field in fields}
 
         # Apply logcode-specific calculations
-        if logcode_id == "0xB888":  # NR5G MAC PDSCH Stats
+        # Normalize logcode_id to uppercase for comparison
+        logcode_id_upper = logcode_id.upper()
+        if logcode_id_upper == "0XB888":  # NR5G MAC PDSCH Stats
             self._calculate_pdsch_stats(field_map)
             self._calculate_pdsch_stats_per_carrier(field_map)
 
