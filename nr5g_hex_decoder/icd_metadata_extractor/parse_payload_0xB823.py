@@ -41,6 +41,10 @@ class PayloadParser:
 
     def _build_table_index(self):
         """Build index of all tables for quick lookup"""
+        # Add pre-version tables (e.g., Table 11-43: MajorMinorVersion)
+        for pre_table in self.metadata.get('pre_version_tables', []):
+            self.tables[pre_table['table_number']] = pre_table
+
         # Add main table
         if 'main_table' in self.metadata:
             main = self.metadata['main_table']
@@ -268,11 +272,28 @@ class PayloadParser:
         # Convert hex to bytes
         data = self._hex_string_to_bytes(payload_hex)
 
-        # Read version from payload (first 4 bytes, little-endian)
+        # Parse version from payload (first 4 bytes) using Table 11-43: MajorMinorVersion
         if len(data) < 4:
             raise ValueError("Payload too short to contain version")
 
-        version_value = struct.unpack('<I', data[0:4])[0]
+        # Use Table 11-43 to dynamically parse the version structure
+        VERSION_TABLE = "11-43"  # MajorMinorVersion table
+
+        if VERSION_TABLE not in self.tables:
+            # Fallback to hardcoded parsing if Table 11-43 not available
+            version_value = struct.unpack('<I', data[0:4])[0]
+            major = (version_value >> 16) & 0xFFFF
+            minor = version_value & 0xFFFF
+        else:
+            # Parse version using metadata-defined structure
+            version_fields = self._parse_table(data[0:4], VERSION_TABLE)
+
+            # Extract Major and Minor from parsed fields
+            major = version_fields.get('Major', {}).get('value', 0)
+            minor = version_fields.get('Minor', {}).get('value', 0)
+
+            # Compute version value: (Major << 16) | Minor
+            version_value = (major << 16) | minor
 
         # Find the table for this version
         target_version = self.metadata.get('target_version', {})
@@ -291,8 +312,8 @@ class PayloadParser:
             'version': {
                 'value': version_value,
                 'hex': f"0x{version_value:08X}",
-                'major': (version_value >> 16) & 0xFFFF,
-                'minor': version_value & 0xFFFF
+                'major': major,
+                'minor': minor
             },
             'fields': parsed_fields
         }

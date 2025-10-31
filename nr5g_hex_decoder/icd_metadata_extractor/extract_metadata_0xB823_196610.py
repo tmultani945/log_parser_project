@@ -179,13 +179,58 @@ def find_all_table_captions(page_text: str, page_num: int) -> List[str]:
     table_pattern = r"Table\s+(\d+-\d+)[:\s]*(.+?)(?:\n|$)"
     matches = re.findall(table_pattern, page_text, re.IGNORECASE)
 
-    captions = []
-    for table_num, table_name in matches:
-        # Skip captions that are just numbers (like "Table 11-55: 0 360")
-        # These are likely misdetected rows, not actual table captions
-        if table_name.strip() and not re.match(r'^\d+\s+\d+$', table_name.strip()):
-            captions.append(f"Table {table_num}: {table_name.strip()}")
+    # Group matches by table number to handle duplicates
+    table_captions = {}
 
+    for table_num, table_name in matches:
+        table_name_clean = table_name.strip()
+
+        # Skip empty captions
+        if not table_name_clean:
+            continue
+
+        # Skip captions that are just numbers (like "Table 11-55: 0 360")
+        if re.match(r'^\d+\s+\d+$', table_name_clean):
+            continue
+
+        # Skip captions that start with numbers followed by more data (likely table rows)
+        # Pattern: starts with 1-3 digits separated by spaces (like "1 0 32 ...")
+        if re.match(r'^\d+\s+\d+\s+\d+', table_name_clean):
+            continue
+
+        # For each table number, prefer captions that:
+        # 1. Start with a letter (not a number)
+        # 2. Don't contain "Shown only when" (that's a condition, not a name)
+        # 3. Are shorter and cleaner (real captions are usually concise)
+
+        if table_num not in table_captions:
+            table_captions[table_num] = table_name_clean
+        else:
+            # Compare quality of captions - prefer the one that looks more like a title
+            current = table_captions[table_num]
+
+            # Score the captions (higher is better)
+            def caption_quality(name):
+                score = 0
+                # Starts with letter (likely a name)
+                if re.match(r'^[A-Za-z]', name):
+                    score += 10
+                # Doesn't contain "shown only when" or similar conditional text
+                if not re.search(r'(shown|only|when|<=|>=)', name, re.IGNORECASE):
+                    score += 5
+                # Shorter is usually better for table names
+                if len(name) < 50:
+                    score += 3
+                # No digits at start
+                if not re.match(r'^\d', name):
+                    score += 2
+                return score
+
+            if caption_quality(table_name_clean) > caption_quality(current):
+                table_captions[table_num] = table_name_clean
+
+    # Return in order of appearance
+    captions = [f"Table {num}: {name}" for num, name in sorted(table_captions.items())]
     return captions if captions else [f"Table on page {page_num + 1}"]
 
 
@@ -319,6 +364,61 @@ def parse_version_table(version_table: Dict) -> Dict[int, str]:
                 continue
 
     return version_map
+
+
+def parse_tables_before_version(all_tables: List[Dict], version_table: Optional[Dict]) -> List[Dict]:
+    """
+    Parse all tables that appear before the version table.
+    These are typically structure definition tables (like 11-42, 11-43, etc.)
+
+    Args:
+        all_tables: All extracted tables from the section
+        version_table: The version table (to determine cutoff point)
+
+    Returns:
+        List of parsed table dictionaries with table_number, table_name, and fields
+    """
+    if not version_table:
+        print(f"\n[3.5/5] No version table found, skipping pre-version tables...")
+        return []
+
+    print(f"\n[3.5/5] Parsing tables before version table...")
+
+    pre_version_tables = []
+    version_table_index = None
+
+    # Find the index of the version table in all_tables
+    for idx, table in enumerate(all_tables):
+        if table == version_table:
+            version_table_index = idx
+            break
+
+    if version_table_index is None:
+        print(f"  [!] Could not locate version table in extracted tables")
+        return []
+
+    # Parse all tables before the version table
+    for idx in range(version_table_index):
+        table = all_tables[idx]
+        table_number = table.get('table_number')
+
+        if not table_number:
+            continue
+
+        # Parse the table
+        fields = parse_table_to_fields(table)
+        if fields:
+            parsed_table = {
+                'table_number': table_number,
+                'table_name': table['caption'],
+                'page_number': table['page_number'] + 1,  # Convert to 1-indexed for display
+                'fields': fields
+            }
+            pre_version_tables.append(parsed_table)
+            print(f"       Parsed Table {table_number} (page {table['page_number'] + 1}) - {len(fields)} fields")
+
+    print(f"  [OK] Found {len(pre_version_tables)} tables before version table")
+    return pre_version_tables
 
 
 # ============================================================================
@@ -598,6 +698,7 @@ def export_to_json(
     section: Dict,
     main_table: Dict,
     dependent_tables: List[Dict],
+    pre_version_tables: List[Dict],
     version_map: Dict,
     output_path: str
 ):
@@ -617,6 +718,7 @@ def export_to_json(
             "table_number": main_table['table_number']
         },
         "version_map": {str(TARGET_VERSION): version_map[TARGET_VERSION]} if TARGET_VERSION in version_map else {},
+        "pre_version_tables": pre_version_tables,
         "main_table": main_table,
         "dependent_tables": dependent_tables
     }
@@ -638,6 +740,7 @@ def export_to_json(
     print(f"  [OK] JSON exported successfully!")
     print(f"       File: {output_file.absolute()}")
     print(f"       Size: {file_size:,} bytes")
+    print(f"       Pre-version tables: {len(pre_version_tables)}")
     print(f"       Main table: {main_table['table_number']} with {len(main_table['fields'])} fields")
     print(f"       Dependent tables: {len(dependent_tables)}")
 
@@ -689,13 +792,16 @@ def main():
         version_table = find_version_table(all_tables)
         version_map = parse_version_table(version_table) if version_table else {}
 
+        # Step 3.5: Parse tables that appear before version table
+        pre_version_tables = parse_tables_before_version(all_tables, version_table)
+
         # Step 4-5: Parse only tables needed for target version (combined and optimized)
         main_table, dependent_tables = parse_tables_for_version(
             all_tables, version_table, version_map, TARGET_VERSION, str(pdf_path), section
         )
 
         # Step 5: Export JSON
-        export_to_json(section, main_table, dependent_tables, version_map, args.output)
+        export_to_json(section, main_table, dependent_tables, pre_version_tables, version_map, args.output)
 
         print("\n" + "="*70)
         print("SUCCESS!")
